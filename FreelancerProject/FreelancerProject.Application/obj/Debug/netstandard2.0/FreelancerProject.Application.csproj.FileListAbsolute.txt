@@ -1,0 +1,13 @@
+C:\Users\User\source\repos\FreelancerProject\FreelancerProject.Application\bin\Debug\netstandard2.0\FreelancerProject.Application.deps.json
+C:\Users\User\source\repos\FreelancerProject\FreelancerProject.Application\bin\Debug\netstandard2.0\FreelancerProject.Application.dll
+C:\Users\User\source\repos\FreelancerProject\FreelancerProject.Application\bin\Debug\netstandard2.0\FreelancerProject.Application.pdb
+C:\Users\User\source\repos\FreelancerProject\FreelancerProject.Application\bin\Debug\netstandard2.0\FreelancerProject.Domain.dll
+C:\Users\User\source\repos\FreelancerProject\FreelancerProject.Application\bin\Debug\netstandard2.0\FreelancerProject.Persistence.dll
+C:\Users\User\source\repos\FreelancerProject\FreelancerProject.Application\bin\Debug\netstandard2.0\FreelancerProject.Persistence.pdb
+C:\Users\User\source\repos\FreelancerProject\FreelancerProject.Application\bin\Debug\netstandard2.0\FreelancerProject.Domain.pdb
+C:\Users\User\source\repos\FreelancerProject\FreelancerProject.Application\obj\Debug\netstandard2.0\FreelancerProject.Application.csprojAssemblyReference.cache
+C:\Users\User\source\repos\FreelancerProject\FreelancerProject.Application\obj\Debug\netstandard2.0\FreelancerProject.Application.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\FreelancerProject\FreelancerProject.Application\obj\Debug\netstandard2.0\FreelancerProject.Application.AssemblyInfo.cs
+C:\Users\User\source\repos\FreelancerProject\FreelancerProject.Application\obj\Debug\netstandard2.0\FreelancerProject.Application.csproj.CopyComplete
+C:\Users\User\source\repos\FreelancerProject\FreelancerProject.Application\obj\Debug\netstandard2.0\FreelancerProject.Application.dll
+C:\Users\User\source\repos\FreelancerProject\FreelancerProject.Application\obj\Debug\netstandard2.0\FreelancerProject.Application.pdb

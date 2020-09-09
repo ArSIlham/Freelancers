@@ -1,0 +1,15 @@
+C:\Users\User\source\repos\FreelancerProject\FreelancerProject.IoC\bin\Debug\netstandard2.0\FreelancerProject.IoC.deps.json
+C:\Users\User\source\repos\FreelancerProject\FreelancerProject.IoC\bin\Debug\netstandard2.0\FreelancerProject.IoC.dll
+C:\Users\User\source\repos\FreelancerProject\FreelancerProject.IoC\bin\Debug\netstandard2.0\FreelancerProject.IoC.pdb
+C:\Users\User\source\repos\FreelancerProject\FreelancerProject.IoC\bin\Debug\netstandard2.0\FreelancerProject.Application.dll
+C:\Users\User\source\repos\FreelancerProject\FreelancerProject.IoC\bin\Debug\netstandard2.0\FreelancerProject.Domain.dll
+C:\Users\User\source\repos\FreelancerProject\FreelancerProject.IoC\bin\Debug\netstandard2.0\FreelancerProject.Persistence.dll
+C:\Users\User\source\repos\FreelancerProject\FreelancerProject.IoC\bin\Debug\netstandard2.0\FreelancerProject.Application.pdb
+C:\Users\User\source\repos\FreelancerProject\FreelancerProject.IoC\bin\Debug\netstandard2.0\FreelancerProject.Persistence.pdb
+C:\Users\User\source\repos\FreelancerProject\FreelancerProject.IoC\bin\Debug\netstandard2.0\FreelancerProject.Domain.pdb
+C:\Users\User\source\repos\FreelancerProject\FreelancerProject.IoC\obj\Debug\netstandard2.0\FreelancerProject.IoC.csprojAssemblyReference.cache
+C:\Users\User\source\repos\FreelancerProject\FreelancerProject.IoC\obj\Debug\netstandard2.0\FreelancerProject.IoC.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\FreelancerProject\FreelancerProject.IoC\obj\Debug\netstandard2.0\FreelancerProject.IoC.AssemblyInfo.cs
+C:\Users\User\source\repos\FreelancerProject\FreelancerProject.IoC\obj\Debug\netstandard2.0\FreelancerProject.IoC.csproj.CopyComplete
+C:\Users\User\source\repos\FreelancerProject\FreelancerProject.IoC\obj\Debug\netstandard2.0\FreelancerProject.IoC.dll
+C:\Users\User\source\repos\FreelancerProject\FreelancerProject.IoC\obj\Debug\netstandard2.0\FreelancerProject.IoC.pdb

@@ -1,0 +1,8 @@
+C:\Users\User\source\repos\FreelancerProject\FreelancerProject.Domain\bin\Debug\netstandard2.0\FreelancerProject.Domain.deps.json
+C:\Users\User\source\repos\FreelancerProject\FreelancerProject.Domain\bin\Debug\netstandard2.0\FreelancerProject.Domain.dll
+C:\Users\User\source\repos\FreelancerProject\FreelancerProject.Domain\bin\Debug\netstandard2.0\FreelancerProject.Domain.pdb
+C:\Users\User\source\repos\FreelancerProject\FreelancerProject.Domain\obj\Debug\netstandard2.0\FreelancerProject.Domain.csprojAssemblyReference.cache
+C:\Users\User\source\repos\FreelancerProject\FreelancerProject.Domain\obj\Debug\netstandard2.0\FreelancerProject.Domain.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\FreelancerProject\FreelancerProject.Domain\obj\Debug\netstandard2.0\FreelancerProject.Domain.AssemblyInfo.cs
+C:\Users\User\source\repos\FreelancerProject\FreelancerProject.Domain\obj\Debug\netstandard2.0\FreelancerProject.Domain.dll
+C:\Users\User\source\repos\FreelancerProject\FreelancerProject.Domain\obj\Debug\netstandard2.0\FreelancerProject.Domain.pdb
