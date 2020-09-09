@@ -1,12 +1,12 @@
 ﻿using FreelancersProject.Domain.Bases;
-using Identity.Dapper.Entities;
+
 using System;
 
 namespace FreelancersProject.Domain.Concretes
 {
-	public class OfferedProject : DapperIdentityUser, IBaseEntity<Guid>
+	public class OfferedProject : BaseEntity<Guid>
 	{
-		Guid IBaseEntity<Guid>.Id { get; set; }
+		
 		public string Title { get; set; }
 		public string Description { get; set; }
 

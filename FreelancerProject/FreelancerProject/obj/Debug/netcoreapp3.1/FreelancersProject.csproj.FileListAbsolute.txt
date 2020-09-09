@@ -129,10 +129,6 @@ C:\Users\99450\Desktop\ExamProjFreeLancer\FreelancerProject\FreelancerProject\ob
 C:\Users\99450\Desktop\ExamProjFreeLancer\FreelancerProject\FreelancerProject\obj\Debug\netcoreapp3.1\FreelancersProject.dll
 C:\Users\99450\Desktop\ExamProjFreeLancer\FreelancerProject\FreelancerProject\obj\Debug\netcoreapp3.1\FreelancersProject.pdb
 C:\Users\99450\Desktop\ExamProjFreeLancer\FreelancerProject\FreelancerProject\obj\Debug\netcoreapp3.1\FreelancersProject.genruntimeconfig.cache
-C:\Users\99450\Desktop\ExamProjFreeLancer\FreelancerProject\FreelancerProject\bin\Debug\netcoreapp3.1\Identity.Dapper.dll
-C:\Users\99450\Desktop\ExamProjFreeLancer\FreelancerProject\FreelancerProject\bin\Debug\netcoreapp3.1\Identity.Dapper.SqlServer.dll
-C:\Users\99450\Desktop\ExamProjFreeLancer\FreelancerProject\FreelancerProject\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
-C:\Users\99450\Desktop\ExamProjFreeLancer\FreelancerProject\FreelancerProject\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
 C:\Users\99450\Desktop\ExamProjFreeLancer\FreelancerProject\FreelancerProject\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\99450\Desktop\ExamProjFreeLancer\FreelancerProject\FreelancerProject\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
 C:\Users\99450\Desktop\ExamProjFreeLancer\FreelancerProject\FreelancerProject\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
@@ -208,4 +204,13 @@ C:\Users\99450\Desktop\ExamProjFreeLancer\FreelancerProject\FreelancerProject\bi
 C:\Users\99450\Desktop\ExamProjFreeLancer\FreelancerProject\FreelancerProject\obj\Debug\netcoreapp3.1\FreelancersProject.csproj.CoreCompileInputs.cache
 C:\Users\99450\Desktop\ExamProjFreeLancer\FreelancerProject\FreelancerProject\obj\Debug\netcoreapp3.1\FreelancersProject.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\99450\Desktop\ExamProjFreeLancer\FreelancerProject\FreelancerProject\obj\Debug\netcoreapp3.1\FreelancersProject.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\99450\Desktop\ExamProjFreeLancer\FreelancerProject\FreelancerProject\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\99450\Desktop\ExamProjFreeLancer\FreelancerProject\FreelancerProject\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\99450\Desktop\ExamProjFreeLancer\FreelancerProject\FreelancerProject\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+C:\Users\99450\Desktop\ExamProjFreeLancer\FreelancerProject\FreelancerProject\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\99450\Desktop\ExamProjFreeLancer\FreelancerProject\FreelancerProject\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\99450\Desktop\ExamProjFreeLancer\FreelancerProject\FreelancerProject\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+C:\Users\99450\Desktop\ExamProjFreeLancer\FreelancerProject\FreelancerProject\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+C:\Users\99450\Desktop\ExamProjFreeLancer\FreelancerProject\FreelancerProject\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\99450\Desktop\ExamProjFreeLancer\FreelancerProject\FreelancerProject\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
 C:\Users\99450\Desktop\ExamProjFreeLancer\FreelancerProject\FreelancerProject\obj\Debug\netcoreapp3.1\Razor\Views\Auth\Index.cshtml.g.cs

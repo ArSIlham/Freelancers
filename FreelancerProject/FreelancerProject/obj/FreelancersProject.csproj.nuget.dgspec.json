@@ -55,10 +55,6 @@
               "target": "Package",
               "version": "[8.0.1, )"
             },
-            "Identity.Dapper.SqlServer": {
-              "target": "Package",
-              "version": "[0.8.4-alpha, )"
-            },
             "MediatR": {
               "target": "Package",
               "version": "[8.1.0, )"
@@ -127,10 +123,6 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
-            "Identity.Dapper.SqlServer": {
-              "target": "Package",
-              "version": "[0.8.4-alpha, )"
-            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
@@ -198,10 +190,6 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
-            "Identity.Dapper.SqlServer": {
-              "target": "Package",
-              "version": "[0.8.4-alpha, )"
-            },
             "Microsoft.Extensions.DependencyInjection.Abstractions": {
               "target": "Package",
               "version": "[3.1.8, )"
@@ -286,11 +274,11 @@
               "target": "Package",
               "version": "[2.0.35, )"
             },
-            "Identity.Dapper.SqlServer": {
-              "target": "Package",
-              "version": "[0.8.4-alpha, )"
-            },
             "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            },
+            "Microsoft.Extensions.Identity.Core": {
               "target": "Package",
               "version": "[3.1.8, )"
             },
@@ -365,10 +353,6 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
-            "Identity.Dapper.SqlServer": {
-              "target": "Package",
-              "version": "[0.8.4-alpha, )"
-            },
             "MediatR": {
               "target": "Package",
               "version": "[8.1.0, )"

@@ -9,8 +9,4 @@
     <Folder Include="Admin\" />
   </ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Identity.Dapper.SqlServer" Version="0.8.4-alpha" />
-  </ItemGroup>
-
 </Project>

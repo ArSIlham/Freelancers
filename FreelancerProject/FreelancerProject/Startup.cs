@@ -7,11 +7,7 @@ using FreelancersProject.Application.Common;
 using FreelancersProject.Domain.Concretes;
 using FreelancersProject.IoC;
 using FreelancersProject.Persistence.Infratructure;
-using Identity.Dapper;
-using Identity.Dapper.Entities;
-using Identity.Dapper.Models;
-using Identity.Dapper.SqlServer.Connections;
-using Identity.Dapper.SqlServer.Models;
+using FreelancersProject.Persistence.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -53,13 +49,12 @@ namespace FreelancersProject
             RepositoryRegistration.RegisterRepo(services);
             ServicesRegistration.RegisterService(services);
 
-          
+			services.AddTransient<IUserStore<User>, UserStore>();
+            services.AddTransient<IRoleStore<Role>, RoleStore>();
+            services.AddIdentity<User, Role>()
+               .AddDefaultTokenProviders();
             services.AddControllers();
-            services.ConfigureDapperConnectionProvider<SqlServerConnectionProvider>(Configuration.GetSection("DapperIdentity"))
-                    .ConfigureDapperIdentityCryptography(Configuration.GetSection("DapperIdentityCryptography"))
-                   .ConfigureDapperIdentityOptions(new DapperIdentityOptions { UseTransactionalBehavior = false });
-            services.AddIdentity<DapperIdentityUser, DapperIdentityRole<int>>()
-                   .AddDapperIdentityFor<SqlServerConfiguration>().AddDefaultTokenProviders();
+            services.AddMvc();
 
 
         }
@@ -86,7 +81,7 @@ namespace FreelancersProject
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllers();
+                endpoints.MapDefaultControllerRoute();
             });
         }
     }

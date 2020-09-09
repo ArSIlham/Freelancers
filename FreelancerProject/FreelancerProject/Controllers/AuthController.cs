@@ -4,21 +4,21 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace FreelancersProject.Controllers
 {
 	public class AuthController :Controller
 	{
-		private readonly RoleManager<Role> roleManager;
+		
 
-		public AuthController(RoleManager<Role> roleManager)
+		
+		public ActionResult Index()
 		{
-			this.roleManager = roleManager;
-		}
-		public IActionResult Index()
-		{
-			roleManager.CreateAsync(new Role() { Name = "Admin" });
+			//roleManager.CreateAsync(new Role() { Name = "Admin" });
+			//var data=await roleStore.CreateAsync(new Role() { Name = "Admin" }, CancellationToken.None);
+			
 			return View();
 		}
 	}
