@@ -5,7 +5,7 @@ using System.Text;
 
 namespace FreelancersProject.Domain.Owner
 {
-    public class OwnerModel : BaseEntity<Guid>
+    public class OwnerModel : IBaseEntity<Guid>
     {
         public string Email { get; set; }
         public string Password { get; set; }
@@ -14,6 +14,6 @@ namespace FreelancersProject.Domain.Owner
         public int Country { get; set; }
         public int Skils { get; set; }
         public int Roles { get; set; }
-
-    }
+		public Guid Id { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+	}
 }

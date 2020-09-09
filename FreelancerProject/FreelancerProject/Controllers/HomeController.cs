@@ -21,7 +21,7 @@ namespace FreelancersProject.Controllers
 
         //    return HandleResponse.Response(result);
         //}
-        [HttpGet("GetAll")]
+        [HttpGet(nameof(GetAll))]
         public async Task<IActionResult> GetAll()
         {
             var result = await Mediator.Send(new GetAllOwner.GetAllOwnerRequest());
@@ -35,7 +35,7 @@ namespace FreelancersProject.Controllers
             return HandleResponse.Response(result);
         }
 
-        [HttpDelete("Delete")]
+        [HttpDelete(nameof(Delete))]
         public async Task<IActionResult> Delete(DeleteOwner.DeleteOwnerRequest ownerRequest)
         {
             var result = await Mediator.Send(ownerRequest);

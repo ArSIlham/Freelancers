@@ -122,9 +122,9 @@ namespace FreelancersProject.Application.Services.Owner
 
     }
 
-    public async Task<OwnerModel> Update(OwnerModel entity)
+    public  Task<OwnerModel> Update(OwnerModel entity)
     {
-            return entity;
+            return Task.FromResult(entity);
         //try
         //{
         //    if (entity.Password == string.Empty)

@@ -4,10 +4,17 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using FreelancersProject.Application.Common;
+using FreelancersProject.Domain.Concretes;
 using FreelancersProject.IoC;
 using FreelancersProject.Persistence.Infratructure;
+using Identity.Dapper;
+using Identity.Dapper.Entities;
+using Identity.Dapper.Models;
+using Identity.Dapper.SqlServer.Connections;
+using Identity.Dapper.SqlServer.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -25,7 +32,7 @@ namespace FreelancersProject
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services)
+        public void   ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.Configure<ApiBehaviorOptions>(opt =>
@@ -38,18 +45,27 @@ namespace FreelancersProject
                 mc.AddProfile(new MappingProfile());
             });
 
-            IMapper mapper = mappingConfig.CreateMapper();
+            var  mapper = mappingConfig.CreateMapper();
             services.AddSingleton(mapper);
 
             MediatRRegistration.RegisterMediatR(services);
             SwaggerRegistration.RegisterSwagger(services);
             RepositoryRegistration.RegisterRepo(services);
             ServicesRegistration.RegisterService(services);
+
+          
             services.AddControllers();
+            services.ConfigureDapperConnectionProvider<SqlServerConnectionProvider>(Configuration.GetSection("DapperIdentity"))
+                    .ConfigureDapperIdentityCryptography(Configuration.GetSection("DapperIdentityCryptography"))
+                   .ConfigureDapperIdentityOptions(new DapperIdentityOptions { UseTransactionalBehavior = false });
+            services.AddIdentity<DapperIdentityUser, DapperIdentityRole<int>>()
+                   .AddDapperIdentityFor<SqlServerConfiguration>().AddDefaultTokenProviders();
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public static void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
@@ -59,12 +75,12 @@ namespace FreelancersProject
             app.UseHttpsRedirection();
 
             app.UseAuthentication();
-            app.UseSwagger();
-            app.UseSwaggerUI(c =>
-            {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Freelancer Service Api V1");
-            });
-            app.UseRouting();
+			app.UseSwagger();
+			app.UseSwaggerUI(c =>
+			{
+				c.SwaggerEndpoint("/swagger/v1/swagger.json", "Freelancer Service Api V1");
+			});
+			app.UseRouting();
 
             app.UseAuthorization();
 
