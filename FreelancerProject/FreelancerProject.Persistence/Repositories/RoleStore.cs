@@ -1,4 +1,5 @@
-﻿using FreelancersProject.Domain.Concretes;
+﻿using Dapper;
+using FreelancersProject.Domain.Concretes;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using System;
@@ -10,117 +11,115 @@ using System.Threading.Tasks;
 
 namespace FreelancersProject.Persistence.Repositories
 {
-	
-        public class RoleStore : IRoleStore<Role>
+
+    public class RoleStore : IRoleStore<ApplicationRole>
+    {
+        private readonly string _connectionString;
+
+        public RoleStore(IConfiguration configuration)
         {
-            private readonly string _connectionString;
+            _connectionString = configuration.GetConnectionString("DefaultConnection");
+        }
 
-            public RoleStore(IConfiguration configuration)
+        public async Task<IdentityResult> CreateAsync(ApplicationRole role, CancellationToken cancellationToken)
+        {
+            cancellationToken.ThrowIfCancellationRequested();
+
+            using (var connection = new SqlConnection(_connectionString))
             {
-                _connectionString = configuration.GetConnectionString("DefaultConnection");
+                await connection.OpenAsync(cancellationToken);
+                role.Id = await connection.QuerySingleAsync<int>($@"INSERT INTO [ApplicationRole] ([Name], [NormalizedName])
+                    VALUES (@{nameof(ApplicationRole.Name)}, @{nameof(ApplicationRole.NormalizedName)});
+                    SELECT CAST(SCOPE_IDENTITY() as int)", role);
             }
 
-            public async Task<IdentityResult> CreateAsync(Role role, CancellationToken cancellationToken)
+            return IdentityResult.Success;
+        }
+
+        public async Task<IdentityResult> UpdateAsync(ApplicationRole role, CancellationToken cancellationToken)
+        {
+            cancellationToken.ThrowIfCancellationRequested();
+
+            using (var connection = new SqlConnection(_connectionString))
             {
-                cancellationToken.ThrowIfCancellationRequested();
-
-                using (var connection = new SqlConnection(_connectionString))
-                {
-                    await connection.OpenAsync(cancellationToken);
-                    //role.Id = await connection.QuerySingleAsync<int>($@"INSERT INTO [Role] ([Name], [NormalizedName])
-                    //VALUES (@{nameof(Role.Name)}, @{nameof(Role.NormalizedName)});
-                    //SELECT CAST(SCOPE_IDENTITY() as int)", role);
-                }
-
-                return IdentityResult.Success;
+                await connection.OpenAsync(cancellationToken);
+                await connection.ExecuteAsync($@"UPDATE [ApplicationRole] SET
+                    [Name] = @{nameof(ApplicationRole.Name)},
+                    [NormalizedName] = @{nameof(ApplicationRole.NormalizedName)}
+                    WHERE [Id] = @{nameof(ApplicationRole.Id)}", role);
             }
 
-            public async Task<IdentityResult> UpdateAsync(Role role, CancellationToken cancellationToken)
+            return IdentityResult.Success;
+        }
+
+        public async Task<IdentityResult> DeleteAsync(ApplicationRole role, CancellationToken cancellationToken)
+        {
+            cancellationToken.ThrowIfCancellationRequested();
+
+            using (var connection = new SqlConnection(_connectionString))
             {
-                cancellationToken.ThrowIfCancellationRequested();
-
-                using (var connection = new SqlConnection(_connectionString))
-                {
-                    await connection.OpenAsync(cancellationToken);
-                    //await connection.ExecuteAsync($@"UPDATE [Role] SET
-                    //[Name] = @{nameof(Role.Name)},
-                    //[NormalizedName] = @{nameof(Role.NormalizedName)}
-                    //WHERE [Id] = @{nameof(Role.Id)}", role);
-                }
-
-                return IdentityResult.Success;
+                await connection.OpenAsync(cancellationToken);
+                await connection.ExecuteAsync($"DELETE FROM [ApplicationRole] WHERE [Id] = @{nameof(ApplicationRole.Id)}", role);
             }
 
-            public async Task<IdentityResult> DeleteAsync(Role role, CancellationToken cancellationToken)
+            return IdentityResult.Success;
+        }
+
+        public Task<string> GetRoleIdAsync(ApplicationRole role, CancellationToken cancellationToken)
+        {
+            return Task.FromResult(role.Id.ToString());
+        }
+
+        public Task<string> GetRoleNameAsync(ApplicationRole role, CancellationToken cancellationToken)
+        {
+            return Task.FromResult(role.Name);
+        }
+
+        public Task SetRoleNameAsync(ApplicationRole role, string roleName, CancellationToken cancellationToken)
+        {
+            role.Name = roleName;
+            return Task.FromResult(0);
+        }
+
+        public Task<string> GetNormalizedRoleNameAsync(ApplicationRole role, CancellationToken cancellationToken)
+        {
+            return Task.FromResult(role.NormalizedName);
+        }
+
+        public Task SetNormalizedRoleNameAsync(ApplicationRole role, string normalizedName, CancellationToken cancellationToken)
+        {
+            role.NormalizedName = normalizedName;
+            return Task.FromResult(0);
+        }
+
+        public async Task<ApplicationRole> FindByIdAsync(string roleId, CancellationToken cancellationToken)
+        {
+            cancellationToken.ThrowIfCancellationRequested();
+
+            using (var connection = new SqlConnection(_connectionString))
             {
-                cancellationToken.ThrowIfCancellationRequested();
-
-                using (var connection = new SqlConnection(_connectionString))
-                {
-                    await connection.OpenAsync(cancellationToken);
-                    //await connection.ExecuteAsync($"DELETE FROM [Role] WHERE [Id] = @{nameof(Role.Id)}", role);
-                }
-
-                return IdentityResult.Success;
-            }
-
-            public Task<string> GetRoleIdAsync(Role role, CancellationToken cancellationToken)
-            {
-                return Task.FromResult(role.Id.ToString());
-            }
-
-            public Task<string> GetRoleNameAsync(Role role, CancellationToken cancellationToken)
-            {
-                return Task.FromResult(role.Name);
-            }
-
-            public Task SetRoleNameAsync(Role role, string roleName, CancellationToken cancellationToken)
-            {
-                role.Name = roleName;
-                return Task.FromResult(0);
-            }
-
-            public Task<string> GetNormalizedRoleNameAsync(Role role, CancellationToken cancellationToken)
-            {
-                return Task.FromResult(role.NormalizedName);
-            }
-
-            public Task SetNormalizedRoleNameAsync(Role role, string normalizedName, CancellationToken cancellationToken)
-            {
-                role.NormalizedName = normalizedName;
-                return Task.FromResult(0);
-            }
-
-            public async Task<Role> FindByIdAsync(string roleId, CancellationToken cancellationToken)
-            {
-                cancellationToken.ThrowIfCancellationRequested();
-
-                using (var connection = new SqlConnection(_connectionString))
-                {
-                    await connection.OpenAsync(cancellationToken);
-                return null;
-                //return await connection.QuerySingleOrDefaultAsync<Role>($@"SELECT * FROM [Role]
-                //    WHERE [Id] = @{nameof(roleId)}", new { roleId });
-                }
-            }
-
-            public async Task<Role> FindByNameAsync(string normalizedRoleName, CancellationToken cancellationToken)
-            {
-                cancellationToken.ThrowIfCancellationRequested();
-
-                using (var connection = new SqlConnection(_connectionString))
-                {
-                    await connection.OpenAsync(cancellationToken);
-                return null;
-                    //return await connection.QuerySingleOrDefaultAsync<Role>($@"SELECT * FROM [Role]
-                    //WHERE [NormalizedName] = @{nameof(normalizedRoleName)}", new { normalizedRoleName });
-                }
-            }
-
-            public void Dispose()
-            {
-                // Nothing to dispose.
+                await connection.OpenAsync(cancellationToken);
+                return await connection.QuerySingleOrDefaultAsync<ApplicationRole>($@"SELECT * FROM [ApplicationRole]
+                    WHERE [Id] = @{nameof(roleId)}", new { roleId });
             }
         }
+
+        public async Task<ApplicationRole> FindByNameAsync(string normalizedRoleName, CancellationToken cancellationToken)
+        {
+            cancellationToken.ThrowIfCancellationRequested();
+
+            using (var connection = new SqlConnection(_connectionString))
+            {
+                await connection.OpenAsync(cancellationToken);
+                return await connection.QuerySingleOrDefaultAsync<ApplicationRole>($@"SELECT * FROM [ApplicationRole]
+                    WHERE [NormalizedName] = @{nameof(normalizedRoleName)}", new { normalizedRoleName });
+            }
+        }
+
+        public void Dispose()
+        {
+            // Nothing to dispose.
+        }
     }
+}
 

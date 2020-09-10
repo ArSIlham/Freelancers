@@ -6,7 +6,7 @@ using System.Text;
 
 namespace FreelancersProject.Domain.Concretes
 {
-	public class Role : BaseEntity<Guid>
+	public class ApplicationRole : BaseEntity<int>
 	{
 	
 		public string Name { get; set; }

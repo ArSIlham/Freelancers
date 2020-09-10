@@ -14,7 +14,7 @@ namespace FreelancersProject
     public class Program
     {
 
-        public RoleManager<Role> Role;
+        public RoleManager<ApplicationRole> Role;
 
         public static void Main(string[] args)
         {

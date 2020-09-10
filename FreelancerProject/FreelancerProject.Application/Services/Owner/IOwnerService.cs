@@ -90,19 +90,19 @@ namespace FreelancersProject.Application.Services.Owner
 
     }
 
-    public async Task<ListResult<OwnerModel>> GetAllPaging(int offset, int limit)
+    public  Task<ListResult<OwnerModel>> GetAllPaging(int offset, int limit)
     {
 
-        try
-        {
-            var result = await productRepository.GetAllPaging(offset, limit);
-            return result;
-        }
-        catch (Exception ex)
-        {
+            //try
+            //{
+            //    var result = await productRepository.GetAllPaging(offset, limit);
+            //    return result;
+            //}
+            //catch (Exception ex)
+            //{
 
-            throw new RestException(System.Net.HttpStatusCode.NotFound, ex.Message);
-        }
+            throw new Exception();
+        //}
 
     }
 

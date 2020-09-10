@@ -49,9 +49,9 @@ namespace FreelancersProject
             RepositoryRegistration.RegisterRepo(services);
             ServicesRegistration.RegisterService(services);
 
-			services.AddTransient<IUserStore<User>, UserStore>();
-            services.AddTransient<IRoleStore<Role>, RoleStore>();
-            services.AddIdentity<User, Role>()
+			services.AddTransient<IUserStore<ApplicationUser>, UserStore>();
+            services.AddTransient<IRoleStore<ApplicationRole>, RoleStore>();
+            services.AddIdentity<ApplicationUser, ApplicationRole>()
                .AddDefaultTokenProviders();
             services.AddControllers();
             services.AddMvc();
