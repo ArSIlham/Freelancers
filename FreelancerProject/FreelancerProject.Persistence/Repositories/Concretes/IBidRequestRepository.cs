@@ -15,7 +15,7 @@ namespace FreelancersProject.Persistence.Repositories.Concretes
 
 	public class BidRequestRepository : IBidRequestRepository
 	{
-		public Task<int> Add(BidRequest entity)
+		public Task<Guid> Add(BidRequest entity)
 		{
 			throw new NotImplementedException();
 		}

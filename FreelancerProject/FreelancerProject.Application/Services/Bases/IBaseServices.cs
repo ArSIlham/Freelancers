@@ -10,7 +10,7 @@ namespace FreelancersProject.Application.Services.Bases
     public interface IBaseServices<TEntity> where TEntity : IEntity
     {
         Task<IEnumerable<TEntity>> GetAll();
-        Task<ListResult<TEntity>> GetAllPaging(int offset, int limit);
+        //Task<ListResult<TEntity>> GetAllPaging(int offset, int limit);
         Task<IEnumerable<TEntity>> Find(Expression<Func<TEntity, bool>> predicate);
         Task<TEntity> GetById(string id);
         Task<TEntity> Add(TEntity entity);

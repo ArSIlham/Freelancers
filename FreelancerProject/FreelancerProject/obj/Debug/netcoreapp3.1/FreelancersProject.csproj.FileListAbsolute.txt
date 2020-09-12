@@ -214,3 +214,5 @@ C:\Users\99450\Desktop\ExamProjFreeLancer\FreelancerProject\FreelancerProject\bi
 C:\Users\99450\Desktop\ExamProjFreeLancer\FreelancerProject\FreelancerProject\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\99450\Desktop\ExamProjFreeLancer\FreelancerProject\FreelancerProject\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
 C:\Users\99450\Desktop\ExamProjFreeLancer\FreelancerProject\FreelancerProject\obj\Debug\netcoreapp3.1\Razor\Views\Auth\Index.cshtml.g.cs
+C:\Users\99450\Desktop\ExamProjFreeLancer\FreelancerProject\FreelancerProject\obj\Debug\netcoreapp3.1\Razor\Views\Auth\Register.cshtml.g.cs
+C:\Users\99450\Desktop\ExamProjFreeLancer\FreelancerProject\FreelancerProject\obj\Debug\netcoreapp3.1\Razor\Views\Auth\SignIn.cshtml.g.cs

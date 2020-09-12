@@ -14,7 +14,7 @@ namespace FreelancersProject.Persistence.Repositories.Concretes
 
 	public class ConfirmedBidRepository : IConfirmedBidRepository
 	{
-		public Task<int> Add(OfferedProject entity)
+		public Task<Guid> Add(OfferedProject entity)
 		{
 			throw new NotImplementedException();
 		}

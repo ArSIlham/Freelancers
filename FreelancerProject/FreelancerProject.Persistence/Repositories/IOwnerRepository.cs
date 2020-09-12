@@ -40,12 +40,13 @@ namespace FreelancersProject.Persistence.Repositories
 
         private string GetByIdSql = "select * from [User] where Id=@id;";
         private const string GetAllSql = "select * from [User]";
-        public async Task<int> Add(OwnerModel entity)
+        public async Task<Guid> Add(OwnerModel entity)
         {
             try
             {
                 var id = await unitOfWork.GetConnection().QuerySingleAsync<int>(AddSql, entity, unitOfWork.GetTransaction());
-                return id;
+                //return id;
+                return new Guid();
             }
             catch (Exception ex)
             {

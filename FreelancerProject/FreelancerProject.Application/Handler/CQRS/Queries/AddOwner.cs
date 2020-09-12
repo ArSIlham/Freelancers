@@ -54,7 +54,7 @@ namespace FreelancersProject.Application.Handler.CQRS.Queries
                     catch (RestException ex)
                     {
                         trx.Rollback();
-                        responses = new BaseResponses<OwnerModel>(ex.Code, ex.Message);
+                        responses = new BaseResponses<OwnerModel>(ex.StatusCode, ex.Message);
                     }
                     return responses;
                 }

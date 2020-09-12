@@ -1,4 +1,6 @@
-﻿using FreelancersProject.Application.Services.Owner;
+﻿using FreelancersProject.Application.Services;
+using FreelancersProject.Application.Services.Owner;
+using FreelancersProject.Persistence.Repositories.Concretes;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -11,6 +13,9 @@ namespace FreelancersProject.IoC
         public static void RegisterService(IServiceCollection services)
         {
             services.AddTransient<IOwnerService, OwnerService>();
+            services.AddTransient<ICountryService, CountryService>(); 
+            services.AddTransient<ICountryRepository, CountryRepository>();
+
         }
     }
 }

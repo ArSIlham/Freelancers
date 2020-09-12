@@ -14,7 +14,7 @@ namespace FreelancersProject.Persistence.Repositories.Concretes
 
 	public class SkillRepository : ISkillRepository
 	{
-		public Task<int> Add(Skill entity)
+		public Task<Guid> Add(Skill entity)
 		{
 			throw new NotImplementedException();
 		}

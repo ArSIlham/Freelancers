@@ -44,7 +44,7 @@ namespace Owner.Application.Handler.CQRS.Queries.ADDress
                     catch (RestException ex)
                     {
                         trx.Rollback();
-                        responses = new BaseResponses<string>(ex.Code, ex.Message);
+                        responses = new BaseResponses<string>(ex.StatusCode, ex.Message);
                     }
                 }
                 return responses;

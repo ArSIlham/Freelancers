@@ -13,7 +13,7 @@ namespace FreelancersProject.Persistence.Repositories.Base
         //Task<ListResult<TEntity>> GetAllPaging(int offset, int limit);
         Task<IEnumerable<TEntity>> Find(Expression<Func<TEntity, bool>> predicate);
         Task<TEntity> GetById(string id);
-        Task<int> Add(TEntity entity);
+        Task<Guid> Add(TEntity entity);
         Task Update(TEntity entity);
         Task Delete(string id);
 

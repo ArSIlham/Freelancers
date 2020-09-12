@@ -44,7 +44,7 @@ namespace FreelancersProject.Application.Handler.CQRS.Queries
                     }
                     catch (RestException ex)
                     {
-                        responses = new BaseResponses<List<OwnerModel>>(ex.Code, ex.Message);
+                        responses = new BaseResponses<List<OwnerModel>>(ex.StatusCode, ex.Message);
                     }
                 }
 

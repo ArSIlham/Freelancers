@@ -16,7 +16,7 @@ namespace FreelancersProject.Persistence.Repositories.Concretes
 
 	public class OfferedProjectRepository : IOfferedProjectRepository
 	{
-		public Task<int> Add(OfferedProject entity)
+		public Task<Guid> Add(OfferedProject entity)
 		{
 			throw new NotImplementedException();
 		}

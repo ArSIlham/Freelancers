@@ -53,8 +53,7 @@ namespace FreelancersProject
             services.AddTransient<IRoleStore<ApplicationRole>, RoleStore>();
             services.AddIdentity<ApplicationUser, ApplicationRole>()
                .AddDefaultTokenProviders();
-            services.AddControllers();
-            services.AddMvc();
+            services.AddControllersWithViews();
 
 
         }
@@ -68,7 +67,7 @@ namespace FreelancersProject
             }
 
             app.UseHttpsRedirection();
-
+            app.UseStaticFiles();
             app.UseAuthentication();
 			app.UseSwagger();
 			app.UseSwaggerUI(c =>
@@ -81,7 +80,9 @@ namespace FreelancersProject
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapDefaultControllerRoute();
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }

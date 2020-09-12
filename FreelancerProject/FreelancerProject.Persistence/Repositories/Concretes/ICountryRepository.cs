@@ -1,4 +1,6 @@
-﻿using FreelancersProject.Domain.Concretes;
+﻿using Dapper;
+using FreelancersProject.Domain.Concretes;
+using FreelancersProject.Persistence.Infratructure;
 using FreelancersProject.Persistence.Repositories.Base;
 using System;
 using System.Collections.Generic;
@@ -14,9 +16,26 @@ namespace FreelancersProject.Persistence.Repositories.Concretes
 
 	public class CountryRepository : ICountryRepository
 	{
-		public Task<int> Add(Country entity)
+		private readonly IUnitOfWork unitOfWork;
+		private string GetAllSql = "Select * from Countries";
+		private string AddSql = "insert into Countries([Name]) values (@Name)";
+
+		public CountryRepository(IUnitOfWork unitOfWork)
 		{
-			throw new NotImplementedException();
+			this.unitOfWork = unitOfWork;
+		}
+		public async Task<Guid> Add(Country entity)
+		{
+			try
+			{
+				var result = await unitOfWork.GetConnection().QueryFirstAsync<Guid>(AddSql, entity, unitOfWork.GetTransaction());
+				return result;
+			}
+			catch (Exception ex)
+			{
+
+				throw ex;
+			}
 		}
 
 		public Task Delete(string id)
@@ -29,9 +48,18 @@ namespace FreelancersProject.Persistence.Repositories.Concretes
 			throw new NotImplementedException();
 		}
 
-		public Task<IEnumerable<Country>> GetAll()
+		public  async Task<IEnumerable<Country>> GetAll()
 		{
-			throw new NotImplementedException();
+			try
+			{
+				var result = await unitOfWork.GetConnection().QueryAsync<Country>(GetAllSql, null, unitOfWork.GetTransaction());
+				return result;
+			}
+			catch (Exception ex)
+			{
+
+				throw ex;
+			}
 		}
 
 		public Task<Country> GetById(string id)

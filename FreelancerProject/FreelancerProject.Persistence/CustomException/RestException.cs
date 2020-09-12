@@ -7,11 +7,11 @@ namespace FreelancersProject.Persistence.CustomException
 {
     public class RestException : Exception
     {
-        public HttpStatusCode Code { get; }
+        public HttpStatusCode StatusCode { get; }
         public override string Message { get; }
         public RestException(HttpStatusCode code, string message)
         {
-            Code = code;
+            StatusCode = code;
             Message = message;
         }
 

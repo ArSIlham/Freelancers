@@ -12,7 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Handler\CQRS\Commands\" />
     <Folder Include="Responses\" />
   </ItemGroup>
 
