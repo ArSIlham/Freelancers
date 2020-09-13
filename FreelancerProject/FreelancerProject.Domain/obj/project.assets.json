@@ -187,11 +187,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\99450\\Desktop\\ExamProjFreeLancer\\FreelancerProject\\FreelancerProject.Domain\\FreelancersProject.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\99450\\Desktop\\exam proj\\FreelancerProject\\FreelancerProject.Domain\\FreelancersProject.Domain.csproj",
       "projectName": "FreelancersProject.Domain",
-      "projectPath": "C:\\Users\\99450\\Desktop\\ExamProjFreeLancer\\FreelancerProject\\FreelancerProject.Domain\\FreelancersProject.Domain.csproj",
+      "projectPath": "C:\\Users\\99450\\Desktop\\exam proj\\FreelancerProject\\FreelancerProject.Domain\\FreelancersProject.Domain.csproj",
       "packagesPath": "C:\\Users\\99450\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\99450\\Desktop\\ExamProjFreeLancer\\FreelancerProject\\FreelancerProject.Domain\\obj\\",
+      "outputPath": "C:\\Users\\99450\\Desktop\\exam proj\\FreelancerProject\\FreelancerProject.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",

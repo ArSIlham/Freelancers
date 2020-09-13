@@ -12,6 +12,8 @@ namespace FreelancersProject.Application.Common
         public string Errors { get; set; }
         public HttpStatusCode StatusCode { get; set; }
         public List<ValidationError> ValidationErrors { get; set; }
+
+      
         public BaseResponses(T entity, HttpStatusCode statusCode, bool success = true, string errors = null)
         {
             Entity = entity;
@@ -39,5 +41,6 @@ namespace FreelancersProject.Application.Common
             ValidationErrors = new List<ValidationError>();
             StatusCode = statusCode;
         }
+       
     }
 }

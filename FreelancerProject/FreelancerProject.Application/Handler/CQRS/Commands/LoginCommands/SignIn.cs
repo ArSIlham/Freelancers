@@ -28,12 +28,13 @@ namespace FreelancersProject.Application.Handler.CQRS.Commands.LoginCommands
 			[Required]
 			[Compare("PasswordHash")]
 			public string ConfirmPassword { get; set; }
-			public string PhoneNumber {get; set;}
+			public string PhoneNumber { get; set; }
 			[Required]
 			public Guid CountryId { get; set; }
+			[Required]
 			public string Role { get; set; }
-			
-			
+
+
 
 
 		}
@@ -44,12 +45,14 @@ namespace FreelancersProject.Application.Handler.CQRS.Commands.LoginCommands
 			private readonly UserManager<ApplicationUser> userManager;
 			private readonly IMapper mapper;
 			private readonly IUnitOfWork unitOfWork;
+			private readonly RoleManager<ApplicationRole> roleManager;
 
-			public SignInHandler(UserManager<ApplicationUser> userManager, IMapper mapper, IUnitOfWork unitOfWork)
+			public SignInHandler(UserManager<ApplicationUser> userManager, IMapper mapper, IUnitOfWork unitOfWork, RoleManager<ApplicationRole> roleManager)
 			{
 				this.userManager = userManager;
 				this.mapper = mapper;
 				this.unitOfWork = unitOfWork;
+				this.roleManager = roleManager;
 			}
 			public async Task<BaseResponses<ApplicationUser>> Handle(SignInRequest request, CancellationToken cancellationToken)
 			{
@@ -59,19 +62,44 @@ namespace FreelancersProject.Application.Handler.CQRS.Commands.LoginCommands
 				{
 					try
 					{
-					var user = mapper.Map<ApplicationUser>(request);
-					var result =await userManager.CreateAsync(user, user.PasswordHash);
-					unitOfWork.SaveChanges();
+						var user = mapper.Map<ApplicationUser>(request);
+						var result = await userManager.CreateAsync(user, user.PasswordHash);
+						if (result.Succeeded)
+						{
+							var role = await roleManager.FindByNameAsync(request.Role);
+							
+							if (role == null)
+							{
+								var roleResult=await roleManager.CreateAsync(new ApplicationRole { Name = request.Role });
+							}
+							var tempUser = await userManager.FindByEmailAsync(request.Email);
+							var finalResult=await userManager.AddToRoleAsync(tempUser, request.Role);
+							unitOfWork.SaveChanges();
 
-					response = new BaseResponses<ApplicationUser>(user);
+							response = new BaseResponses<ApplicationUser>(user, result.Succeeded, "");
+
+						}
+						List<ValidationError> errors = null;
+						if (!result.Succeeded)
+						{
+							errors = new List<ValidationError>();
+							foreach (var item in result.Errors)
+							{
+								errors.Add(new ValidationError(item.Code, item.Description));
+							}
+
+							response = new BaseResponses<ApplicationUser>(user, result.Succeeded) { ValidationErrors = errors };
+						}
+
+						
 
 					}
 					catch (RestException ex)
 					{
 						trx.Rollback();
-						response = new BaseResponses<ApplicationUser>( ex.StatusCode, ex.Message);
+						response = new BaseResponses<ApplicationUser>(ex.StatusCode, ex.Message);
 
-						
+
 					}
 					return response;
 				}
@@ -82,6 +110,6 @@ namespace FreelancersProject.Application.Handler.CQRS.Commands.LoginCommands
 
 	}
 
-   
+
 
 }

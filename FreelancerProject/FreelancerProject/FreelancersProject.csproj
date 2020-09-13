@@ -15,19 +15,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Areas\" />
     <Folder Include="Areas\Admin\Controllers\" />
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Admin\Views\" />
-    <Folder Include="Areas\Freelancer\Controllers\" />
     <Folder Include="Areas\Freelancer\Data\" />
     <Folder Include="Areas\Freelancer\Models\" />
-    <Folder Include="Areas\Freelancer\Views\" />
-    <Folder Include="Areas\Hirer\Controllers\" />
+    <Folder Include="Areas\Freelancer\Views\Shared\" />
     <Folder Include="Areas\Hirer\Data\" />
     <Folder Include="Areas\Hirer\Models\" />
-    <Folder Include="Areas\Hirer\Views\" />
   </ItemGroup>
 
 

@@ -1,62 +1,65 @@
-﻿
+﻿@model FreelancersProject.Application.DTOs.LoginDTO
 @{
-	ViewData["Title"] = "SignIn";
-	Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = null;
 }
 
-<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
+<!DOCTYPE html>
 
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SignIn</title>
+</head>
+<body>
+	<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<!------ Include the above in your HEAD tag ---------->
 
-<div id="login-overlay" class="modal-dialog">
-	<div class="modal-content">
-		<div class="modal-header">
-	
-			<h4 class="modal-title" id="myModalLabel">Login to Freelancer.com</h4>
-		</div>
-		<div class="modal-body">
-			<div class="row">
-				<div class="col-xs-6">
-					<div class="well">
-						<form id="loginForm" method="POST" action="/login/" novalidate="novalidate">
-							<div class="form-group">
-								<label for="username" class="control-label">Username</label>
-								<input type="text" class="form-control" id="username" name="username" value="" required="" title="Please enter you username" placeholder="example@gmail.com">
-								<span class="help-block"></span>
-							</div>
-							<div class="form-group">
-								<label for="password" class="control-label">Password</label>
-								<input type="password" class="form-control" id="password" name="password" value="" required="" title="Please enter your password">
-								<span class="help-block"></span>
-							</div>
-							<div id="loginErrorMsg" class="alert alert-error hide">Wrong username og password</div>
-							<div class="checkbox">
-								<label>
-									<input type="checkbox" name="remember" id="remember"> Remember login
-								</label>
-								<p class="help-block">(if this is a private computer)</p>
-							</div>
-							<button type="submit" class="btn btn-success btn-block">Login</button>
-							<a href="/forgot/" class="btn btn-default btn-block">Help to login</a>
-						</form>
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<div id="login-overlay" class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<img src="https://www.f-cdn.com/assets/main/en/assets/freelancer-logo.svg" style="height: 30px; width:100px;" alt="">
+				<h4>
+					
+				</h4>
+
+			</div>
+			
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="well">
+							<form id="loginForm" method="POST" asp-controller="Auth" asp-action="SignIn" >
+								<div class="text-danger" asp-validation-summary="All"></div>
+								<div class="form-group">
+									<label for="username" class="control-label">Username</label>
+									<input type="text" class="form-control" id="username" asp-for="@Model.EMail" required="" title="Please enter you Email" placeholder="example@gmail.com">
+									<span class="help-block"></span>
+								</div>
+								<div class="form-group">
+									<label for="password" class="control-label">Password</label>
+									<input type="password" class="form-control" id="password" asp-for="@Model.Password" value="" required="" title="Please enter your password">
+									<span class="help-block"></span>
+								</div>
+								
+
+								<button type="submit" class="btn btn-primary btn-block">Login</button>
+
+								<div class="text-center mt-5">
+									<p>Don't have an account?<a asp-action="Register" asp-controller="Auth" class="btn btn-link"><b>Sign Up</b></a> </p>
+
+								</div>
+
+							</form>
+						</div>
 					</div>
-				</div>
-				<div class="col-xs-6">
-					<p class="lead">Register now for <span class="text-success">FREE</span></p>
-					<ul class="list-unstyled" style="line-height: 2">
-						<li><span class="fa fa-check text-success"></span> See all your orders</li>
-						<li><span class="fa fa-check text-success"></span> Fast re-order</li>
-						<li><span class="fa fa-check text-success"></span> Save your favorites</li>
-						<li><span class="fa fa-check text-success"></span> Fast checkout</li>
-						<li><span class="fa fa-check text-success"></span> Get a gift <small>(only new customers)</small></li>
-						<li><a href="/read-more/"><u>Read more</u></a></li>
-					</ul>
-					<p><a asp-controller="Auth" asp-action="Register" class="btn btn-info btn-block">Yes please, register now!</a></p>
+
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
+</body>
+</html>

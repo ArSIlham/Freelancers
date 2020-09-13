@@ -1,4 +1,5 @@
 ﻿using FreelancersProject.Domain.Concretes;
+using FreelancersProject.Persistence.Infratructure;
 using FreelancersProject.Persistence.Repositories.Base;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,12 @@ namespace FreelancersProject.Persistence.Repositories.Concretes
 
 	public class OfferedProjectRepository : IOfferedProjectRepository
 	{
+		private readonly IUnitOfWork unitOfWork;
+
+		public OfferedProjectRepository(IUnitOfWork unitOfWork)
+		{
+			this.unitOfWork = unitOfWork;
+		}
 		public Task<Guid> Add(OfferedProject entity)
 		{
 			throw new NotImplementedException();

@@ -1,4 +1,5 @@
 ﻿using FreelancersProject.Domain.Concretes;
+using FreelancersProject.Persistence.Infratructure;
 using FreelancersProject.Persistence.Repositories.Base;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,12 @@ namespace FreelancersProject.Persistence.Repositories.Concretes
 
 	public class ConfirmedBidRepository : IConfirmedBidRepository
 	{
+		private readonly IUnitOfWork unitOfWork;
+
+		public ConfirmedBidRepository(IUnitOfWork unitOfWork)
+		{
+			this.unitOfWork = unitOfWork;
+		}
 		public Task<Guid> Add(OfferedProject entity)
 		{
 			throw new NotImplementedException();

@@ -1,74 +1,93 @@
-
-@model SignIn.SignInRequest
+﻿
+	@model SignIn.SignInRequest
 @{
-	ViewData["Title"] = "Index";
-	Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = null;
 }
 
+<!DOCTYPE html>
 
-<div class="container register">
-	<div class="row">
-		<div class="col-md-3 register-left text-center">
-			<img src="https://image.ibb.co/n7oTvU/logo_white.png" alt="" />
-			<div><h3>Create an account.</h3></div>
-			
-			<div> It is free and only take one minute</div>
-			
-		</div>
-		<div class="col-md-9 register-right">
-			
-			
-			<div class="tab-content mt-5" id="myTabContent">
-				<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-				
-					<form asp-action="Register" asp-controller="Auth" method="post">
-						<div asp-validation-summary="All"></div>
-						<div class="row register-form">
-							<div class="col-md-6">
-								<div class="form-group">
-									<input type="text" class="form-control" placeholder="UserName *" asp-for="@Model.UserName" value="" />
-								</div>
-								<div class="form-group">
-									<input type="password" class="form-control" placeholder="Password *" asp-for="@Model.PasswordHash" value="" />
-								</div>
-								<div class="form-group">
-									<input type="password" class="form-control" placeholder="Confirm Password *" asp-for="@Model.ConfirmPassword" value="" />
-								</div>
-								<div class="form-group">
-									<div class="maxl">
-										<label class="radio inline">
-											<input type="radio" value="Freelancer" asp-for="@Model.Role" checked>
-											<span> Employee </span>
-										</label>
-										<label class="radio inline">
-											<input type="radio"  value="Hirer" asp-for="@Model.Role">
-											<span>Hirer </span>
-										</label>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-group">
-									<input type="email" class="form-control" asp-for="@Model.Email" placeholder="Your Email *" value="" />
-								</div>
-								<div class="form-group">
-									<input type="text" minlength="10" maxlength="10" name="txtEmpPhone" asp-for="@Model.PhoneNumber" class="form-control" placeholder="Your Phone *" value="" />
-								</div>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<title>Register</title>
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!------ Include the above in your HEAD tag ---------->
+</head>
+	
+<body>
 
-								<div class="form-group">
-									<select class="form-control" asp-items="@ViewBag.CountryItems" asp-for="@Model.CountryId">
-										<option class="hidden" selected disabled>Please select your country</option>
 
-									</select>
-								</div>
-								<input type="submit" class="btn btn-primary" value="Register" />
-							</div>
-						</div>
-					</form>
-				</div>
-				
+	
+
+	<div class="container register fadeIn">
+		<div class="row">
+			<div class="col-sm-12 register-left text-center mt-5 ">
+				<img src="https://www.f-cdn.com/assets/main/en/assets/freelancer-logo.svg" class="pb-5" style="height: 50px; width:200px;" alt="">
+				<div><h3>Create an account.</h3></div>
+
+				<div> It is free and only take one minute</div>
+
 			</div>
 		</div>
-	</div>
+			<div class="row">
+				<div class="col-sm-12  register-left  register-form">
 
-</div>
+
+					<div class="tab-content mt-5" id="myTabContent">
+						<div class="" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+							<form asp-action="Register" asp-controller="Auth" method="post">
+								<div asp-validation-summary="All" class="text-warning"></div>
+								<div class="row register-form">
+									<div class="col-md-6">
+										<div class="form-group">
+											<input type="text" class="form-control" placeholder="UserName *" asp-for="@Model.UserName" value="" />
+										</div>
+										<div class="form-group">
+											<input type="password" class="form-control" placeholder="Password *" asp-for="@Model.PasswordHash" value="" />
+										</div>
+										<div class="form-group">
+											<input type="password" class="form-control" placeholder="Confirm Password *" asp-for="@Model.ConfirmPassword" value="" />
+										</div>
+										<div class="form-group">
+											<div class="maxl">
+												<label class="radio inline">
+													<input type="radio" value="Freelancer" asp-for="@Model.Role" checked>
+													<span> Employee </span>
+												</label>
+												<label class="radio inline">
+													<input type="radio" value="Owner" asp-for="@Model.Role">
+													<span>Hirer </span>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<input type="email" class="form-control" asp-for="@Model.Email" placeholder="Your Email *" value="" />
+										</div>
+										<div class="form-group">
+											<input type="text" minlength="12" maxlength="12" name="txtEmpPhone" asp-for="@Model.PhoneNumber" class="form-control" placeholder="994502223322 *" value="" />
+										</div>
+
+										<div class="form-group">
+											<select class="form-control" asp-items="@ViewBag.CountryItems" asp-for="@Model.CountryId">
+												<option class="hidden" selected disabled>Please select your country</option>
+
+											</select>
+										</div>
+										<input type="submit" class="btn btn-primary" value="Register" />
+									</div>
+								</div>
+							</form>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+	</div>
+</body>
+</html>

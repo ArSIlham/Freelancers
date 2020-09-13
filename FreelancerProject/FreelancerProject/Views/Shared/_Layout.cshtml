@@ -6,12 +6,14 @@
 	<title>@ViewData["Title"] FreeLancer</title>
 	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
 	<link rel="stylesheet" href="~/css/site.css" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+		  rel="stylesheet">
 
 	<link href="~/startbootstrap-landing-page-gh-pages/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
 	<link href="~/startbootstrap-landing-page-gh-pages/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 	@*<link href="~/css/register.css" />
-	<link href="~/css/signIn.css" />*@
+		<link href="~/css/signIn.css" />*@
 	<!-- Custom styles for this template -->
 	<link href="~/startbootstrap-landing-page-gh-pages/css/landing-page.min.css" rel="stylesheet">
 	@*<link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">*@
@@ -20,24 +22,67 @@
 	<!-- Navigation -->
 	<header>
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<a class="navbar-brand"><img src="https://www.f-cdn.com/assets/main/en/assets/freelancer-logo.svg" style="height: 30px; width:100px;" alt=""></a>
+			<a class="navbar-brand"><img src="https://www.f-cdn.com/assets/main/en/assets/freelancer-logo.svg" style="height: 40px; width:130px;" alt=""></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
 				<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-					<li class="nav-item active">
+					@if (User.IsInRole("Freelancer"))
+					{
 
-					</li>
-					<li class="nav-item">
+						<li class="nav-item active">
+							<a class="nav-link" asp-action="Projects" asp-controller="Home" asp-area="Freelancer">Projects</a>
+						</li>
 
-					</li>
-					<li class="nav-item">
+						<li class="nav-item">
+							<a class="nav-link" asp-action="MyProjects" asp-controller="Project" asp-area="Freelancer">My Projects</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" asp-action="MyMessages" asp-controller="Project" asp-area="Freelancer">My messages</a>
 
-					</li>
+						</li>
+					}
+
+					@if (User.IsInRole("Owner"))
+					{
+						<li class="nav-item active">
+							<a class="nav-link">My Projects</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link">Crete Project</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link">Make Offer</a>
+						</li>
+					}
 				</ul>
-				<a class="btn btn-info my-2 my-sm-0 mr-4 text-white"  asp-action="SignIn" asp-controller="Auth">Sign In</a>
-				
+				@if (User.Identity.IsAuthenticated)
+				{
+
+					<a href="#" class="my-2 my-sm-0 mr-4 text-info">
+						<span class="material-icons">
+							mail
+						</span>
+					</a>
+
+
+					<a href="#" class="my-2 my-sm-0 mr-4 text-info">
+						
+					<img class="avatar avatar-48 img-circle" src="~/images/freelance.png"  style="height:50px; width:50px; border-radius:50%;"/>
+					</a>
+
+
+					<a class="btn btn-outline-info my-2 my-sm-0 mr-4" asp-action="SignOut" asp-controller="Auth">Sign Out</a>
+				}
+
+				else
+				{
+					<a class="btn btn-outline-info my-2 my-sm-0 mr-4" asp-action="SignIn" asp-controller="Auth">Sign In</a>
+					<a class="btn btn-outline-info my-2 my-sm-0 mr-4" asp-action="Register" asp-controller="Auth">Sign Up</a>
+
+				}
+
 
 			</div>
 		</nav>
@@ -46,7 +91,7 @@
 	<!-- Masthead -->
 
 	<div class="container-fluid">
-		
+
 		<main role="main" class="pb-5">
 			@RenderBody()
 		</main>
@@ -55,18 +100,18 @@
 
 
 	@* <footer class="footer text-muted ">
-		<div class="container ">
-			&copy; 2020 - BlogAsp.Net - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-		</div>
-	</footer> *@
+			<div class="container ">
+				&copy; 2020 - BlogAsp.Net - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+			</div>
+		</footer> *@
 
 	<script src="~/lib/jquery/dist/jquery.min.js"></script>
 	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 	<script src="~/js/site.js" asp-append-version="true"></script>
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
-<script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
+	<script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+	<script>$(document).ready(function () { $('body').bootstrapMaterialDesign(); });</script>
 	@RenderSection("Scripts", required: false)
 
 </body>

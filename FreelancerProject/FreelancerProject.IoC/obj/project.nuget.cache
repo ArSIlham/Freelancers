@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "J71ugnmZI5zhcomakfTdINnuyoIsd3JrXApwYLIyfiBKxtGExORnQXBBnS8KwKgihv201BtSZCHVf6WNyh/cSQ==",
+  "dgSpecHash": "bbHaqP5T+ptG/Go5qzlRDV84/l75ggJZYaE35H8lJJwZDb3Asc/J4qs5ZHGNV+gJIqzdAtZRhucq8GNlgT//hg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\99450\\Desktop\\ExamProjFreeLancer\\FreelancerProject\\FreelancerProject.IoC\\FreelancersProject.IoC.csproj",
+  "projectFilePath": "C:\\Users\\99450\\Desktop\\exam proj\\FreelancerProject\\FreelancerProject.IoC\\FreelancersProject.IoC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\99450\\.nuget\\packages\\automapper\\10.0.0\\automapper.10.0.0.nupkg.sha512",
     "C:\\Users\\99450\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.0.1\\automapper.extensions.microsoft.dependencyinjection.8.0.1.nupkg.sha512",
     "C:\\Users\\99450\\.nuget\\packages\\dapper\\2.0.35\\dapper.2.0.35.nupkg.sha512",
+    "C:\\Users\\99450\\.nuget\\packages\\fluentvalidation\\9.2.0\\fluentvalidation.9.2.0.nupkg.sha512",
     "C:\\Users\\99450\\.nuget\\packages\\mediatr\\8.1.0\\mediatr.8.1.0.nupkg.sha512",
     "C:\\Users\\99450\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\8.1.0\\mediatr.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512",
     "C:\\Users\\99450\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.1.0\\microsoft.aspnetcore.authentication.abstractions.2.1.0.nupkg.sha512",

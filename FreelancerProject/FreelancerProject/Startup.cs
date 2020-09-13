@@ -54,6 +54,8 @@ namespace FreelancersProject
             services.AddIdentity<ApplicationUser, ApplicationRole>()
                .AddDefaultTokenProviders();
             services.AddControllersWithViews();
+            
+
 
 
         }
@@ -80,6 +82,8 @@ namespace FreelancersProject
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllerRoute(name:"areaRoute",  pattern:"{area:exists}/{controller=Home}/{action=Main}/{id?}");
+
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
