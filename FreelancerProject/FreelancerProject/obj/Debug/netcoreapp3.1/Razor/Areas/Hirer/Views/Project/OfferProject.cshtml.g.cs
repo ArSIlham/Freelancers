@@ -12,7 +12,43 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
+#nullable restore
+#line 1 "C:\Users\99450\Desktop\exam proj\FreelancerProject\FreelancerProject\Areas\Hirer\Views\_ViewImports.cshtml"
+using FreelancersProject;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 2 "C:\Users\99450\Desktop\exam proj\FreelancerProject\FreelancerProject\Areas\Hirer\Views\_ViewImports.cshtml"
+using FreelancersProject.Application.Handler.CQRS.Commands.LoginCommands;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 3 "C:\Users\99450\Desktop\exam proj\FreelancerProject\FreelancerProject\Areas\Hirer\Views\_ViewImports.cshtml"
+using FreelancersProject.Application.Handler.CQRS.Commands.ProjectCommands;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "C:\Users\99450\Desktop\exam proj\FreelancerProject\FreelancerProject\Areas\Hirer\Views\_ViewImports.cshtml"
+using FreelancersProject.Domain.Concretes;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "C:\Users\99450\Desktop\exam proj\FreelancerProject\FreelancerProject\Areas\Hirer\Views\_ViewImports.cshtml"
+using FreelancersProject.Application.DTOs;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"0635b82e3aaa8506daf09c3557c4059bb236b3be", @"/Areas/Hirer/Views/Project/OfferProject.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b00cb1ede8fad256d2b696a8252d8c113a95fffc", @"/Areas/Hirer/Views/_ViewImports.cshtml")]
     public class Areas_Hirer_Views_Project_OfferProject : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

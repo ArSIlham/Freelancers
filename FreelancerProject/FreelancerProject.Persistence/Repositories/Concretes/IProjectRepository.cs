@@ -1,4 +1,5 @@
-﻿using FreelancersProject.Domain.Concretes;
+﻿using Dapper;
+using FreelancersProject.Domain.Concretes;
 using FreelancersProject.Persistence.Infratructure;
 using FreelancersProject.Persistence.Repositories.Base;
 using System;
@@ -16,6 +17,8 @@ namespace FreelancersProject.Persistence.Repositories.Concretes
 		//GetProjectByCountry(Guid countryId)
 		//GetProjectByStatus(string status)
 		//GetProjectByOwnerId(Guid ownerId)
+		Task AddSkillsToProject(List<ProjectSkill> projectSkills);
+		
 	}
 
 	public class ProjectRepository : IProjectRepository
@@ -27,6 +30,7 @@ namespace FreelancersProject.Persistence.Repositories.Concretes
 		}
 
 		public string AddSql = "insert into Projects(Title, Description, MinPrice, MaxPrice,OwnerId,CreateDate,Status) " +
+			"OUTPUT Inserted.Id" +
 			"values (@Title, @Description,@MinPrice, @MaxPrice,@OwnerId,@CreateDate,@Status)";
 
 		private string DeleteSql = "delete from Projects where Id=@Id";
@@ -39,11 +43,21 @@ namespace FreelancersProject.Persistence.Repositories.Concretes
 
 		private string GetProjectBySkillSql = "select Projects.* from Projects as p inner join ProjectSkills as s where s.SkillId=@skillId ";
 		private string GetProjectById = "select * from Projects where Id=@Id";
+		private string AddSkillProjectSkill = "insert ProjectSkills (ProjectId, SkillId)  values(@projectId, @skillId)";
 		private readonly IUnitOfWork unitOfWork;
 
-		public Task<Guid> Add(Project entity)
+		public async Task<Guid> Add(Project entity)
 		{
-			throw new NotImplementedException();
+			try
+			{
+				var result = await unitOfWork.GetConnection().QueryFirstAsync<Guid>(AddSql, entity, unitOfWork.GetTransaction());
+				return result;
+			}
+			catch (Exception ex)
+			{
+
+				throw ex;
+			}
 		}
 
 		public Task Delete(string id)
@@ -61,14 +75,40 @@ namespace FreelancersProject.Persistence.Repositories.Concretes
 			throw new NotImplementedException();
 		}
 
-		public Task<Project> GetById(string id)
+		public async Task<Project> GetById(string id)
 		{
-			throw new NotImplementedException();
+			try
+			{
+				var result = await unitOfWork.GetConnection().QueryFirstAsync<Project>(GetProjectById, new {Id=id }, unitOfWork.GetTransaction());
+				return result;
+			}
+			catch (Exception ex)
+			{
+
+				throw ex;
+			}
 		}
 
 		public Task Update(Project entity)
 		{
 			throw new NotImplementedException();
+		}
+
+		public  async Task AddSkillsToProject(List<ProjectSkill> projectSkills )
+		{
+			try
+			{
+				
+
+				 await unitOfWork.GetConnection().QueryFirstAsync(AddSkillProjectSkill, projectSkills, unitOfWork.GetTransaction());
+				
+				
+			}
+			catch (Exception ex)
+			{
+
+				throw ex;
+			}
 		}
 	}
 }

@@ -1,4 +1,5 @@
-﻿using FreelancersProject.Domain.Concretes;
+﻿using Dapper;
+using FreelancersProject.Domain.Concretes;
 using FreelancersProject.Persistence.Infratructure;
 using FreelancersProject.Persistence.Repositories.Base;
 using System;
@@ -23,8 +24,8 @@ namespace FreelancersProject.Persistence.Repositories.Concretes
 		private string GetAllSql = "select * from Skills";
 		private string DeleteSql = "delete Skills where Id=@Id";
 		private string UpdateSql = "update Skills set Name=@Name where Id=@Id";
-		private string AddSql = "insert into Skills ([Name]) values(@Name)";
-		private string GetById = "select * from Skills where Id=@Id";
+		private string AddSqlSql = "insert into Skills ([Name]) values(@Name)";
+		private string GetByIdSql = "select * from Skills where Id=@Id";
 		private readonly IUnitOfWork unitOfWork;
 
 		public Task<Guid> Add(Skill entity)
@@ -42,9 +43,18 @@ namespace FreelancersProject.Persistence.Repositories.Concretes
 			throw new NotImplementedException();
 		}
 
-		public Task<IEnumerable<Skill>> GetAll()
+		public async Task<IEnumerable<Skill>> GetAll()
 		{
-			throw new NotImplementedException();
+			try
+			{
+				var result = await unitOfWork.GetConnection().QueryAsync<Skill>(GetAllSql, null, unitOfWork.GetTransaction());
+				return result;
+			}
+			catch (Exception ex)
+			{
+
+				throw ex;
+			}
 		}
 
 		public Task<Skill> GetById(string id)

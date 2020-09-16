@@ -1,8 +1,78 @@
-﻿
+﻿@model CreateProject.CreateProjectRequest
 @{
-    ViewData["Title"] = "CreateProject";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+	ViewData["Title"] = "CreateProject";
+	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>CreateProject</h1>
+<style>
+	div.project-main {
+		background: -webkit-linear-gradient(top, #0F69C9 70%, white 50%)
+	}
+
+	.custom-input {
+	}
+</style>
+<div class="project-main container-fluid">
+	<div class="text-center text-white pt-5">
+		<h1>Tell us what you need done</h1>
+		<p class="pt-1 text-large">
+			Contact skilled freelancers within minutes. View profiles, ratings, portfolios and chat with them. Pay the freelancer only when you are 100% satisfied with their work.
+		</p>
+	</div>
+
+	@* modal pencerenin bashligi *@
+	<form asp-action="CreateProject" asp-controller="Project" method="post" asp-area="Hirer">
+		<div class="pt-5 pl-5 pr-5" tabindex="-1" role="dialog">
+			<div class="modal-dialog modal-lg " role="document">
+				<div class="modal-content">
+
+					<div class="modal-body">
+						<div class="form-group">
+							<h3><label class="control-label" for="ProjectTitle">Choose a name for your project</label></h3>
+							<input type="text" class="form-control " asp-for="@Model.Title"
+								   id="ProjectTitle" aria-label="Large" aria-describedby="inputGroup-sizing-sm" placeholder="e.g. Build me website">
+						</div>
+
+						<div class="form-group">
+							<h4><label class="control-label" for="ProjectDesc">Tell us more about your project</label></h4>
+							<input class="form-control " id="ProjectDesc" cols="40" asp-for="@Model.Description"
+								   rows="5" placeholder="e.g. Description of the project">
+						</div>
+
+						<div class="form-group">
+							<h5><label class="control-label" for="minPrice">Price</label></h5>
+							<input type="number" class="form-control " asp-for="@Model.MinPrice"
+								   id="minPrice" aria-describedby="inputGroup-sizing-sm" placeholder="e.g. Min Price">
+							<input type="number" class="form-control " asp-for="@Model.MaxPrice"
+								   id="MaxPrice" aria-describedby="inputGroup-sizing-sm" placeholder="e.g. Max Price">
+						</div>
+
+						@{
+							int i = 0;
+						}
+						@foreach (var item in @ViewBag.SkillList as List<SkillListDTO>)
+						{
+							<div class="form-check form-check-inline ">
+								<input type="checkbox" class="form-check-input" asp-for="@Model.Skills[@i].IsChecked" id="exampleCheck1" value="true">
+								<label class="form-check-label" for="exampleCheck1">@item.Name</label>
+								<input hidden type="text" asp-for="@Model.Skills[@i].Id"  value="@item.Id"/>
+							</div>
+
+							{ 
+								i++;
+							}
+						}
+
+					</div>
+					<div class="modal-footer">
+						<input hidden  asp-for="@Model.OwnerName" value="@User.Identity.Name"/>
+						<button type="submit" class="btn btn-success">Post project</button>
+						<a type="button" class="btn btn-secondary" href="">Back to home</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+
 

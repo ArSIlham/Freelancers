@@ -1,6 +1,7 @@
 ﻿using FreelancersProject.Application.Services.Bases;
 using FreelancersProject.Domain.Concretes;
 using FreelancersProject.Persistence.CustomException;
+using FreelancersProject.Persistence.Infratructure;
 using FreelancersProject.Persistence.Repositories.Concretes;
 using System;
 using System.Collections.Generic;
@@ -15,15 +16,17 @@ namespace FreelancersProject.Application.Services
 
 	public interface IProjectService : IBaseServices<Project>
 	{
-
+		Task AddSkillsToProject(List<ProjectSkill> projectSkills);
 	}
 	public class ProjectService : IProjectService
 	{
 		private readonly IProjectRepository projectRepository;
+		private readonly IUnitOfWork unitOfWork;
 
-		public ProjectService(IProjectRepository projectRepository)
+		public ProjectService(IProjectRepository projectRepository, IUnitOfWork unitOfWork)
 		{
 			this.projectRepository = projectRepository;
+			this.unitOfWork = unitOfWork;
 		}
 
 		
@@ -32,8 +35,22 @@ namespace FreelancersProject.Application.Services
 			try
 			{
 				var id = projectRepository.Add(entity);
+				
 				var result = projectRepository.GetById(id.ToString());
 				return result;
+			}
+			catch (Exception ex)
+			{
+
+				throw new RestException(HttpStatusCode.NotFound, ex.Message);
+			}
+		}
+
+		public  async Task AddSkillsToProject(List<ProjectSkill> projectSkills)
+		{
+			try
+			{
+				await projectRepository.AddSkillsToProject(projectSkills);
 			}
 			catch (Exception ex)
 			{

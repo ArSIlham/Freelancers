@@ -12,7 +12,7 @@ namespace FreelancersProject.Domain.Concretes
 
 		public decimal MinPrice { get; set; }
 		public decimal MaxPrice { get; set; }
-		public Guid OwnerId { get; set; }
+		public int OwnerId { get; set; }
 		public DateTime CreateDate { get; set; }
 		public string Status { get; set; }
 	}

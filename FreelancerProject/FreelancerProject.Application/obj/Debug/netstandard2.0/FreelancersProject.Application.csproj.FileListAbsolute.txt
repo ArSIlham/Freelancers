@@ -38,3 +38,4 @@ C:\Users\99450\Desktop\exam proj\FreelancerProject\FreelancerProject.Application
 C:\Users\99450\Desktop\exam proj\FreelancerProject\FreelancerProject.Application\obj\Debug\netstandard2.0\FreelancersProject.Application.csproj.CopyComplete
 C:\Users\99450\Desktop\exam proj\FreelancerProject\FreelancerProject.Application\obj\Debug\netstandard2.0\FreelancersProject.Application.dll
 C:\Users\99450\Desktop\exam proj\FreelancerProject\FreelancerProject.Application\obj\Debug\netstandard2.0\FreelancersProject.Application.pdb
+C:\Users\99450\Desktop\exam proj\FreelancerProject\FreelancerProject.Application\obj\Debug\netstandard2.0\FreelancersProject.Application.csproj.CoreCompileInputs.cache

@@ -14,7 +14,11 @@ namespace FreelancersProject.IoC
         {
             services.AddTransient<IOwnerService, OwnerService>();
             services.AddTransient<ICountryService, CountryService>(); 
-            services.AddTransient<ICountryRepository, CountryRepository>();
+            
+           
+            services.AddTransient<ISkillService, SkillService>();
+           
+            services.AddTransient<IProjectService, ProjectService>();
 
         }
     }

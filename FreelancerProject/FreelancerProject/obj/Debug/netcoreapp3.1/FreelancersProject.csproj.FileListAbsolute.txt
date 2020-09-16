@@ -372,8 +372,11 @@ C:\Users\99450\Desktop\exam proj\FreelancerProject\FreelancerProject\obj\Debug\n
 C:\Users\99450\Desktop\exam proj\FreelancerProject\FreelancerProject\obj\Debug\netcoreapp3.1\Razor\Areas\Freelancer\Views\Home\Main.cshtml.g.cs
 C:\Users\99450\Desktop\exam proj\FreelancerProject\FreelancerProject\obj\Debug\netcoreapp3.1\Razor\Areas\Hirer\Views\Home\Main.cshtml.g.cs
 C:\Users\99450\Desktop\exam proj\FreelancerProject\FreelancerProject\obj\Debug\netcoreapp3.1\Razor\Areas\Hirer\Views\Project\MyProjects.cshtml.g.cs
-C:\Users\99450\Desktop\exam proj\FreelancerProject\FreelancerProject\obj\Debug\netcoreapp3.1\Razor\Areas\Hirer\Views\Project\CreateProject.cshtml.g.cs
 C:\Users\99450\Desktop\exam proj\FreelancerProject\FreelancerProject\obj\Debug\netcoreapp3.1\Razor\Areas\Hirer\Views\Project\OfferProject.cshtml.g.cs
 C:\Users\99450\Desktop\exam proj\FreelancerProject\FreelancerProject\obj\Debug\netcoreapp3.1\Razor\Areas\Freelancer\Views\Project\MyProjects.cshtml.g.cs
 C:\Users\99450\Desktop\exam proj\FreelancerProject\FreelancerProject\obj\Debug\netcoreapp3.1\Razor\Areas\Freelancer\Views\Project\MyMessages.cshtml.g.cs
 C:\Users\99450\Desktop\exam proj\FreelancerProject\FreelancerProject\obj\Debug\netcoreapp3.1\Razor\Areas\Freelancer\Views\Home\Projects.cshtml.g.cs
+C:\Users\99450\Desktop\exam proj\FreelancerProject\FreelancerProject\bin\Debug\netcoreapp3.1\FluentValidation.dll
+C:\Users\99450\Desktop\exam proj\FreelancerProject\FreelancerProject\obj\Debug\netcoreapp3.1\Razor\Areas\Freelancer\Views\Profile\Settings.cshtml.g.cs
+C:\Users\99450\Desktop\exam proj\FreelancerProject\FreelancerProject\obj\Debug\netcoreapp3.1\Razor\Areas\Hirer\Views\Project\CreateProject.cshtml.g.cs
+C:\Users\99450\Desktop\exam proj\FreelancerProject\FreelancerProject\obj\Debug\netcoreapp3.1\Razor\Areas\Hirer\Views\_ViewImports.cshtml.g.cs

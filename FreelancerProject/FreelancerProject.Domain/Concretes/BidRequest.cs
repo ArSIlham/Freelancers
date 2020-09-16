@@ -8,7 +8,7 @@ namespace FreelancersProject.Domain.Concretes
 	{
 		
 		
-		public Guid FreelancerId { get; set; }
+		public int FreelancerId { get; set; }
 		public Guid ProjectId { get; set; }
 		public decimal BidPrice { get; set; }
 		public DateTime CreateDate { get; set; }

@@ -10,7 +10,8 @@ namespace FreelancersProject.Domain.Concretes
 		public string Title { get; set; }
 		public string Description { get; set; }
 
-		public Guid FreelancerId { get; set; }
+		public int FreelancerId { get; set; }
+		public int OwnerId { get; set; }
 		public decimal Price { get; set; }
 
 		public DateTime OfferedDate { get; set; }

@@ -26,8 +26,29 @@ using FreelancersProject.Application.Handler.CQRS.Commands.LoginCommands;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\99450\Desktop\exam proj\FreelancerProject\FreelancerProject\Views\_ViewImports.cshtml"
+using FreelancersProject.Application.Handler.CQRS.Commands.ProjectCommands;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "C:\Users\99450\Desktop\exam proj\FreelancerProject\FreelancerProject\Views\_ViewImports.cshtml"
+using FreelancersProject.Domain.Concretes;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "C:\Users\99450\Desktop\exam proj\FreelancerProject\FreelancerProject\Views\_ViewImports.cshtml"
+using FreelancersProject.Application.DTOs;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"fe7423305f6422945e553f93f57ff8beb90aa976", @"/Views/Auth/Confirmation.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"1e100673098494cc8f1148c697515b79f7967b70", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b00cb1ede8fad256d2b696a8252d8c113a95fffc", @"/Views/_ViewImports.cshtml")]
     public class Views_Auth_Confirmation : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("btn btn-primary btn-sm"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -70,7 +91,7 @@ using FreelancersProject.Application.Handler.CQRS.Commands.LoginCommands;
 #line hidden
 #nullable disable
             WriteLiteral("\r\n<!DOCTYPE html>\r\n\r\n<html>\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fe7423305f6422945e553f93f57ff8beb90aa9765060", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fe7423305f6422945e553f93f57ff8beb90aa9765750", async() => {
                 WriteLiteral(@"
 	<meta name=""viewport"" content=""width=device-width"" />
 	<title>Confirmation</title>
@@ -88,12 +109,12 @@ using FreelancersProject.Application.Handler.CQRS.Commands.LoginCommands;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fe7423305f6422945e553f93f57ff8beb90aa9766337", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fe7423305f6422945e553f93f57ff8beb90aa9767027", async() => {
                 WriteLiteral("\r\n\t<div class=\"jumbotron text-center\">\r\n\t\t<h1 class=\"display-3\">Thank You!</h1>\r\n\t\t<p class=\"lead\"><strong>Please check your email</strong> for further instructions on how to complete your account setup.</p>\r\n\t\t<hr>\r\n\t\t<p>\r\n\t\t\tHaving trouble? <a");
                 BeginWriteAttribute("href", " href=\"", 626, "\"", 633, 0);
                 EndWriteAttribute();
                 WriteLiteral(">Contact us</a>\r\n\t\t</p>\r\n\t\t<p class=\"lead\">\r\n\t\t\t");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fe7423305f6422945e553f93f57ff8beb90aa9767079", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fe7423305f6422945e553f93f57ff8beb90aa9767769", async() => {
                     WriteLiteral("Continue to homepage");
                 }
                 );
