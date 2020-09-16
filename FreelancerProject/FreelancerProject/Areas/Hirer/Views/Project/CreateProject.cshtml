@@ -22,6 +22,7 @@
 
 	@* modal pencerenin bashligi *@
 	<form asp-action="CreateProject" asp-controller="Project" method="post" asp-area="Hirer">
+		<div asp-validation-summary="All"></div>
 		<div class="pt-5 pl-5 pr-5" tabindex="-1" role="dialog">
 			<div class="modal-dialog modal-lg " role="document">
 				<div class="modal-content">
@@ -67,7 +68,7 @@
 					<div class="modal-footer">
 						<input hidden  asp-for="@Model.OwnerName" value="@User.Identity.Name"/>
 						<button type="submit" class="btn btn-success">Post project</button>
-						<a type="button" class="btn btn-secondary" href="">Back to home</a>
+						<a type="button" class="btn btn-secondary" asp-area="Hirer" asp-controller="Project" asp-action="MyProjectss">Back to home</a>
 					</div>
 				</div>
 			</div>

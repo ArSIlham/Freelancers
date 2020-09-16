@@ -22,14 +22,15 @@ namespace FreelancersProject.Application.Handler.CQRS.Commands.ProjectCommands
 
 		public class CreateProjectRequest : IRequest<BaseResponses<Project>>
 		{
-			
+			[Required]
 			public string Title { get; set; }
-			
+			[Required]
 			public string Description { get; set; }
 
-			
+			[Required]
 			public decimal MinPrice { get; set; }
 		
+			[Required]
 			public decimal MaxPrice { get; set; }
 			[NotMapped]
 			public string OwnerName { get; set; }
@@ -63,33 +64,37 @@ namespace FreelancersProject.Application.Handler.CQRS.Commands.ProjectCommands
 			public async Task<BaseResponses<Project>> Handle(CreateProjectRequest request, CancellationToken cancellationToken)
 			{
 				BaseResponses<Project> response = null;
-				try
+				using (var trx = unitOfWork.BeginTransaction())
 				{
-					var user = await userManager.FindByNameAsync(request.OwnerName);
-					request.OwnerId = user.Id;
-					var project = mapper.Map<Project>(request);
-					var result =  await projectService.Add(project);
-					//unitOfWork.SaveChanges();
-					var projectSkills = new List<ProjectSkill>();
-					foreach (var item in request.Skills)
+					try
 					{
-						if (item.IsChecked)
+						var user = await userManager.FindByNameAsync(request.OwnerName);
+						request.OwnerId = user.Id;
+						var project = mapper.Map<Project>(request);
+						var result = await projectService.Add(project);
+						var projectSkills = new List<ProjectSkill>();
+						foreach (var item in request.Skills)
 						{
-						  projectSkills.Add(new ProjectSkill {ProjectId=project.Id, SkillId=item.Id });
+							if (item.IsChecked)
+							{
+								projectSkills.Add(new ProjectSkill { ProjectId = result.Id, SkillId = item.Id });
 
+							}
 						}
-					}
-					await projectService.AddSkillsToProject(projectSkills);
-					response = new BaseResponses<Project>(result);
-					unitOfWork.SaveChanges();
-				}
-				catch (RestException ex)
-				{
-					response = new BaseResponses<Project>(ex.StatusCode, ex.Message);
-					
-				}
+						await projectService.AddSkillsToProject(projectSkills);
+						unitOfWork.SaveChanges();
+						response = new BaseResponses<Project>(result);
 
-				return response;
+					}
+					catch (RestException ex)
+					{
+						trx.Rollback();
+						response = new BaseResponses<Project>(ex.StatusCode, ex.Message);
+
+					}
+
+					return response;
+				}
 			}
 		}
 	}

@@ -48,13 +48,13 @@
 					@if (User.IsInRole("Owner"))
 					{
 						<li class="nav-item active">
-							<a class="nav-link">My Projects</a>
+							<a class="nav-link" asp-area="Hirer" asp-controller="Project" asp-action="MyProjectss">My Projects</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link">Crete Project</a>
+							<a class="nav-link" asp-area="Hirer" asp-controller="Project" asp-action="CreateProject">Create Project</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link">Make Offer</a>
+							<a class="nav-link" asp-area="Hirer" asp-controller="Project" asp-action="OfferProject">Make Offer</a>
 						</li>
 					}
 				</ul>

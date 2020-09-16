@@ -30,13 +30,13 @@ namespace FreelancersProject.Application.Services
 		}
 
 		
-		public Task<Project> Add(Project entity)
+		public async Task<Project> Add(Project entity)
 		{
 			try
 			{
-				var id = projectRepository.Add(entity);
+				var id = await projectRepository.Add(entity);
 				
-				var result = projectRepository.GetById(id.ToString());
+				var result = await projectRepository.GetById(id.ToString());
 				return result;
 			}
 			catch (Exception ex)

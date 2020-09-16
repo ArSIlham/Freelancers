@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace FreelancersProject.Persistence.Repositories.Concretes
 {
-	public interface IProjectRepository :IRepository<Project>
+	public interface IProjectRepository : IRepository<Project>
 	{
 		//GetProjectBySkill(int skillId)
 		//GetProjectByPrice(int price)
@@ -18,7 +18,7 @@ namespace FreelancersProject.Persistence.Repositories.Concretes
 		//GetProjectByStatus(string status)
 		//GetProjectByOwnerId(Guid ownerId)
 		Task AddSkillsToProject(List<ProjectSkill> projectSkills);
-		
+
 	}
 
 	public class ProjectRepository : IProjectRepository
@@ -29,9 +29,15 @@ namespace FreelancersProject.Persistence.Repositories.Concretes
 			this.unitOfWork = unitOfWork;
 		}
 
-		public string AddSql = "insert into Projects(Title, Description, MinPrice, MaxPrice,OwnerId,CreateDate,Status) " +
-			"OUTPUT Inserted.Id" +
-			"values (@Title, @Description,@MinPrice, @MaxPrice,@OwnerId,@CreateDate,@Status)";
+		public string AddSql = $@"insert into [Projects](Title, Description, MinPrice, MaxPrice,OwnerId,CreateDate,Status) 
+			                      OUTPUT Inserted.Id
+			                      values(@{ nameof(Project.Title)},
+                                         @{ nameof(Project.Description)},
+                                         @{ nameof(Project.MinPrice)},
+                                         @{ nameof(Project.MaxPrice)},
+                                         @{ nameof(Project.OwnerId)},
+                                         @{ nameof(Project.CreateDate)}, 
+                                         @{ nameof(Project.Status)})";
 
 		private string DeleteSql = "delete from Projects where Id=@Id";
 		private string UpdateSql = "update Projects set Title=@Title,Descriprion=@Description, MinPrice=@MinPrice, MaxPrice=@MaxPrice, Status=@Status where Id=@Id";
@@ -43,7 +49,7 @@ namespace FreelancersProject.Persistence.Repositories.Concretes
 
 		private string GetProjectBySkillSql = "select Projects.* from Projects as p inner join ProjectSkills as s where s.SkillId=@skillId ";
 		private string GetProjectById = "select * from Projects where Id=@Id";
-		private string AddSkillProjectSkill = "insert ProjectSkills (ProjectId, SkillId)  values(@projectId, @skillId)";
+		private string AddSkillProjectSkill = "insert into ProjectSkills (ProjectId, SkillId)  values(@projectId, @skillId)";
 		private readonly IUnitOfWork unitOfWork;
 
 		public async Task<Guid> Add(Project entity)
@@ -79,7 +85,7 @@ namespace FreelancersProject.Persistence.Repositories.Concretes
 		{
 			try
 			{
-				var result = await unitOfWork.GetConnection().QueryFirstAsync<Project>(GetProjectById, new {Id=id }, unitOfWork.GetTransaction());
+				var result = await unitOfWork.GetConnection().QueryFirstAsync<Project>(GetProjectById, new { Id = id }, unitOfWork.GetTransaction());
 				return result;
 			}
 			catch (Exception ex)
@@ -94,15 +100,15 @@ namespace FreelancersProject.Persistence.Repositories.Concretes
 			throw new NotImplementedException();
 		}
 
-		public  async Task AddSkillsToProject(List<ProjectSkill> projectSkills )
+		public async Task AddSkillsToProject(List<ProjectSkill> projectSkills)
 		{
 			try
 			{
-				
 
-				 await unitOfWork.GetConnection().QueryFirstAsync(AddSkillProjectSkill, projectSkills, unitOfWork.GetTransaction());
-				
-				
+
+				await unitOfWork.GetConnection().ExecuteAsync(AddSkillProjectSkill, projectSkills, unitOfWork.GetTransaction());
+
+
 			}
 			catch (Exception ex)
 			{

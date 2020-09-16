@@ -29,7 +29,7 @@ namespace FreelancersProject.Areas.Hirer.Controllers
 			return View();
 		}
 		[HttpGet]
-		public async  Task<IActionResult> CreateProject()
+		public async Task<IActionResult> CreateProject()
 		{
 			var skills = await mediator.Send(new SkillList.SkillListRequest());
 
@@ -47,14 +47,24 @@ namespace FreelancersProject.Areas.Hirer.Controllers
 
 		public async Task<IActionResult> CreateProject(CreateProject.CreateProjectRequest model)
 		{
-
-			var result = await mediator.Send(model);
-			if (result.Success)
+			ModelState.Clear();
+			if (ModelState.IsValid)
 			{
-				return RedirectToAction("MyProjectss");
+				var result = await mediator.Send(model);
+				if (result.Success)
+				{
+					return RedirectToAction("MyProjectss");
+				}
+				else
+				{
+					foreach (var item in result.ValidationErrors)
+					{
+						ModelState.AddModelError("All", item.Value);
+					}
+				}
 			}
-			else
-			{
+			
+			
 				var skills = await mediator.Send(new SkillList.SkillListRequest());
 
 				var listDTO = new List<SkillListDTO>();
@@ -64,8 +74,9 @@ namespace FreelancersProject.Areas.Hirer.Controllers
 					listDTO.Add(data);
 				}
 				ViewBag.SkillList = listDTO;
-			return View(model);
-			}
+				return View(model);
+			
+			
 		}
 
 		public IActionResult OfferProject()
