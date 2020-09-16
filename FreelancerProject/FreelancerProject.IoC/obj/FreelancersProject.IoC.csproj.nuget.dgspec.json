@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\99450\\Desktop\\exam proj\\FreelancerProject\\FreelancerProject.IoC\\FreelancersProject.IoC.csproj": {}
+    "C:\\Users\\99450\\Desktop\\examProj\\FreelancerProject\\FreelancerProject.IoC\\FreelancersProject.IoC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\99450\\Desktop\\exam proj\\FreelancerProject\\FreelancerProject.Application\\FreelancersProject.Application.csproj": {
+    "C:\\Users\\99450\\Desktop\\examProj\\FreelancerProject\\FreelancerProject.Application\\FreelancersProject.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\99450\\Desktop\\exam proj\\FreelancerProject\\FreelancerProject.Application\\FreelancersProject.Application.csproj",
+        "projectUniqueName": "C:\\Users\\99450\\Desktop\\examProj\\FreelancerProject\\FreelancerProject.Application\\FreelancersProject.Application.csproj",
         "projectName": "FreelancersProject.Application",
-        "projectPath": "C:\\Users\\99450\\Desktop\\exam proj\\FreelancerProject\\FreelancerProject.Application\\FreelancersProject.Application.csproj",
+        "projectPath": "C:\\Users\\99450\\Desktop\\examProj\\FreelancerProject\\FreelancerProject.Application\\FreelancersProject.Application.csproj",
         "packagesPath": "C:\\Users\\99450\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\99450\\Desktop\\exam proj\\FreelancerProject\\FreelancerProject.Application\\obj\\",
+        "outputPath": "C:\\Users\\99450\\Desktop\\examProj\\FreelancerProject\\FreelancerProject.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -32,8 +32,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "C:\\Users\\99450\\Desktop\\exam proj\\FreelancerProject\\FreelancerProject.Persistence\\FreelancersProject.Persistence.csproj": {
-                "projectPath": "C:\\Users\\99450\\Desktop\\exam proj\\FreelancerProject\\FreelancerProject.Persistence\\FreelancersProject.Persistence.csproj"
+              "C:\\Users\\99450\\Desktop\\examProj\\FreelancerProject\\FreelancerProject.Persistence\\FreelancersProject.Persistence.csproj": {
+                "projectPath": "C:\\Users\\99450\\Desktop\\examProj\\FreelancerProject\\FreelancerProject.Persistence\\FreelancersProject.Persistence.csproj"
               }
             }
           }
@@ -88,14 +88,14 @@
         }
       }
     },
-    "C:\\Users\\99450\\Desktop\\exam proj\\FreelancerProject\\FreelancerProject.Domain\\FreelancersProject.Domain.csproj": {
+    "C:\\Users\\99450\\Desktop\\examProj\\FreelancerProject\\FreelancerProject.Domain\\FreelancersProject.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\99450\\Desktop\\exam proj\\FreelancerProject\\FreelancerProject.Domain\\FreelancersProject.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\99450\\Desktop\\examProj\\FreelancerProject\\FreelancerProject.Domain\\FreelancersProject.Domain.csproj",
         "projectName": "FreelancersProject.Domain",
-        "projectPath": "C:\\Users\\99450\\Desktop\\exam proj\\FreelancerProject\\FreelancerProject.Domain\\FreelancersProject.Domain.csproj",
+        "projectPath": "C:\\Users\\99450\\Desktop\\examProj\\FreelancerProject\\FreelancerProject.Domain\\FreelancersProject.Domain.csproj",
         "packagesPath": "C:\\Users\\99450\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\99450\\Desktop\\exam proj\\FreelancerProject\\FreelancerProject.Domain\\obj\\",
+        "outputPath": "C:\\Users\\99450\\Desktop\\examProj\\FreelancerProject\\FreelancerProject.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -148,14 +148,14 @@
         }
       }
     },
-    "C:\\Users\\99450\\Desktop\\exam proj\\FreelancerProject\\FreelancerProject.IoC\\FreelancersProject.IoC.csproj": {
+    "C:\\Users\\99450\\Desktop\\examProj\\FreelancerProject\\FreelancerProject.IoC\\FreelancersProject.IoC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\99450\\Desktop\\exam proj\\FreelancerProject\\FreelancerProject.IoC\\FreelancersProject.IoC.csproj",
+        "projectUniqueName": "C:\\Users\\99450\\Desktop\\examProj\\FreelancerProject\\FreelancerProject.IoC\\FreelancersProject.IoC.csproj",
         "projectName": "FreelancersProject.IoC",
-        "projectPath": "C:\\Users\\99450\\Desktop\\exam proj\\FreelancerProject\\FreelancerProject.IoC\\FreelancersProject.IoC.csproj",
+        "projectPath": "C:\\Users\\99450\\Desktop\\examProj\\FreelancerProject\\FreelancerProject.IoC\\FreelancersProject.IoC.csproj",
         "packagesPath": "C:\\Users\\99450\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\99450\\Desktop\\exam proj\\FreelancerProject\\FreelancerProject.IoC\\obj\\",
+        "outputPath": "C:\\Users\\99450\\Desktop\\examProj\\FreelancerProject\\FreelancerProject.IoC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -176,11 +176,11 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "C:\\Users\\99450\\Desktop\\exam proj\\FreelancerProject\\FreelancerProject.Application\\FreelancersProject.Application.csproj": {
-                "projectPath": "C:\\Users\\99450\\Desktop\\exam proj\\FreelancerProject\\FreelancerProject.Application\\FreelancersProject.Application.csproj"
+              "C:\\Users\\99450\\Desktop\\examProj\\FreelancerProject\\FreelancerProject.Application\\FreelancersProject.Application.csproj": {
+                "projectPath": "C:\\Users\\99450\\Desktop\\examProj\\FreelancerProject\\FreelancerProject.Application\\FreelancersProject.Application.csproj"
               },
-              "C:\\Users\\99450\\Desktop\\exam proj\\FreelancerProject\\FreelancerProject.Persistence\\FreelancersProject.Persistence.csproj": {
-                "projectPath": "C:\\Users\\99450\\Desktop\\exam proj\\FreelancerProject\\FreelancerProject.Persistence\\FreelancersProject.Persistence.csproj"
+              "C:\\Users\\99450\\Desktop\\examProj\\FreelancerProject\\FreelancerProject.Persistence\\FreelancersProject.Persistence.csproj": {
+                "projectPath": "C:\\Users\\99450\\Desktop\\examProj\\FreelancerProject\\FreelancerProject.Persistence\\FreelancersProject.Persistence.csproj"
               }
             }
           }
@@ -231,14 +231,14 @@
         }
       }
     },
-    "C:\\Users\\99450\\Desktop\\exam proj\\FreelancerProject\\FreelancerProject.Persistence\\FreelancersProject.Persistence.csproj": {
+    "C:\\Users\\99450\\Desktop\\examProj\\FreelancerProject\\FreelancerProject.Persistence\\FreelancersProject.Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\99450\\Desktop\\exam proj\\FreelancerProject\\FreelancerProject.Persistence\\FreelancersProject.Persistence.csproj",
+        "projectUniqueName": "C:\\Users\\99450\\Desktop\\examProj\\FreelancerProject\\FreelancerProject.Persistence\\FreelancersProject.Persistence.csproj",
         "projectName": "FreelancersProject.Persistence",
-        "projectPath": "C:\\Users\\99450\\Desktop\\exam proj\\FreelancerProject\\FreelancerProject.Persistence\\FreelancersProject.Persistence.csproj",
+        "projectPath": "C:\\Users\\99450\\Desktop\\examProj\\FreelancerProject\\FreelancerProject.Persistence\\FreelancersProject.Persistence.csproj",
         "packagesPath": "C:\\Users\\99450\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\99450\\Desktop\\exam proj\\FreelancerProject\\FreelancerProject.Persistence\\obj\\",
+        "outputPath": "C:\\Users\\99450\\Desktop\\examProj\\FreelancerProject\\FreelancerProject.Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -259,8 +259,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "C:\\Users\\99450\\Desktop\\exam proj\\FreelancerProject\\FreelancerProject.Domain\\FreelancersProject.Domain.csproj": {
-                "projectPath": "C:\\Users\\99450\\Desktop\\exam proj\\FreelancerProject\\FreelancerProject.Domain\\FreelancersProject.Domain.csproj"
+              "C:\\Users\\99450\\Desktop\\examProj\\FreelancerProject\\FreelancerProject.Domain\\FreelancersProject.Domain.csproj": {
+                "projectPath": "C:\\Users\\99450\\Desktop\\examProj\\FreelancerProject\\FreelancerProject.Domain\\FreelancersProject.Domain.csproj"
               }
             }
           }

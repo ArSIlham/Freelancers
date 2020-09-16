@@ -8,7 +8,8 @@ namespace FreelancersProject.Domain.Concretes
 {
 	public class ApplicationUser : BaseEntity<int>
 	{
-
+        public string Name { get; set; }
+        public string SurName { get; set; }
         public string UserName { get; set; }
 
         public string NormalizedUserName { get; set; }

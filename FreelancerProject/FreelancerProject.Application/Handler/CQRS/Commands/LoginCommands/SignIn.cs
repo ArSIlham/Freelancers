@@ -20,6 +20,10 @@ namespace FreelancersProject.Application.Handler.CQRS.Commands.LoginCommands
 		public class SignInRequest : IRequest<BaseResponses<ApplicationUser>>
 		{
 			[Required]
+			public string Name { get; set; }
+			[Required]
+			public string SurName { get; set; }
+			[Required]
 			public string UserName { get; set; }
 			[Required]
 			public string Email { get; set; }

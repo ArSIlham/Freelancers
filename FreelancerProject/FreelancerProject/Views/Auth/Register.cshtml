@@ -43,13 +43,31 @@
 								<div class="row register-form">
 									<div class="col-md-6">
 										<div class="form-group">
+											<input type="text" class="form-control" placeholder="Name *" asp-for="@Model.Name" value="" />
+										</div>
+										<div class="form-group">
 											<input type="text" class="form-control" placeholder="UserName *" asp-for="@Model.UserName" value="" />
 										</div>
+									</div>
+									<div class="col-md-6">
 										<div class="form-group">
-											<input type="password" class="form-control" placeholder="Password *" asp-for="@Model.PasswordHash" value="" />
+											<input type="text" class="form-control" placeholder="Surname *" asp-for="@Model.SurName" value="" />
 										</div>
 										<div class="form-group">
-											<input type="password" class="form-control" placeholder="Confirm Password *" asp-for="@Model.ConfirmPassword" value="" />
+											<input type="text" minlength="12" maxlength="12" name="txtEmpPhone" asp-for="@Model.PhoneNumber" class="form-control" placeholder="994502223322 *" value="" />
+										</div>
+										
+
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<input type="email" class="form-control" asp-for="@Model.Email" placeholder="Your Email *" value="" />
+										</div>
+										<div class="form-group">
+											<select class="form-control" asp-items="@ViewBag.CountryItems" asp-for="@Model.CountryId">
+												<option class="hidden" selected disabled>Please select your country</option>
+
+											</select>
 										</div>
 										<div class="form-group">
 											<div class="maxl">
@@ -66,18 +84,15 @@
 									</div>
 									<div class="col-md-6">
 										<div class="form-group">
-											<input type="email" class="form-control" asp-for="@Model.Email" placeholder="Your Email *" value="" />
-										</div>
-										<div class="form-group">
-											<input type="text" minlength="12" maxlength="12" name="txtEmpPhone" asp-for="@Model.PhoneNumber" class="form-control" placeholder="994502223322 *" value="" />
+											<input type="password" class="form-control" placeholder="Password *" asp-for="@Model.PasswordHash" value="" />
 										</div>
 
 										<div class="form-group">
-											<select class="form-control" asp-items="@ViewBag.CountryItems" asp-for="@Model.CountryId">
-												<option class="hidden" selected disabled>Please select your country</option>
-
-											</select>
+											<input type="password" class="form-control" placeholder="Confirm Password *" asp-for="@Model.ConfirmPassword" value="" />
 										</div>
+
+
+										
 										<input type="submit" class="btn btn-primary" value="Register" />
 									</div>
 								</div>
