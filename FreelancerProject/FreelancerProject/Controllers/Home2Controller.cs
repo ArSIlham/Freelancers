@@ -24,7 +24,7 @@ namespace FreelancersProject.Controllers
         [HttpGet(nameof(GetAll))]
         public async Task<IActionResult> GetAll()
         {
-            var result = await Mediator.Send(new GetAllOwner.GetAllOwnerRequest());
+            var result = await Mediator.Send(new GettAllProject.GetAllProjectRequest());
             return HandleResponse.Response(result);
         }
      

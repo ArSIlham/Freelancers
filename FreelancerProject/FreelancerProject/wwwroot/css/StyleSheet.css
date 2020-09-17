@@ -1,0 +1,20 @@
+﻿body {
+}
+
+.Atag {
+    border: rgb(80, 77, 77) solid 0.01px;
+    color: rgb(80, 77, 77);
+    cursor: pointer;
+    margin: 5px;
+}
+
+
+.Atag:hover {
+
+    border: solid 1px blueviolet;
+
+    background: cadetblue;
+
+    cursor: pointer;
+
+}

@@ -69,9 +69,17 @@ namespace FreelancersProject.Application.Services
 			throw new NotImplementedException();
 		}
 
-		public Task<IEnumerable<Project>> GetAll()
+		public async Task<IEnumerable<Project>> GetAll()
 		{
-			throw new NotImplementedException();
+			try
+			{
+				var result = await projectRepository.GetAll();
+				return result;
+			}
+			catch (Exception ex)
+			{
+				throw new RestException(System.Net.HttpStatusCode.NotFound, ex.Message);
+			}
 		}
 
 		public Task<Project> GetById(string id)

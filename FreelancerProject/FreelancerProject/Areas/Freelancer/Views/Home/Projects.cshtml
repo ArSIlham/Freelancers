@@ -1,4 +1,4 @@
-﻿
+﻿@model List<FreelancersProject.Domain.Concretes.Project>
 @{
     ViewData["Title"] = "Projects";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -6,3 +6,28 @@
 
 <h1>Projects</h1>
 
+<link href="~/css/StyleSheet.css" rel="stylesheet" />
+<div style=" margin: 0px 300px 0px 350px;">
+
+    @foreach (var item in Model)
+    {
+        
+        <div class="card Hoverr" >
+            <div class="card-header">
+                <p>@item.Title</p>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">@item.Description</h5>
+                <p class="card-text">@item.OwnerId</p>
+                <p class="card-text" style=" margin: 0px 0px 0px 10px;">
+                <p class="card-text">
+                    <a class="Atag border border-primary" href="#">C# Asp.Net Core </a>
+                    <a class="Atag border border-primary" href="#">Web Desing </a>
+                    <a class="Atag border border-primary" href="#">JavaScript </a>
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    }
+
+</div>

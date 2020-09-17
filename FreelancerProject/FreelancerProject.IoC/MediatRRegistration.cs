@@ -13,7 +13,8 @@ namespace FreelancersProject.IoC
         public static void RegisterMediatR(IServiceCollection services)
         {
             //Owner
-            services.AddMediatR(Assembly.GetAssembly(typeof(GetAllOwner.GetAllOwnerRequest)));
+            services.AddMediatR(Assembly.GetAssembly(typeof(GettAllProject.GetAllProjectRequest)));
+
 
 
         }

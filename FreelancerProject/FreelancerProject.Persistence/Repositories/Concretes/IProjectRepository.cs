@@ -41,7 +41,13 @@ namespace FreelancersProject.Persistence.Repositories.Concretes
 
 		private string DeleteSql = "delete from Projects where Id=@Id";
 		private string UpdateSql = "update Projects set Title=@Title,Descriprion=@Description, MinPrice=@MinPrice, MaxPrice=@MaxPrice, Status=@Status where Id=@Id";
-		private string GetAllSql = "select * from Projects";
+		private string GetAllSql = @"select AU.UserName,P.* from ApplicationUser as AU inner join ApplicationUserRole as AUR
+on AU.Id = AUR.UserId
+inner join ApplicationRole as AR
+on AR.Id = AUR.RoleId
+inner join Projects as P 
+on p.OwnerId = AU.Id
+";
 		private string GetProjectByOwnerIdSql = "select * from Projects where OwnerId=@ownerId";
 		private string GetProjectByStatusSql = "select * from Projects where Status=@status";
 		private string GetProjectByCountrySql = "select * from Projects where CountryId=@countryId";
@@ -76,9 +82,18 @@ namespace FreelancersProject.Persistence.Repositories.Concretes
 			throw new NotImplementedException();
 		}
 
-		public Task<IEnumerable<Project>> GetAll()
+		public async Task<IEnumerable<Project>> GetAll()
 		{
-			throw new NotImplementedException();
+			try
+			{
+				var result = await unitOfWork.GetConnection().QueryAsync<Project>(GetAllSql, null, unitOfWork.GetTransaction());
+				return result;
+			}
+			catch (Exception ex)
+			{
+
+				throw ex;
+			}
 		}
 
 		public async Task<Project> GetById(string id)
