@@ -6,7 +6,7 @@ namespace FreelancersProject.Domain.Concretes
 {
 	public enum Statuses
 	{
-		Pending, Waiting, Completed 
+		Pending, Waiting, Completed, Confirmed,Cancelled
 	}
 
 }

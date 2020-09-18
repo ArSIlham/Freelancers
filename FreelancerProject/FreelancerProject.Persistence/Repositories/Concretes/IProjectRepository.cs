@@ -18,6 +18,7 @@ namespace FreelancersProject.Persistence.Repositories.Concretes
 		//GetProjectByStatus(string status)
 		//GetProjectByOwnerId(Guid ownerId)
 		Task AddSkillsToProject(List<ProjectSkill> projectSkills);
+		Task<IEnumerable<Project>> GetProjectByOwnerId(int ownerId);
 
 	}
 
@@ -48,7 +49,7 @@ on AR.Id = AUR.RoleId
 inner join Projects as P 
 on p.OwnerId = AU.Id
 ";
-		private string GetProjectByOwnerIdSql = "select * from Projects where OwnerId=@ownerId";
+		private string GetProjectByOwnerIdSql = "select * from Projects where OwnerId=@OwnerId";
 		private string GetProjectByStatusSql = "select * from Projects where Status=@status";
 		private string GetProjectByCountrySql = "select * from Projects where CountryId=@countryId";
 		private string GetProjectByPriceSql = "select * from Projects where MinPrice>@price and maxPrice<@price";
@@ -124,6 +125,20 @@ on p.OwnerId = AU.Id
 				await unitOfWork.GetConnection().ExecuteAsync(AddSkillProjectSkill, projectSkills, unitOfWork.GetTransaction());
 
 
+			}
+			catch (Exception ex)
+			{
+
+				throw ex;
+			}
+		}
+
+		public async Task<IEnumerable<Project>> GetProjectByOwnerId(int ownerId)
+		{
+			try
+			{
+				var result = await unitOfWork.GetConnection().QueryAsync<Project>(GetProjectByOwnerIdSql, new { OwnerId = ownerId.ToString() }, unitOfWork.GetTransaction());
+				return result as IEnumerable<Project>;
 			}
 			catch (Exception ex)
 			{

@@ -17,6 +17,7 @@ namespace FreelancersProject.Application.Services
 	public interface IProjectService : IBaseServices<Project>
 	{
 		Task AddSkillsToProject(List<ProjectSkill> projectSkills);
+		Task<IEnumerable<Project>> GetProjectByOwnerId(int id);
 	}
 	public class ProjectService : IProjectService
 	{
@@ -87,9 +88,24 @@ namespace FreelancersProject.Application.Services
 			throw new NotImplementedException();
 		}
 
+		public async  Task<IEnumerable<Project>> GetProjectByOwnerId(int id)
+		{
+			try
+			{
+				var result = await projectRepository.GetProjectByOwnerId(id);
+				return result;
+			}
+			catch (Exception ex)
+			{
+
+				throw new RestException(HttpStatusCode.NotFound, ex.Message);
+			}
+		}
+
 		public Task<Project> Update(Project entity)
 		{
 			throw new NotImplementedException();
 		}
+
 	}
 }

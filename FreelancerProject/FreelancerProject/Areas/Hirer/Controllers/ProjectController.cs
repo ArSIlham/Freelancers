@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using FreelancersProject.Application.Common;
 using FreelancersProject.Application.DTOs;
 using FreelancersProject.Application.Handler.CQRS.Commands.ProjectCommands;
+using FreelancersProject.Application.Handler.CQRS.Queries.ProjectQueries;
 using FreelancersProject.Application.Handler.CQRS.Queries.SkillQueries;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
@@ -24,9 +25,14 @@ namespace FreelancersProject.Areas.Hirer.Controllers
 		{
 			this.mediator = mediator;
 		}
-		public IActionResult MyProjectss()
+		public async Task<IActionResult> MyProjectss()
 		{
-			return View();
+			var username = User.Identity.Name;
+			var projList = new ProjectList.ProjectListRequest() { Username = username };
+
+			var result = await mediator.Send(projList);
+
+			return View(result.Entity);
 		}
 		[HttpGet]
 		public async Task<IActionResult> CreateProject()
@@ -80,6 +86,11 @@ namespace FreelancersProject.Areas.Hirer.Controllers
 		}
 
 		public IActionResult OfferProject()
+		{
+			return View();
+		}
+
+		public IActionResult ProjectDetails([FromQuery]string projectId)
 		{
 			return View();
 		}

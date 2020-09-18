@@ -56,3 +56,15 @@ C:\Free\FreelancerProject\FreelancerProject.Persistence\obj\Debug\netstandard2.0
 C:\Free\FreelancerProject\FreelancerProject.Persistence\obj\Debug\netstandard2.0\FreelancersProject.Persistence.csproj.CopyComplete
 C:\Free\FreelancerProject\FreelancerProject.Persistence\obj\Debug\netstandard2.0\FreelancersProject.Persistence.dll
 C:\Free\FreelancerProject\FreelancerProject.Persistence\obj\Debug\netstandard2.0\FreelancersProject.Persistence.pdb
+C:\Users\99450\Desktop\Freelancers\FreelancerProject\FreelancerProject.Persistence\bin\Debug\netstandard2.0\FreelancersProject.Persistence.deps.json
+C:\Users\99450\Desktop\Freelancers\FreelancerProject\FreelancerProject.Persistence\bin\Debug\netstandard2.0\FreelancersProject.Persistence.dll
+C:\Users\99450\Desktop\Freelancers\FreelancerProject\FreelancerProject.Persistence\bin\Debug\netstandard2.0\FreelancersProject.Persistence.pdb
+C:\Users\99450\Desktop\Freelancers\FreelancerProject\FreelancerProject.Persistence\bin\Debug\netstandard2.0\FreelancersProject.Domain.dll
+C:\Users\99450\Desktop\Freelancers\FreelancerProject\FreelancerProject.Persistence\bin\Debug\netstandard2.0\FreelancersProject.Domain.pdb
+C:\Users\99450\Desktop\Freelancers\FreelancerProject\FreelancerProject.Persistence\obj\Debug\netstandard2.0\FreelancersProject.Persistence.csprojAssemblyReference.cache
+C:\Users\99450\Desktop\Freelancers\FreelancerProject\FreelancerProject.Persistence\obj\Debug\netstandard2.0\FreelancersProject.Persistence.AssemblyInfoInputs.cache
+C:\Users\99450\Desktop\Freelancers\FreelancerProject\FreelancerProject.Persistence\obj\Debug\netstandard2.0\FreelancersProject.Persistence.AssemblyInfo.cs
+C:\Users\99450\Desktop\Freelancers\FreelancerProject\FreelancerProject.Persistence\obj\Debug\netstandard2.0\FreelancersProject.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\99450\Desktop\Freelancers\FreelancerProject\FreelancerProject.Persistence\obj\Debug\netstandard2.0\FreelancersProject.Persistence.csproj.CopyComplete
+C:\Users\99450\Desktop\Freelancers\FreelancerProject\FreelancerProject.Persistence\obj\Debug\netstandard2.0\FreelancersProject.Persistence.dll
+C:\Users\99450\Desktop\Freelancers\FreelancerProject\FreelancerProject.Persistence\obj\Debug\netstandard2.0\FreelancersProject.Persistence.pdb

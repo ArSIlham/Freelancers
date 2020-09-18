@@ -1,8 +1,75 @@
-﻿
+﻿@model IEnumerable<ProjectDTO>
 @{
-    ViewData["Title"] = "MyProjects";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+	ViewData["Title"] = "MyProjects";
+	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>MyProjects</h1>
+<div class="d-flex align-items-center p-3 my-3 bg-purple rounded box-shadow">
+
+	<div class="lh-100 text-center ">
+
+	</div>
+</div>
+<div class="my-3 p-3 bg-white rounded box-shadow">
+
+
+
+	@foreach (var item in Model)
+	{
+		<div class="row">
+			<div class="col-sm-2 pb-1 mb-0 pt-1 border-bottom border-gray text-center">
+				<p class="font-weight-bold small mb-3 ">
+
+					Create Date:
+					<strong class="d-block text-dark small">
+
+						@item.Project.CreateDate.ToShortDateString()
+					</strong>
+				</p>
+			</div>
+
+			<div class="col-sm-2 pb-1 mb-0 pt-1 border-bottom border-gray">
+				<p class="font-weight-bold small mb-3 ">@item.Project.MinPrice - @item.Project.MaxPrice $USD</p>
+				@if (item.Project.Status == Statuses.Pending.ToString())
+				{
+
+					<span class="badge badge-warning">@item.Project.Status</span>
+				}
+				@if (item.Project.Status == Statuses.Waiting.ToString())
+				{
+
+					<span class="badge badge-danger">@item.Project.Status</span>
+				}
+				@if (item.Project.Status == Statuses.Completed.ToString())
+				{
+
+					<span class="badge badge-success">@item.Project.Status</span>
+				}
+
+			</div>
+			<div class="col-sm-8  pb-1 mb-0 pt-1 border-bottom border-gray">
+				<div class="media text-muted ">
+
+					<p class="media-body  small  ">
+						<strong class="d-block text-dark">
+							<a asp-action="ProjectDetails" asp-area="Hirer" asp-controller="Project" asp-route-projectI="@item.Project.Id">@item.Project.Title</a>
+						</strong>
+
+						@if (item.Project.Description.Length > 100)@item.Project.Description.Substring(0, 100)
+						else @item.Project.Description
+
+						<strong class="d-block"> Skills:
+							@foreach (var skill in item.ProjectSkills)
+							{
+								@skill.Name <span>  </span>
+							}
+						</strong>
+					</p>
+					<br />
+				</div>
+			</div>
+		</div>
+	}
+</div>
+
 
