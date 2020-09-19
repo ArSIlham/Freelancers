@@ -68,3 +68,14 @@ C:\Users\99450\Desktop\Freelancers\FreelancerProject\FreelancerProject.Persisten
 C:\Users\99450\Desktop\Freelancers\FreelancerProject\FreelancerProject.Persistence\obj\Debug\netstandard2.0\FreelancersProject.Persistence.csproj.CopyComplete
 C:\Users\99450\Desktop\Freelancers\FreelancerProject\FreelancerProject.Persistence\obj\Debug\netstandard2.0\FreelancersProject.Persistence.dll
 C:\Users\99450\Desktop\Freelancers\FreelancerProject\FreelancerProject.Persistence\obj\Debug\netstandard2.0\FreelancersProject.Persistence.pdb
+C:\CFreel\FreelancerProject\FreelancerProject.Persistence\bin\Debug\netstandard2.0\FreelancersProject.Persistence.deps.json
+C:\CFreel\FreelancerProject\FreelancerProject.Persistence\bin\Debug\netstandard2.0\FreelancersProject.Persistence.dll
+C:\CFreel\FreelancerProject\FreelancerProject.Persistence\bin\Debug\netstandard2.0\FreelancersProject.Persistence.pdb
+C:\CFreel\FreelancerProject\FreelancerProject.Persistence\bin\Debug\netstandard2.0\FreelancersProject.Domain.dll
+C:\CFreel\FreelancerProject\FreelancerProject.Persistence\bin\Debug\netstandard2.0\FreelancersProject.Domain.pdb
+C:\CFreel\FreelancerProject\FreelancerProject.Persistence\obj\Debug\netstandard2.0\FreelancersProject.Persistence.csprojAssemblyReference.cache
+C:\CFreel\FreelancerProject\FreelancerProject.Persistence\obj\Debug\netstandard2.0\FreelancersProject.Persistence.AssemblyInfoInputs.cache
+C:\CFreel\FreelancerProject\FreelancerProject.Persistence\obj\Debug\netstandard2.0\FreelancersProject.Persistence.AssemblyInfo.cs
+C:\CFreel\FreelancerProject\FreelancerProject.Persistence\obj\Debug\netstandard2.0\FreelancersProject.Persistence.csproj.CopyComplete
+C:\CFreel\FreelancerProject\FreelancerProject.Persistence\obj\Debug\netstandard2.0\FreelancersProject.Persistence.dll
+C:\CFreel\FreelancerProject\FreelancerProject.Persistence\obj\Debug\netstandard2.0\FreelancersProject.Persistence.pdb

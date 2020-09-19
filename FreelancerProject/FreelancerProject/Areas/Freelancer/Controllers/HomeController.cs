@@ -25,5 +25,17 @@ namespace FreelancersProject.Areas.Freelancer.Controllers
             var list = await mediator.Send(new GetAllProject.GetAllProjectRequest());
             return View(list.Entity);
         }
+        [HttpGet]
+        public async Task<IActionResult> detail(GetProjectSelectID.GetProjectSelectIDRequest get)
+        {
+            
+
+             var list = await mediator.Send(get);
+            
+            return View(list.Entity);
+
+
+        }
+
     }
 }

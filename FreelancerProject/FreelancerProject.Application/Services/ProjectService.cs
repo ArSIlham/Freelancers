@@ -83,9 +83,17 @@ namespace FreelancersProject.Application.Services
 			}
 		}
 
-		public Task<Project> GetById(string id)
+		public async Task<Project> GetById(string id)
 		{
-			throw new NotImplementedException();
+			try
+			{
+				var result = await projectRepository.GetById(id);
+				return result;
+			}
+			catch (Exception ex)
+			{
+				throw new RestException(System.Net.HttpStatusCode.NotFound, ex.Message);
+			}
 		}
 
 		public async  Task<IEnumerable<Project>> GetProjectByOwnerId(int id)

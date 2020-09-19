@@ -1,4 +1,5 @@
-﻿using FreelancersProject.Application.Handler.CQRS.Queries;
+﻿using FreelancersProject.Application.Handler.CQRS.Commands.ProjectCommands;
+using FreelancersProject.Application.Handler.CQRS.Queries;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -14,6 +15,9 @@ namespace FreelancersProject.IoC
         {
             //Owner
             services.AddMediatR(Assembly.GetAssembly(typeof(GettAllProject.GetAllProjectRequest)));
+
+            services.AddMediatR(Assembly.GetAssembly(typeof(GetProjectSelectID.GetProjectSelectIDRequest)));
+            
 
 
 
