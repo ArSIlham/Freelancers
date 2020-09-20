@@ -3880,11 +3880,12 @@
       ]
     },
     "runtime.native.System.Security.Cryptography.Apple/4.3.0": {
-      "sha512": "jwjwlEL0Elv6gwoyaokRn12nv/JE+UW/DXJEbzhjCPvGbef36StnHKc9XaZD/rGWqYicrphZ7eumR/jdmNcjRg==",
+      "sha512": "DloMk88juo0OuOWr56QG7MNchmafTLYWvABy36izkrLI5VledI0rq28KGs1i9wbpeT9NPQrx/wTf8U2vazqQ3Q==",
       "type": "package",
       "path": "runtime.native.system.security.cryptography.apple/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/_._",
@@ -3935,11 +3936,12 @@
       ]
     },
     "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.Apple/4.3.0": {
-      "sha512": "Kh9W4agE0r/hK8AX1LvyQI2NrKHBL8pO0gRoDTdDb0LL6Ta1Z2OtFx3lOaAE0ZpCUc/dt9Wzs3rA7a3IsKdOVA==",
+      "sha512": "kVXCuMTrTlxq4XOOMAysuNwsXWpYeboGddNGpIgNSZmv1b6r/s/DPk0fYMB7Q5Qo4bY68o48jt4T4y5BVecbCQ==",
       "type": "package",
       "path": "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.apple/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.apple.4.3.0.nupkg.sha512",
@@ -7548,27 +7550,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\99450\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\99450\\Desktop\\Freelancers\\FreelancerProject\\FreelancerProject\\FreelancersProject.csproj",
+      "projectUniqueName": "C:\\CFreel\\FreelancerProject\\FreelancerProject\\FreelancersProject.csproj",
       "projectName": "FreelancersProject",
-      "projectPath": "C:\\Users\\99450\\Desktop\\Freelancers\\FreelancerProject\\FreelancerProject\\FreelancersProject.csproj",
-      "packagesPath": "C:\\Users\\99450\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\99450\\Desktop\\Freelancers\\FreelancerProject\\FreelancerProject\\obj\\",
+      "projectPath": "C:\\CFreel\\FreelancerProject\\FreelancerProject\\FreelancersProject.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\CFreel\\FreelancerProject\\FreelancerProject\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\99450\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -7580,11 +7575,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\99450\\Desktop\\Freelancers\\FreelancerProject\\FreelancerProject.Application\\FreelancersProject.Application.csproj": {
-              "projectPath": "C:\\Users\\99450\\Desktop\\Freelancers\\FreelancerProject\\FreelancerProject.Application\\FreelancersProject.Application.csproj"
+            "C:\\CFreel\\FreelancerProject\\FreelancerProject.Application\\FreelancersProject.Application.csproj": {
+              "projectPath": "C:\\CFreel\\FreelancerProject\\FreelancerProject.Application\\FreelancersProject.Application.csproj"
             },
-            "C:\\Users\\99450\\Desktop\\Freelancers\\FreelancerProject\\FreelancerProject.IoC\\FreelancersProject.IoC.csproj": {
-              "projectPath": "C:\\Users\\99450\\Desktop\\Freelancers\\FreelancerProject\\FreelancerProject.IoC\\FreelancersProject.IoC.csproj"
+            "C:\\CFreel\\FreelancerProject\\FreelancerProject.IoC\\FreelancersProject.IoC.csproj": {
+              "projectPath": "C:\\CFreel\\FreelancerProject\\FreelancerProject.IoC\\FreelancersProject.IoC.csproj"
             }
           }
         }
@@ -7633,7 +7628,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
       }
     }
   },

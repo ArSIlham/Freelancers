@@ -77,7 +77,9 @@ namespace FreelancersProject
             app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute(name:"areaRoute",  pattern:"{area:exists}/{controller=Home}/{action=Main}/{id?}");
+                endpoints.MapControllerRoute(
+                    name:"areaRoute", 
+                    pattern:"{area:exists}/{controller=Home}/{action=Main}/{id?}");
 
                 endpoints.MapControllerRoute(
                     name: "default",

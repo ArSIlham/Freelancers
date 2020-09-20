@@ -13,6 +13,7 @@ namespace FreelancersProject.Areas.Freelancer.Controllers
 		
 		public IActionResult MyProjects()
 		{
+
 			return View();
 		}
 
