@@ -18,6 +18,7 @@ namespace FreelancersProject.Application.Common
 
             CreateMap<SignIn.SignInRequest, ApplicationUser>();
             CreateMap<CreateProject.CreateProjectRequest, Project>();
+            CreateMap<OfferProject.OfferProjectRequest, OfferedProject>();
 
 
 

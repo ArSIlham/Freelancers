@@ -42,9 +42,9 @@
 
 						<div class="form-group">
 							<h5><label class="control-label" for="minPrice">Price</label></h5>
-							<input type="number" class="form-control " asp-for="@Model.MinPrice"
-								   id="minPrice" aria-describedby="inputGroup-sizing-sm" placeholder="e.g. Min Price">
-							<input type="number" class="form-control " asp-for="@Model.MaxPrice"
+							<input type="number" class="form-control " asp-for="@Model.MinPrice" min="0" step="any"
+ 								   id="minPrice" aria-describedby="inputGroup-sizing-sm" placeholder="e.g. Min Price">
+							<input type="number" class="form-control " asp-for="@Model.MaxPrice" min="0" step="any"
 								   id="MaxPrice" aria-describedby="inputGroup-sizing-sm" placeholder="e.g. Max Price">
 						</div>
 

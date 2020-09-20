@@ -357,6 +357,14 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Bootstrap.v3.Datetimepicker": {
+              "target": "Package",
+              "version": "[4.17.45, )"
+            },
+            "Bootstrap.v3.Datetimepicker.CSS": {
+              "target": "Package",
+              "version": "[4.17.45, )"
+            },
             "MediatR": {
               "target": "Package",
               "version": "[8.1.0, )"

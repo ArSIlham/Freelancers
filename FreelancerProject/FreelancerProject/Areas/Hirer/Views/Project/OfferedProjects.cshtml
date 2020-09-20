@@ -1,0 +1,86 @@
+﻿@model IEnumerable<OfferedProjectDTO>
+@{
+	ViewData["Title"] = "OfferedProjects";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="d-flex align-items-center p-3 my-3 bg-purple rounded box-shadow">
+
+	<div class="lh-100 text-center ">
+
+	</div>
+</div>
+<div class="my-3 p-3 bg-white rounded box-shadow">
+
+
+
+	@foreach (var item in Model)
+	{
+		<div class="row">
+			<div class="col-sm-2 pb-1 mb-0 pt-1 border-bottom border-gray text-center">
+				<p class="font-weight-bold small mb-3 ">
+
+					Offer Date:
+					<strong class="d-block text-dark small">
+
+						@item.OfferedProject.OfferedDate.ToShortDateString()
+					</strong>
+				</p>
+			</div>
+
+			<div class="col-sm-2 pb-1 mb-0 pt-1 border-bottom border-gray">
+				<p class="font-weight-bold small mb-3 ">@item.OfferedProject.Price  $USD</p>
+				@if (!item.OfferedProject.IsAccepted)
+				{
+
+					<span class="badge badge-danger">Waiting for Approve</span>
+				}
+				else 
+				{
+
+					<span class="badge badge-success">Approved</span>
+				}
+				
+
+			</div>
+			<div class="col-sm-8  pb-1 mb-0 pt-1 border-bottom border-gray">
+				<div class="media text-muted ">
+
+					<p class="media-body  small  ">
+						<strong class="d-block text-dark">
+							<a >@item.OfferedProject.Title</a>
+						</strong>
+
+						@if (item.OfferedProject.Description.Length > 100)@item.OfferedProject.Description.Substring(0, 100)
+						else @item.OfferedProject.Description
+
+						<strong class="d-block">
+							FreeLancer: @item.FreeLancer.Name @item.FreeLancer.SurName
+
+						</strong>
+
+						<strong class="d-block">
+							Country: @item.FreeLancerCountry.Name
+
+						</strong>
+						@if(item.OfferedProject.AcceptedDate.Year > 1990)
+						{
+						<strong class="d-block">
+							Accepted Date: @item.OfferedProject.AcceptedDate
+
+						</strong>
+						<strong class="d-block">
+							Deadline: @item.OfferedProject.DeadlineDayCounts
+
+						</strong>
+
+						}
+					</p>
+					<br />
+				</div>
+			</div>
+		</div>
+	}
+</div>
+
+

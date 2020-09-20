@@ -13,6 +13,7 @@ namespace FreelancersProject.Persistence.Repositories.Concretes
 	public interface ISkillRepository  :IRepository<Skill>
 	{
 		Task<IEnumerable<Skill>> GetSkillsOfProject(Guid Id);
+		Task<IEnumerable<Skill>> GetSkillsOfFreelancer(int Id);
 	}
 
 	public class SkillRepository : ISkillRepository
@@ -30,6 +31,9 @@ namespace FreelancersProject.Persistence.Repositories.Concretes
 		private string GetProjectSkillsSql = $@"select a.Id, a.Name from ProjectSkills as p, Skills as a 
                                                 where p.SkillId=a.Id 
                                                 and p.ProjectId=@projId";
+		private string GetFreelancerSkillsSql = $@"select a.Id, a.Name from FreelancerSkills as p, Skills as a 
+                                                where p.SkillId=a.Id 
+                                                and p.Freelancerid=@FreelancerId";
 		private readonly IUnitOfWork unitOfWork;
 
 		public Task<Guid> Add(Skill entity)
@@ -76,6 +80,20 @@ namespace FreelancersProject.Persistence.Repositories.Concretes
 			try
 			{
 				var result = await unitOfWork.GetConnection().QueryAsync<Skill>(GetProjectSkillsSql, new {projId=Id }, unitOfWork.GetTransaction());
+				return result;
+			}
+			catch (Exception ex)
+			{
+
+				throw ex;
+			}
+		}
+
+		public async Task<IEnumerable<Skill>> GetSkillsOfFreelancer(int Id)
+		{
+			try
+			{
+				var result = await unitOfWork.GetConnection().QueryAsync<Skill>(GetFreelancerSkillsSql, new { FreelancerId = Id.ToString() }, unitOfWork.GetTransaction());
 				return result;
 			}
 			catch (Exception ex)

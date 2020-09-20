@@ -52,7 +52,7 @@
 
 					<p class="media-body  small  ">
 						<strong class="d-block text-dark">
-							<a asp-action="ProjectDetails" asp-area="Hirer" asp-controller="Project" asp-route-projectI="@item.Project.Id">@item.Project.Title</a>
+							<a asp-action="ProjectDetails" asp-area="Hirer" asp-controller="Project" asp-route-projectId="@item.Project.Id">@item.Project.Title</a>
 						</strong>
 
 						@if (item.Project.Description.Length > 100)@item.Project.Description.Substring(0, 100)

@@ -1,4 +1,5 @@
-﻿using FreelancersProject.Domain.Concretes;
+﻿using Dapper;
+using FreelancersProject.Domain.Concretes;
 using FreelancersProject.Persistence.Infratructure;
 using FreelancersProject.Persistence.Repositories.Base;
 using System;
@@ -9,9 +10,9 @@ using System.Threading.Tasks;
 
 namespace FreelancersProject.Persistence.Repositories.Concretes
 {
-	public interface IBidRequestRepository: IRepository<BidRequest>
+	public interface IBidRequestRepository : IRepository<BidRequest>
 	{
-		//GetBidRequestsByProjectId(int ProjectId)
+		Task<IEnumerable<BidRequest>> GetBidRequestsByProjectId(string projectId);
 	}
 
 	public class BidRequestRepository : IBidRequestRepository
@@ -27,7 +28,7 @@ namespace FreelancersProject.Persistence.Repositories.Concretes
 		//public decimal BidPrice { get; set; }
 		//public DateTime CreateDate { get; set; }
 		//public bool IsConfirmed { get; set; }
-		private string GetAllBidRequestByProjectId = "select * from BidRequests where ProjectId=@id";
+		private string GetAllBidRequestByProjectIdSql = "select * from BidRequests where ProjectId=@ProjectId";
 		private string AddSql = "insert into BidRequests (FreelancerId, ProjectId,BidPrice, CreateDate,IsConfirmed)" +
 			"values(@FreelancerId, @ProjectId,@BidPrice, @CreateDate,@IsConfirmed)";
 		private string DeleteSql = "delete BidRequests where Id=@id;";
@@ -61,6 +62,20 @@ namespace FreelancersProject.Persistence.Repositories.Concretes
 		public Task Update(BidRequest entity)
 		{
 			throw new NotImplementedException();
+		}
+
+		public async Task<IEnumerable<BidRequest>> GetBidRequestsByProjectId(string projectId)
+		{
+			try
+			{
+				var result = await unitOfWork.GetConnection().QueryAsync<BidRequest>(GetAllBidRequestByProjectIdSql, new { ProjectId = projectId.ToString() }, unitOfWork.GetTransaction());
+				return result;
+			}
+			catch (Exception ex)
+			{
+
+				throw ex;
+			}
 		}
 	}
 }

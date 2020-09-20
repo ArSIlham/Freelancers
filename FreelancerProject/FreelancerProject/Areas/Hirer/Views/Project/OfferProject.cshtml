@@ -1,8 +1,68 @@
-﻿
+﻿@model OfferProject.OfferProjectRequest
 @{
-    ViewData["Title"] = "OfferProject";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+	ViewData["Title"] = "OfferProject";
+	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>OfferProject</h1>
+<style>
+	div.project-main {
+		background: -webkit-linear-gradient(top, #0F69C9 70%, white 50%)
+	}
+
+	.custom-input {
+	}
+</style>
+<div class="project-main container-fluid">
+	<div class="text-center text-white pt-5">
+		<h1>Want to offer project directly?</h1>
+		<p class="pt-1 text-large">
+			Contact skilled freelancers within minutes. View profiles, ratings, portfolios and chat with them. Pay the freelancer only when you are 100% satisfied with their work.
+		</p>
+
+	</div>
+
+	@* modal pencerenin bashligi *@
+	<form asp-action="OfferProject" asp-controller="Project" method="post" asp-area="Hirer">
+		<div asp-validation-summary="All"></div>
+		<div class="pt-5 pl-5 pr-5" tabindex="-1" role="dialog">
+			<div class="modal-dialog modal-lg " role="document">
+				<div class="modal-content">
+
+					<div class="modal-body">
+						<div class="form-group">
+							<h4><label class="control-label" for="ProjectTitle">Project title</label></h4>
+							<input type="text" class="form-control " asp-for="@Model.Title"
+								   id="ProjectTitle" aria-label="Large" aria-describedby="inputGroup-sizing-sm" placeholder="e.g. Build me website">
+						</div>
+
+						<div class="form-group">
+							<h4><label class="control-label" for="ProjectDesc">Project description</label></h4>
+							<input class="form-control " id="ProjectDesc" cols="40" asp-for="@Model.Description"
+								   rows="5" placeholder="e.g. Description of the project">
+						</div>
+
+						<div class="form-group">
+							<h5><label class="control-label" for="minPrice">Price</label></h5>
+							<input type="number" class="form-control " asp-for="@Model.Price" min="0" step="any"
+								   id="minPrice" aria-describedby="inputGroup-sizing-sm" placeholder="e.g. Min Price">
+							<h5><label class="control-label" for="minPrice">Deadline days</label></h5>
+							<input type="number" class="form-control " asp-for="@Model.DeadlineDayCounts" min="0"
+								   id="MaxPrice" aria-describedby="inputGroup-sizing-sm" placeholder="e.g. Days ">
+						</div>
+
+						
+
+					</div>
+					<div class="modal-footer">
+						<input hidden asp-for="@Model.OwnerUserName" value='@Model.OwnerUserName' />
+						<input hidden asp-for="@Model.FreelancerId" value='@Model.FreelancerId' />
+						<button type="submit" class="btn btn-success">Offer project</button>
+						<a type="button" class="btn btn-secondary" asp-area="Hirer" asp-controller="Project" asp-action="MakeOffer">Back</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+
 

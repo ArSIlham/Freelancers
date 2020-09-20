@@ -18,5 +18,8 @@
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <PkgMicrosoft_Extensions_ApiDescription_Server Condition=" '$(PkgMicrosoft_Extensions_ApiDescription_Server)' == '' ">C:\Users\99450\.nuget\packages\microsoft.extensions.apidescription.server\3.0.0</PkgMicrosoft_Extensions_ApiDescription_Server>
     <PkgMicrosoft_CodeAnalysis_Analyzers Condition=" '$(PkgMicrosoft_CodeAnalysis_Analyzers)' == '' ">C:\Users\99450\.nuget\packages\microsoft.codeanalysis.analyzers\2.9.4</PkgMicrosoft_CodeAnalysis_Analyzers>
+    <PkgjQuery Condition=" '$(PkgjQuery)' == '' ">C:\Users\99450\.nuget\packages\jquery\1.9.1</PkgjQuery>
+    <PkgBootstrap_v3_Datetimepicker_CSS Condition=" '$(PkgBootstrap_v3_Datetimepicker_CSS)' == '' ">C:\Users\99450\.nuget\packages\bootstrap.v3.datetimepicker.css\4.17.45</PkgBootstrap_v3_Datetimepicker_CSS>
+    <PkgBootstrap_v3_Datetimepicker Condition=" '$(PkgBootstrap_v3_Datetimepicker)' == '' ">C:\Users\99450\.nuget\packages\bootstrap.v3.datetimepicker\4.17.45</PkgBootstrap_v3_Datetimepicker>
   </PropertyGroup>
 </Project>

@@ -16,6 +16,7 @@ namespace FreelancersProject.Application.Services
 	public interface ISkillService : IBaseServices<Skill>
 	{
 		Task<IEnumerable<Skill>> GetProjectSkills(Guid id);
+		Task<IEnumerable<Skill>> GetFreelancerSkill(int id);
 	}
 	public class SkillService : ISkillService
 	{
@@ -61,6 +62,20 @@ namespace FreelancersProject.Application.Services
 		public Task<Skill> GetById(string id)
 		{
 			throw new NotImplementedException();
+		}
+
+		public async Task<IEnumerable<Skill>> GetFreelancerSkill(int id)
+		{
+			try
+			{
+				var result = await skillRepository.GetSkillsOfFreelancer(id);
+				return result;
+			}
+			catch (Exception ex)
+			{
+
+				throw new RestException(HttpStatusCode.NotFound, ex.Message);
+			}
 		}
 
 		public async Task<IEnumerable<Skill>> GetProjectSkills(Guid id)

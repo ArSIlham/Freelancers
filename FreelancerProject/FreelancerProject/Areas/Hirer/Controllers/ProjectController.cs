@@ -1,13 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using FreelancersProject.Application.Common;
 using FreelancersProject.Application.DTOs;
 using FreelancersProject.Application.Handler.CQRS.Commands.ProjectCommands;
+using FreelancersProject.Application.Handler.CQRS.Queries.Freelancer;
+using FreelancersProject.Application.Handler.CQRS.Queries.OfferedProjectQueries;
 using FreelancersProject.Application.Handler.CQRS.Queries.ProjectQueries;
 using FreelancersProject.Application.Handler.CQRS.Queries.SkillQueries;
+using FreelancersProject.Persistence.Repositories.Concretes;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -85,14 +90,67 @@ namespace FreelancersProject.Areas.Hirer.Controllers
 			
 		}
 
-		public IActionResult OfferProject()
+		public  async Task<IActionResult> MakeOffer()
 		{
-			return View();
+			var users = await mediator.Send(new FreelancerList.FreelancerListRequest());
+			return View(users.Entity);
+		}
+		[HttpGet]
+		public   IActionResult OfferProject(string freelancerId)
+		{
+			var username = User.Identity.Name;
+			var model = new OfferProject.OfferProjectRequest() { OwnerUserName = username, FreelancerId=Convert.ToInt32(freelancerId) };
+
+			return View(model);
 		}
 
-		public IActionResult ProjectDetails([FromQuery]string projectId)
+		[HttpPost]
+		public async Task<IActionResult> OfferProject(OfferProject.OfferProjectRequest model)
 		{
-			return View();
+			if (ModelState.IsValid)
+			{
+				var result =await mediator.Send(model);
+				if (result.StatusCode == HttpStatusCode.OK)
+				{
+					return RedirectToAction("OfferedProjects");
+				}
+				else
+				{
+					var error = new ErrorPageDTO() { StatusCode = result.StatusCode, Errors = result.Errors, Success = result.Success };
+					return RedirectToAction("ResponsePage", "Home", error);
+				}
+			}
+			
+			return View(model);
+		}
+		public async Task<IActionResult> ProjectDetails([FromQuery]string projectId)
+		{
+			var result = await mediator.Send(new ProjectDetails.ProjectDetailsRequest { ProjectId = projectId });
+			if (result.StatusCode == HttpStatusCode.OK)
+			{
+			return View(result.Entity);
+
+			}
+
+			else
+			{
+				var error = new ErrorPageDTO() { StatusCode = result.StatusCode, Errors = result.Errors, Success = result.Success };
+				return RedirectToAction("ResponsePage", "Home", error);
+			}
+		}
+
+		public async Task<IActionResult> OfferedProjects()
+		{
+			var username = User.Identity.Name;
+			var model = new OfferedProjectList.OfferedProjectListRequest { UserName = username };
+			var result = await mediator.Send(model);
+			return View(result.Entity);
+		}
+
+		[HttpPost]
+		public IActionResult ConfirmBid(ProjectDetailsDTO model)
+		{
+			return RedirectToAction("ProjectDetails");
 		}
 	}
 }

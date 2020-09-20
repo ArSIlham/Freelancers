@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\99450\\Desktop\\exam proj\\FreelancerProject\\FreelancerProject\\FreelancersProject.csproj",
+  "FilePath": "c:\\Users\\99450\\Desktop\\Freelancers\\FreelancerProject\\FreelancerProject\\FreelancersProject.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "3.0",
@@ -14392,103 +14392,128 @@
   "RootNamespace": "FreelancersProject",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\99450\\Desktop\\exam proj\\FreelancerProject\\FreelancerProject\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FilePath": "c:\\Users\\99450\\Desktop\\Freelancers\\FreelancerProject\\FreelancerProject\\Areas\\Hirer\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Areas\\Hirer\\Views\\_ViewImports.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\99450\\Desktop\\exam proj\\FreelancerProject\\FreelancerProject\\Views\\Auth\\Index.cshtml",
-      "TargetPath": "Views\\Auth\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\99450\\Desktop\\exam proj\\FreelancerProject\\FreelancerProject\\Views\\Shared\\Error.cshtml",
-      "TargetPath": "Views\\Shared\\Error.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\99450\\Desktop\\exam proj\\FreelancerProject\\FreelancerProject\\Areas\\Freelancer\\Views\\Home\\Projects.cshtml",
-      "TargetPath": "Areas\\Freelancer\\Views\\Home\\Projects.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\99450\\Desktop\\exam proj\\FreelancerProject\\FreelancerProject\\Areas\\Hirer\\Views\\Home\\Main.cshtml",
-      "TargetPath": "Areas\\Hirer\\Views\\Home\\Main.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\99450\\Desktop\\exam proj\\FreelancerProject\\FreelancerProject\\Views\\Auth\\SignIn.cshtml",
-      "TargetPath": "Views\\Auth\\SignIn.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\99450\\Desktop\\exam proj\\FreelancerProject\\FreelancerProject\\Areas\\Hirer\\Views\\Project\\MyProjects.cshtml",
-      "TargetPath": "Areas\\Hirer\\Views\\Project\\MyProjects.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\99450\\Desktop\\exam proj\\FreelancerProject\\FreelancerProject\\Views\\Shared\\_Layout.cshtml",
-      "TargetPath": "Views\\Shared\\_Layout.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\99450\\Desktop\\exam proj\\FreelancerProject\\FreelancerProject\\Areas\\Freelancer\\Views\\Project\\MyMessages.cshtml",
-      "TargetPath": "Areas\\Freelancer\\Views\\Project\\MyMessages.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\99450\\Desktop\\exam proj\\FreelancerProject\\FreelancerProject\\Areas\\Hirer\\Views\\Project\\CreateProject.cshtml",
-      "TargetPath": "Areas\\Hirer\\Views\\Project\\CreateProject.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\99450\\Desktop\\exam proj\\FreelancerProject\\FreelancerProject\\Views\\Auth\\Confirmation.cshtml",
+      "FilePath": "c:\\Users\\99450\\Desktop\\Freelancers\\FreelancerProject\\FreelancerProject\\Views\\Auth\\Confirmation.cshtml",
       "TargetPath": "Views\\Auth\\Confirmation.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\99450\\Desktop\\exam proj\\FreelancerProject\\FreelancerProject\\Areas\\Freelancer\\Views\\Home\\Main.cshtml",
-      "TargetPath": "Areas\\Freelancer\\Views\\Home\\Main.cshtml",
+      "FilePath": "c:\\Users\\99450\\Desktop\\Freelancers\\FreelancerProject\\FreelancerProject\\Areas\\Freelancer\\Views\\Home\\Projects.cshtml",
+      "TargetPath": "Areas\\Freelancer\\Views\\Home\\Projects.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\99450\\Desktop\\exam proj\\FreelancerProject\\FreelancerProject\\Areas\\Freelancer\\Views\\Profile\\Settings.cshtml",
-      "TargetPath": "Areas\\Freelancer\\Views\\Profile\\Settings.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\99450\\Desktop\\exam proj\\FreelancerProject\\FreelancerProject\\Views\\Auth\\Register.cshtml",
-      "TargetPath": "Views\\Auth\\Register.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\99450\\Desktop\\exam proj\\FreelancerProject\\FreelancerProject\\Views\\_ViewImports.cshtml",
-      "TargetPath": "Views\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\99450\\Desktop\\exam proj\\FreelancerProject\\FreelancerProject\\Views\\Home\\Privacy.cshtml",
-      "TargetPath": "Views\\Home\\Privacy.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\99450\\Desktop\\exam proj\\FreelancerProject\\FreelancerProject\\Areas\\Freelancer\\Views\\Project\\MyProjects.cshtml",
+      "FilePath": "c:\\Users\\99450\\Desktop\\Freelancers\\FreelancerProject\\FreelancerProject\\Areas\\Freelancer\\Views\\Project\\MyProjects.cshtml",
       "TargetPath": "Areas\\Freelancer\\Views\\Project\\MyProjects.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\99450\\Desktop\\exam proj\\FreelancerProject\\FreelancerProject\\Areas\\Hirer\\Views\\Project\\OfferProject.cshtml",
-      "TargetPath": "Areas\\Hirer\\Views\\Project\\OfferProject.cshtml",
+      "FilePath": "c:\\Users\\99450\\Desktop\\Freelancers\\FreelancerProject\\FreelancerProject\\Views\\Auth\\SignIn.cshtml",
+      "TargetPath": "Views\\Auth\\SignIn.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\99450\\Desktop\\exam proj\\FreelancerProject\\FreelancerProject\\Views\\_ViewStart.cshtml",
+      "FilePath": "c:\\Users\\99450\\Desktop\\Freelancers\\FreelancerProject\\FreelancerProject\\Views\\Shared\\_Layout.cshtml",
+      "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\99450\\Desktop\\Freelancers\\FreelancerProject\\FreelancerProject\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\99450\\Desktop\\exam proj\\FreelancerProject\\FreelancerProject\\Views\\Home\\Index.cshtml",
+      "FilePath": "c:\\Users\\99450\\Desktop\\Freelancers\\FreelancerProject\\FreelancerProject\\Areas\\Hirer\\Views\\Home\\Main.cshtml",
+      "TargetPath": "Areas\\Hirer\\Views\\Home\\Main.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\99450\\Desktop\\Freelancers\\FreelancerProject\\FreelancerProject\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\99450\\Desktop\\Freelancers\\FreelancerProject\\FreelancerProject\\Areas\\Freelancer\\Views\\Profile\\Settings.cshtml",
+      "TargetPath": "Areas\\Freelancer\\Views\\Profile\\Settings.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\99450\\Desktop\\Freelancers\\FreelancerProject\\FreelancerProject\\Areas\\Hirer\\Views\\Project\\OfferProject.cshtml",
+      "TargetPath": "Areas\\Hirer\\Views\\Project\\OfferProject.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\99450\\Desktop\\Freelancers\\FreelancerProject\\FreelancerProject\\Areas\\Hirer\\Views\\Project\\CreateProject.cshtml",
+      "TargetPath": "Areas\\Hirer\\Views\\Project\\CreateProject.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\99450\\Desktop\\Freelancers\\FreelancerProject\\FreelancerProject\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\99450\\Desktop\\Freelancers\\FreelancerProject\\FreelancerProject\\Views\\Auth\\Index.cshtml",
+      "TargetPath": "Views\\Auth\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\99450\\Desktop\\Freelancers\\FreelancerProject\\FreelancerProject\\Areas\\Freelancer\\Views\\Project\\MyMessages.cshtml",
+      "TargetPath": "Areas\\Freelancer\\Views\\Project\\MyMessages.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\99450\\Desktop\\Freelancers\\FreelancerProject\\FreelancerProject\\Views\\Home\\Privacy.cshtml",
+      "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\99450\\Desktop\\Freelancers\\FreelancerProject\\FreelancerProject\\Areas\\Hirer\\Views\\Project\\ProjectDetails.cshtml",
+      "TargetPath": "Areas\\Hirer\\Views\\Project\\ProjectDetails.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\99450\\Desktop\\Freelancers\\FreelancerProject\\FreelancerProject\\Areas\\Hirer\\Views\\Home\\ResponsePage.cshtml",
+      "TargetPath": "Areas\\Hirer\\Views\\Home\\ResponsePage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\99450\\Desktop\\Freelancers\\FreelancerProject\\FreelancerProject\\Views\\Auth\\Register.cshtml",
+      "TargetPath": "Views\\Auth\\Register.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\99450\\Desktop\\Freelancers\\FreelancerProject\\FreelancerProject\\Areas\\Hirer\\Views\\Project\\MakeOffer.cshtml",
+      "TargetPath": "Areas\\Hirer\\Views\\Project\\MakeOffer.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\99450\\Desktop\\Freelancers\\FreelancerProject\\FreelancerProject\\Areas\\Hirer\\Views\\Project\\OfferedProjects.cshtml",
+      "TargetPath": "Areas\\Hirer\\Views\\Project\\OfferedProjects.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\99450\\Desktop\\Freelancers\\FreelancerProject\\FreelancerProject\\Areas\\Freelancer\\Views\\Home\\Main.cshtml",
+      "TargetPath": "Areas\\Freelancer\\Views\\Home\\Main.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\99450\\Desktop\\Freelancers\\FreelancerProject\\FreelancerProject\\Areas\\Hirer\\Views\\Project\\MyProjectss.cshtml",
+      "TargetPath": "Areas\\Hirer\\Views\\Project\\MyProjectss.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\99450\\Desktop\\Freelancers\\FreelancerProject\\FreelancerProject\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\99450\\Desktop\\Freelancers\\FreelancerProject\\FreelancerProject\\Views\\Shared\\Error.cshtml",
+      "TargetPath": "Views\\Shared\\Error.cshtml",
       "FileKind": "mvc"
     }
   ],

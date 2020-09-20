@@ -7,7 +7,7 @@ namespace FreelancersProject.Domain.Concretes
 	public class ConfirmedBid : BaseEntity<Guid>
 	{
 		
-		public Guid BidId { get; set; }
+		public string BidId { get; set; }
 		public DateTime DeadlineDate { get; set; }
 		public DateTime ConfirmedDate { get; set; }
 	}

@@ -12,7 +12,10 @@ using System.Threading.Tasks;
 namespace FreelancersProject.Application.Services
 {
 
-	public interface ICountryService :IBaseServices<Country>{}
+	public interface ICountryService :IBaseServices<Country>
+	{
+			
+	}
 	public class CountryService : ICountryService
 	{
 		private readonly ICountryRepository countryRepository;
@@ -60,9 +63,18 @@ namespace FreelancersProject.Application.Services
 			}
 		}
 
-		public Task<Country> GetById(string id)
+		public  async Task<Country> GetById(string id)
 		{
-			throw new NotImplementedException();
+			try
+			{
+				var result = await countryRepository.GetById(id);
+				return result;
+			}
+			catch (Exception ex)
+			{
+
+				throw new RestException(HttpStatusCode.NotFound, ex.Message);
+			}
 		}
 
 		public Task<Country> Update(Country entity)

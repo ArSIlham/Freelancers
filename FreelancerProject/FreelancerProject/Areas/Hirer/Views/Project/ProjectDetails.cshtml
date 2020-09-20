@@ -1,16 +1,19 @@
-﻿
+﻿@model ProjectDetailsDTO
 @{
 	ViewData["Title"] = "ProjectDetails";
 	Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
 <div class="my-3 p-3 bg-white rounded box-shadow">
 	<div class="card">
 		<div class="card-body">
-			<h5 class="card-title">Card title</h5>
-			<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-			<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+			<h5 class="card-title">@Model.Project.Title</h5>
+			<p class="card-text">@Model.Project.Description</p>
+			<p class="card-text">Price:@Model.Project.MinPrice -@Model.Project.MaxPrice $USD</p>
+			<p class="card-text "><small class="text-muted">Status :@Model.Project.Status</small></p>
+			<p class="card-text"><small class="text-muted">Created Date :@Model.Project.CreateDate</small></p>
 		</div>
-		
+
 	</div>
 
 	<div class="card-body">
@@ -24,11 +27,78 @@
 						<th>Date</th>
 						<th>Status</th>
 						<th>Action</th>
-						
+
 					</tr>
 				</thead>
+				<tbody>
+					@foreach (var item in Model.BidRequests)
+					{
+						<tr>
+							<td></td>
+							<td>@item.FreeLancer.Name @item.FreeLancer.SurName</td>
+							<td>@item.BidRequest.BidPrice</td>
+							<td>@item.BidRequest.CreateDate</td>
+							@if (item.BidRequest.IsConfirmed)
+							{
+								<td><span class="text-success">Confirmed</span></td>
+								<td></td>
+							}
+							else
+							{
+								<td><span class="text-danger">Waiting for action</span></td>
+								<td>
+									<a href="#" class="badge badge-success" data-toggle="modal" data-target="#confrimModal" onclick="ConfirmBid('@item.BidRequest.Id')">Confirm</a>
+								</td>
+							}
+						</tr>
+					}
+				</tbody>
 			</table>
 		</div>
 	</div>
 
 </div>
+
+<div class="modal fade" id="confrimModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Confirm bid</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<form asp-action="ConfirmBid" asp-controller="Project" asp-area="Hirer" method="post">
+					<div class="modal-body">
+						<label for="lockdaycount">Deadline</label>
+						<input hidden asp-for="@Model.ConfirmedBid.BidId" id="BidRequestId" />
+						<input hidden asp-for="@Model.ProjectId" value="@Model.Project.Id"  />
+						<div class="form-group">
+
+							<input class=" form-control" data-val="true" data-val-required="Date is required"
+								   asp-for="@Model.ConfirmedBid.DeadlineDate"
+								   type="date" value="1/11/1989" />
+
+
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="submit" class="btn btn-primary">Confirm Bid</button>
+
+					</div>
+				</form>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<script>
+	function ConfirmBid(id) {
+
+		//alert(id);
+		var userid = document.getElementById("BidRequestId");
+		userid.value = id;
+	}</script>
+

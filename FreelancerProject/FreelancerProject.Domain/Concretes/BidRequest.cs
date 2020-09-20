@@ -9,7 +9,7 @@ namespace FreelancersProject.Domain.Concretes
 		
 		
 		public int FreelancerId { get; set; }
-		public Guid ProjectId { get; set; }
+		public string ProjectId { get; set; }
 		public decimal BidPrice { get; set; }
 		public DateTime CreateDate { get; set; }
 		public bool IsConfirmed { get; set; }

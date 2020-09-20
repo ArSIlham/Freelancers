@@ -832,9 +832,6 @@ C:\Users\99450\Desktop\Freelancers\FreelancerProject\FreelancerProject\bin\Debug
 C:\Users\99450\Desktop\Freelancers\FreelancerProject\FreelancerProject\obj\Debug\netcoreapp3.1\FreelancersProject.csprojAssemblyReference.cache
 C:\Users\99450\Desktop\Freelancers\FreelancerProject\FreelancerProject\obj\Debug\netcoreapp3.1\FreelancersProject.AssemblyInfoInputs.cache
 C:\Users\99450\Desktop\Freelancers\FreelancerProject\FreelancerProject\obj\Debug\netcoreapp3.1\FreelancersProject.AssemblyInfo.cs
-C:\Users\99450\Desktop\Freelancers\FreelancerProject\FreelancerProject\obj\Debug\netcoreapp3.1\FreelancersProject.csproj.CoreCompileInputs.cache
-C:\Users\99450\Desktop\Freelancers\FreelancerProject\FreelancerProject\obj\Debug\netcoreapp3.1\FreelancersProject.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\99450\Desktop\Freelancers\FreelancerProject\FreelancerProject\obj\Debug\netcoreapp3.1\FreelancersProject.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\99450\Desktop\Freelancers\FreelancerProject\FreelancerProject\obj\Debug\netcoreapp3.1\FreelancersProject.RazorAssemblyInfo.cache
 C:\Users\99450\Desktop\Freelancers\FreelancerProject\FreelancerProject\obj\Debug\netcoreapp3.1\FreelancersProject.RazorAssemblyInfo.cs
 C:\Users\99450\Desktop\Freelancers\FreelancerProject\FreelancerProject\obj\Debug\netcoreapp3.1\FreelancersProject.TagHelpers.input.cache
@@ -848,7 +845,6 @@ C:\Users\99450\Desktop\Freelancers\FreelancerProject\FreelancerProject\obj\Debug
 C:\Users\99450\Desktop\Freelancers\FreelancerProject\FreelancerProject\obj\Debug\netcoreapp3.1\Razor\Areas\Hirer\Views\Home\Main.cshtml.g.cs
 C:\Users\99450\Desktop\Freelancers\FreelancerProject\FreelancerProject\obj\Debug\netcoreapp3.1\Razor\Areas\Hirer\Views\Project\CreateProject.cshtml.g.cs
 C:\Users\99450\Desktop\Freelancers\FreelancerProject\FreelancerProject\obj\Debug\netcoreapp3.1\Razor\Areas\Hirer\Views\Project\MyProjectss.cshtml.g.cs
-C:\Users\99450\Desktop\Freelancers\FreelancerProject\FreelancerProject\obj\Debug\netcoreapp3.1\Razor\Areas\Hirer\Views\Project\OfferProject.cshtml.g.cs
 C:\Users\99450\Desktop\Freelancers\FreelancerProject\FreelancerProject\obj\Debug\netcoreapp3.1\Razor\Areas\Hirer\Views\_ViewImports.cshtml.g.cs
 C:\Users\99450\Desktop\Freelancers\FreelancerProject\FreelancerProject\obj\Debug\netcoreapp3.1\Razor\Views\Auth\Confirmation.cshtml.g.cs
 C:\Users\99450\Desktop\Freelancers\FreelancerProject\FreelancerProject\obj\Debug\netcoreapp3.1\Razor\Views\Auth\Index.cshtml.g.cs
@@ -871,3 +867,11 @@ C:\Users\99450\Desktop\Freelancers\FreelancerProject\FreelancerProject\obj\Debug
 C:\Users\99450\Desktop\Freelancers\FreelancerProject\FreelancerProject\obj\Debug\netcoreapp3.1\FreelancersProject.pdb
 C:\Users\99450\Desktop\Freelancers\FreelancerProject\FreelancerProject\obj\Debug\netcoreapp3.1\FreelancersProject.genruntimeconfig.cache
 C:\Users\99450\Desktop\Freelancers\FreelancerProject\FreelancerProject\obj\Debug\netcoreapp3.1\Razor\Areas\Hirer\Views\Project\ProjectDetails.cshtml.g.cs
+C:\Users\99450\Desktop\Freelancers\FreelancerProject\FreelancerProject\obj\Debug\netcoreapp3.1\Razor\Areas\Hirer\Views\Project\MakeOffer.cshtml.g.cs
+C:\Users\99450\Desktop\Freelancers\FreelancerProject\FreelancerProject\obj\Debug\netcoreapp3.1\Razor\Areas\Hirer\Views\Project\OfferProject.cshtml.g.cs
+C:\Users\99450\Desktop\Freelancers\FreelancerProject\FreelancerProject\obj\Debug\netcoreapp3.1\Razor\Areas\Hirer\Views\Project\OfferedProjects.cshtml.g.cs
+C:\Users\99450\Desktop\Freelancers\FreelancerProject\FreelancerProject\obj\Debug\netcoreapp3.1\Razor\Areas\Hirer\Views\Home\ResponsePage.cshtml.g.cs
+C:\Users\99450\Desktop\Freelancers\FreelancerProject\FreelancerProject\bin\Debug\netcoreapp3.1\libman.json
+C:\Users\99450\Desktop\Freelancers\FreelancerProject\FreelancerProject\obj\Debug\netcoreapp3.1\FreelancersProject.csproj.CoreCompileInputs.cache
+C:\Users\99450\Desktop\Freelancers\FreelancerProject\FreelancerProject\obj\Debug\netcoreapp3.1\FreelancersProject.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\99450\Desktop\Freelancers\FreelancerProject\FreelancerProject\obj\Debug\netcoreapp3.1\FreelancersProject.MvcApplicationPartsAssemblyInfo.cache

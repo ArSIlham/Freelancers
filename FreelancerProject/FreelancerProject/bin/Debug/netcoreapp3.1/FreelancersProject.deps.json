@@ -24,6 +24,8 @@
     ".NETCoreApp,Version=v3.1": {
       "FreelancersProject/1.0.0": {
         "dependencies": {
+          "Bootstrap.v3.Datetimepicker": "4.17.45",
+          "Bootstrap.v3.Datetimepicker.CSS": "4.17.45",
           "FreelancersProject.Application": "1.0.0",
           "FreelancersProject.IoC": "1.0.0",
           "MediatR": "8.1.0",
@@ -337,6 +339,28 @@
           "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
         }
       },
+      "bootstrap/3.3.0": {
+        "dependencies": {
+          "jQuery": "1.9.1"
+        }
+      },
+      "bootstrap.less/3.3.5": {
+        "dependencies": {
+          "jQuery": "1.9.1"
+        }
+      },
+      "Bootstrap.v3.Datetimepicker/4.17.45": {
+        "dependencies": {
+          "Moment.js": "2.9.0",
+          "bootstrap.less": "3.3.5"
+        }
+      },
+      "Bootstrap.v3.Datetimepicker.CSS/4.17.45": {
+        "dependencies": {
+          "Moment.js": "2.9.0",
+          "bootstrap": "3.3.0"
+        }
+      },
       "Dapper/2.0.35": {
         "dependencies": {
           "System.Reflection.Emit.Lightweight": "4.7.0"
@@ -362,6 +386,7 @@
           "lib/netstandard2.0/FluentValidation.dll": {}
         }
       },
+      "jQuery/1.9.1": {},
       "MediatR/8.1.0": {
         "runtime": {
           "lib/netstandard2.1/MediatR.dll": {
@@ -973,6 +998,7 @@
           "System.Security.Principal.Windows": "4.7.0"
         }
       },
+      "Moment.js/2.9.0": {},
       "Namotion.Reflection/1.0.11": {
         "dependencies": {
           "Microsoft.CSharp": "4.7.0"
@@ -3627,6 +3653,34 @@
       "path": "automapper.extensions.microsoft.dependencyinjection/8.0.1",
       "hashPath": "automapper.extensions.microsoft.dependencyinjection.8.0.1.nupkg.sha512"
     },
+    "bootstrap/3.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8Fn3Tnk23NpT0i1Osj3mydnknbzbFA/rOVk5hoGlqb0XXl/rDn085qanSCcCqsZlIGL2VWSbO4vihOs1hMtZ5A==",
+      "path": "bootstrap/3.3.0",
+      "hashPath": "bootstrap.3.3.0.nupkg.sha512"
+    },
+    "bootstrap.less/3.3.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+xxiEyTJdWwO9G7Ig9gHoXl7grsncyQVy1bhWY9L41fSFUayIZYlziGcwB+ORQDzHAZJrCNa+y1bke11wJy0Ug==",
+      "path": "bootstrap.less/3.3.5",
+      "hashPath": "bootstrap.less.3.3.5.nupkg.sha512"
+    },
+    "Bootstrap.v3.Datetimepicker/4.17.45": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0/m8BCfhDRhWdiXm8RAHS0lVfaE64/93tDyINtrf4/cBpXGnVU7o5pFP6FhGhelTX7eH0hpLc8+j2obumhI9oA==",
+      "path": "bootstrap.v3.datetimepicker/4.17.45",
+      "hashPath": "bootstrap.v3.datetimepicker.4.17.45.nupkg.sha512"
+    },
+    "Bootstrap.v3.Datetimepicker.CSS/4.17.45": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-O6uUKSMe4KvfSJ1pON8yI8JzTxpf/InaDChbC3kwfUFG7hjysyIpx8fmgEtb8sojMJcfRRO5NFyLsz+rRX3Fdw==",
+      "path": "bootstrap.v3.datetimepicker.css/4.17.45",
+      "hashPath": "bootstrap.v3.datetimepicker.css.4.17.45.nupkg.sha512"
+    },
     "Dapper/2.0.35": {
       "type": "package",
       "serviceable": true,
@@ -3640,6 +3694,13 @@
       "sha512": "sha512-LNUzNXWlBQavU/eB9pf4Tg8TTWgCw8E85OBA1GJv4xkdwuer9FuFLHTBjcYX+gGBkPFc2G+3utzEA4aMhUOL3w==",
       "path": "fluentvalidation/9.2.0",
       "hashPath": "fluentvalidation.9.2.0.nupkg.sha512"
+    },
+    "jQuery/1.9.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HiX9icLyiJGgiL5EOIn0d1MBPHVV2M9mzWT4mANdniDNR51RvAFTyKEXEd2+5yQJ4PJ5xePOR61Vjj/omQzYcw==",
+      "path": "jquery/1.9.1",
+      "hashPath": "jquery.1.9.1.nupkg.sha512"
     },
     "MediatR/8.1.0": {
       "type": "package",
@@ -3913,6 +3974,13 @@
       "sha512": "sha512-KSrRMb5vNi0CWSGG1++id2ZOs/1QhRqROt+qgbEAdQuGjGrFcl4AOl4/exGPUYz2wUnU42nvJqon1T3U0kPXLA==",
       "path": "microsoft.win32.registry/4.7.0",
       "hashPath": "microsoft.win32.registry.4.7.0.nupkg.sha512"
+    },
+    "Moment.js/2.9.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4rhbvFzmgXp/gjvwjxt9Qjmdz+2CD9T99erXEDtZHlYxaI06F9A4628/Vpxklm8D9RmwJjKjp1244FwEh+a5WQ==",
+      "path": "moment.js/2.9.0",
+      "hashPath": "moment.js.2.9.0.nupkg.sha512"
     },
     "Namotion.Reflection/1.0.11": {
       "type": "package",

@@ -18,7 +18,7 @@ namespace FreelancersProject.Domain.Concretes
 
 		public bool IsAccepted { get; set; }
 
-		public int DeadlineDaysCount { get; set; }
+		public int DeadlineDayCounts { get; set; }
 
 		public DateTime AcceptedDate { get; set; }
 

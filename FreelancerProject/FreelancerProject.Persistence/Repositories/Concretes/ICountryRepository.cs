@@ -2,6 +2,7 @@
 using FreelancersProject.Domain.Concretes;
 using FreelancersProject.Persistence.Infratructure;
 using FreelancersProject.Persistence.Repositories.Base;
+using Microsoft.Extensions.Primitives;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
@@ -12,6 +13,7 @@ namespace FreelancersProject.Persistence.Repositories.Concretes
 {
 	public interface ICountryRepository :IRepository<Country>
 	{
+		
 	}
 
 	public class CountryRepository : ICountryRepository
@@ -19,6 +21,7 @@ namespace FreelancersProject.Persistence.Repositories.Concretes
 		private readonly IUnitOfWork unitOfWork;
 		private string GetAllSql = "Select * from Countries";
 		private string AddSql = "insert into Countries([Name]) values (@Name)";
+		private string GetCountryByIdSql = "select * from Countries where Id=@CountryId";
 
 		public CountryRepository(IUnitOfWork unitOfWork)
 		{
@@ -62,10 +65,21 @@ namespace FreelancersProject.Persistence.Repositories.Concretes
 			}
 		}
 
-		public Task<Country> GetById(string id)
+		public async Task<Country> GetById(string id)
 		{
-			throw new NotImplementedException();
+			try
+			{
+				var result = await unitOfWork.GetConnection().QueryFirstAsync<Country>(GetCountryByIdSql, new { CountryId = id }, unitOfWork.GetTransaction());
+				return result;
+			}
+			catch (Exception ex)
+			{
+
+				throw ex;
+			}
 		}
+
+		
 
 		public Task Update(Country entity)
 		{
