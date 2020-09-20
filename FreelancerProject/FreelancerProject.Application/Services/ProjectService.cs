@@ -87,23 +87,23 @@ namespace FreelancersProject.Application.Services
 		{
 			try
 			{
-<<<<<<< HEAD
+//<<<<<<< HEAD
 				
 
 				var result = await projectRepository.GetById(id.ToString());
-=======
-				var result = await projectRepository.GetById(id);
->>>>>>> 7442466b20afb19728593a2d940eaf07d52d2f53
+//=======
+//				var result = await projectRepository.GetById(id);
+//>>>>>>> 7442466b20afb19728593a2d940eaf07d52d2f53
 				return result;
 			}
 			catch (Exception ex)
 			{
-<<<<<<< HEAD
+//<<<<<<< HEAD
 
 				throw new RestException(HttpStatusCode.NotFound, ex.Message);
-=======
-				throw new RestException(System.Net.HttpStatusCode.NotFound, ex.Message);
->>>>>>> 7442466b20afb19728593a2d940eaf07d52d2f53
+//=======
+//				throw new RestException(System.Net.HttpStatusCode.NotFound, ex.Message);
+//>>>>>>> 7442466b20afb19728593a2d940eaf07d52d2f53
 			}
 		}
 

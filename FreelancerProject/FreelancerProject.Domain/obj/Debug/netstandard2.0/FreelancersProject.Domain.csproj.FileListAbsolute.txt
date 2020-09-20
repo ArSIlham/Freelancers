@@ -57,3 +57,12 @@ C:\CFreel\FreelancerProject\FreelancerProject.Domain\obj\Debug\netstandard2.0\Fr
 C:\CFreel\FreelancerProject\FreelancerProject.Domain\obj\Debug\netstandard2.0\FreelancersProject.Domain.AssemblyInfo.cs
 C:\CFreel\FreelancerProject\FreelancerProject.Domain\obj\Debug\netstandard2.0\FreelancersProject.Domain.dll
 C:\CFreel\FreelancerProject\FreelancerProject.Domain\obj\Debug\netstandard2.0\FreelancersProject.Domain.pdb
+C:\Users\99450\Desktop\FreelancersM\FreelancerProject\FreelancerProject.Domain\bin\Debug\netstandard2.0\FreelancersProject.Domain.deps.json
+C:\Users\99450\Desktop\FreelancersM\FreelancerProject\FreelancerProject.Domain\bin\Debug\netstandard2.0\FreelancersProject.Domain.dll
+C:\Users\99450\Desktop\FreelancersM\FreelancerProject\FreelancerProject.Domain\bin\Debug\netstandard2.0\FreelancersProject.Domain.pdb
+C:\Users\99450\Desktop\FreelancersM\FreelancerProject\FreelancerProject.Domain\obj\Debug\netstandard2.0\FreelancersProject.Domain.csprojAssemblyReference.cache
+C:\Users\99450\Desktop\FreelancersM\FreelancerProject\FreelancerProject.Domain\obj\Debug\netstandard2.0\FreelancersProject.Domain.AssemblyInfoInputs.cache
+C:\Users\99450\Desktop\FreelancersM\FreelancerProject\FreelancerProject.Domain\obj\Debug\netstandard2.0\FreelancersProject.Domain.AssemblyInfo.cs
+C:\Users\99450\Desktop\FreelancersM\FreelancerProject\FreelancerProject.Domain\obj\Debug\netstandard2.0\FreelancersProject.Domain.csproj.CoreCompileInputs.cache
+C:\Users\99450\Desktop\FreelancersM\FreelancerProject\FreelancerProject.Domain\obj\Debug\netstandard2.0\FreelancersProject.Domain.dll
+C:\Users\99450\Desktop\FreelancersM\FreelancerProject\FreelancerProject.Domain\obj\Debug\netstandard2.0\FreelancersProject.Domain.pdb

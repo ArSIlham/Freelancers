@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lCiBoH/Wy2CdRLojPDpqVCN96D/3WHwz5z9NCAvzSXVfFJUbaPU3SesHkC+v7OqDvtcEgNX6cB4rJNxnqWrE9g==",
+  "dgSpecHash": "j9SRLLaYEbnR9XYeSyfmIjEN5SAR8yHdh/aRCQ8caBnjwAJtOhrgo3Oz4GtTW0n+4a+aUVEZRhVauTgS6bYLGw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\99450\\Desktop\\Freelancers\\FreelancerProject\\FreelancerProject.Domain\\FreelancersProject.Domain.csproj",
+  "projectFilePath": "C:\\Users\\99450\\Desktop\\FreelancersM\\FreelancerProject\\FreelancerProject.Domain\\FreelancersProject.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\99450\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\99450\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"

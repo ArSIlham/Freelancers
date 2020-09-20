@@ -93,3 +93,17 @@ C:\CFreel\FreelancerProject\FreelancerProject.Application\obj\Debug\netstandard2
 C:\CFreel\FreelancerProject\FreelancerProject.Application\obj\Debug\netstandard2.0\FreelancersProject.Application.csproj.CopyComplete
 C:\CFreel\FreelancerProject\FreelancerProject.Application\obj\Debug\netstandard2.0\FreelancersProject.Application.dll
 C:\CFreel\FreelancerProject\FreelancerProject.Application\obj\Debug\netstandard2.0\FreelancersProject.Application.pdb
+C:\Users\99450\Desktop\FreelancersM\FreelancerProject\FreelancerProject.Application\obj\Debug\netstandard2.0\FreelancersProject.Application.csprojAssemblyReference.cache
+C:\Users\99450\Desktop\FreelancersM\FreelancerProject\FreelancerProject.Application\obj\Debug\netstandard2.0\FreelancersProject.Application.AssemblyInfoInputs.cache
+C:\Users\99450\Desktop\FreelancersM\FreelancerProject\FreelancerProject.Application\obj\Debug\netstandard2.0\FreelancersProject.Application.AssemblyInfo.cs
+C:\Users\99450\Desktop\FreelancersM\FreelancerProject\FreelancerProject.Application\obj\Debug\netstandard2.0\FreelancersProject.Application.csproj.CoreCompileInputs.cache
+C:\Users\99450\Desktop\FreelancersM\FreelancerProject\FreelancerProject.Application\obj\Debug\netstandard2.0\FreelancersProject.Application.dll
+C:\Users\99450\Desktop\FreelancersM\FreelancerProject\FreelancerProject.Application\obj\Debug\netstandard2.0\FreelancersProject.Application.pdb
+C:\Users\99450\Desktop\FreelancersM\FreelancerProject\FreelancerProject.Application\bin\Debug\netstandard2.0\FreelancersProject.Application.deps.json
+C:\Users\99450\Desktop\FreelancersM\FreelancerProject\FreelancerProject.Application\bin\Debug\netstandard2.0\FreelancersProject.Application.dll
+C:\Users\99450\Desktop\FreelancersM\FreelancerProject\FreelancerProject.Application\bin\Debug\netstandard2.0\FreelancersProject.Application.pdb
+C:\Users\99450\Desktop\FreelancersM\FreelancerProject\FreelancerProject.Application\bin\Debug\netstandard2.0\FreelancersProject.Domain.dll
+C:\Users\99450\Desktop\FreelancersM\FreelancerProject\FreelancerProject.Application\bin\Debug\netstandard2.0\FreelancersProject.Persistence.dll
+C:\Users\99450\Desktop\FreelancersM\FreelancerProject\FreelancerProject.Application\bin\Debug\netstandard2.0\FreelancersProject.Persistence.pdb
+C:\Users\99450\Desktop\FreelancersM\FreelancerProject\FreelancerProject.Application\bin\Debug\netstandard2.0\FreelancersProject.Domain.pdb
+C:\Users\99450\Desktop\FreelancersM\FreelancerProject\FreelancerProject.Application\obj\Debug\netstandard2.0\FreelancersProject.Application.csproj.CopyComplete

@@ -1,21 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\CFreel\\FreelancerProject\\FreelancerProject.Persistence\\FreelancersProject.Persistence.csproj": {}
+    "C:\\Users\\99450\\Desktop\\FreelancersM\\FreelancerProject\\FreelancerProject.Persistence\\FreelancersProject.Persistence.csproj": {}
   },
   "projects": {
-    "C:\\CFreel\\FreelancerProject\\FreelancerProject.Domain\\FreelancersProject.Domain.csproj": {
+    "C:\\Users\\99450\\Desktop\\FreelancersM\\FreelancerProject\\FreelancerProject.Domain\\FreelancersProject.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\CFreel\\FreelancerProject\\FreelancerProject.Domain\\FreelancersProject.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\99450\\Desktop\\FreelancersM\\FreelancerProject\\FreelancerProject.Domain\\FreelancersProject.Domain.csproj",
         "projectName": "FreelancersProject.Domain",
-        "projectPath": "C:\\CFreel\\FreelancerProject\\FreelancerProject.Domain\\FreelancersProject.Domain.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\CFreel\\FreelancerProject\\FreelancerProject.Domain\\obj\\",
+        "projectPath": "C:\\Users\\99450\\Desktop\\FreelancersM\\FreelancerProject\\FreelancerProject.Domain\\FreelancersProject.Domain.csproj",
+        "packagesPath": "C:\\Users\\99450\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\99450\\Desktop\\FreelancersM\\FreelancerProject\\FreelancerProject.Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\99450\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
@@ -55,22 +60,27 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\CFreel\\FreelancerProject\\FreelancerProject.Persistence\\FreelancersProject.Persistence.csproj": {
+    "C:\\Users\\99450\\Desktop\\FreelancersM\\FreelancerProject\\FreelancerProject.Persistence\\FreelancersProject.Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\CFreel\\FreelancerProject\\FreelancerProject.Persistence\\FreelancersProject.Persistence.csproj",
+        "projectUniqueName": "C:\\Users\\99450\\Desktop\\FreelancersM\\FreelancerProject\\FreelancerProject.Persistence\\FreelancersProject.Persistence.csproj",
         "projectName": "FreelancersProject.Persistence",
-        "projectPath": "C:\\CFreel\\FreelancerProject\\FreelancerProject.Persistence\\FreelancersProject.Persistence.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\CFreel\\FreelancerProject\\FreelancerProject.Persistence\\obj\\",
+        "projectPath": "C:\\Users\\99450\\Desktop\\FreelancersM\\FreelancerProject\\FreelancerProject.Persistence\\FreelancersProject.Persistence.csproj",
+        "packagesPath": "C:\\Users\\99450\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\99450\\Desktop\\FreelancersM\\FreelancerProject\\FreelancerProject.Persistence\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\99450\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
@@ -82,8 +92,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "C:\\CFreel\\FreelancerProject\\FreelancerProject.Domain\\FreelancersProject.Domain.csproj": {
-                "projectPath": "C:\\CFreel\\FreelancerProject\\FreelancerProject.Domain\\FreelancersProject.Domain.csproj"
+              "C:\\Users\\99450\\Desktop\\FreelancersM\\FreelancerProject\\FreelancerProject.Domain\\FreelancersProject.Domain.csproj": {
+                "projectPath": "C:\\Users\\99450\\Desktop\\FreelancersM\\FreelancerProject\\FreelancerProject.Domain\\FreelancersProject.Domain.csproj"
               }
             }
           }
@@ -130,7 +140,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
