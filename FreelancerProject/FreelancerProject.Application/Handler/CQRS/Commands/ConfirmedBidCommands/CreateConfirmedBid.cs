@@ -59,7 +59,7 @@ namespace FreelancersProject.Application.Handler.CQRS.Commands.ConfirmedBidComma
 						bidRequest.IsConfirmed = true;
 						project.Status = Statuses.Confirmed.ToString();
 						var bidUpdateResult = await bidRequestService.Update(bidRequest);
-						var projectUpateResult = await projectService.Update(project);
+						var projectUpateResult = await projectService.ProjectStatusUpdate(project);
 						unitOfWork.SaveChanges();
 
 						responce = new BaseResponses<ConfirmedBid>(confirmedBid);

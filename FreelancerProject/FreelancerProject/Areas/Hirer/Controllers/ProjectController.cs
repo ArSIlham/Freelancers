@@ -157,7 +157,7 @@ namespace FreelancersProject.Areas.Hirer.Controllers
 			if (result.StatusCode == HttpStatusCode.OK)
 			{
 				
-			    return RedirectToAction("ProjectDetails");
+			    return RedirectToAction("MyProjectss");
 
 			}
 

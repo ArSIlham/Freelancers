@@ -20,6 +20,8 @@ namespace FreelancersProject.Persistence.Repositories.Concretes
 		Task AddSkillsToProject(List<ProjectSkill> projectSkills);
 		Task<IEnumerable<Project>> GetProjectByOwnerId(int ownerId);
 
+		Task ProjectStatusUpdate(Project entity);
+
 	}
 
 	public class ProjectRepository : IProjectRepository
@@ -58,6 +60,7 @@ on p.OwnerId = AU.Id
 		private string GetProjectById = "select * from Projects where Id=@Id";
 		private string AddSkillProjectSkill = "insert into ProjectSkills (ProjectId, SkillId)  values(@projectId, @skillId)";
 		private readonly IUnitOfWork unitOfWork;
+		private string ProjectStatusUpdateSql = $@"update Projects set Status=@Status where Id=@Id";
 
 		public async Task<Guid> Add(Project entity)
 		{
@@ -139,6 +142,20 @@ on p.OwnerId = AU.Id
 			{
 				var result = await unitOfWork.GetConnection().QueryAsync<Project>(GetProjectByOwnerIdSql, new { OwnerId = ownerId.ToString() }, unitOfWork.GetTransaction());
 				return result as IEnumerable<Project>;
+			}
+			catch (Exception ex)
+			{
+
+				throw ex;
+			}
+		}
+
+		public async Task ProjectStatusUpdate(Project entity)
+		{
+			try
+			{
+				var res = await unitOfWork.GetConnection().ExecuteAsync(ProjectStatusUpdateSql, new { Status = entity.Status, Id = entity.Id.ToString() }, unitOfWork.GetTransaction());
+
 			}
 			catch (Exception ex)
 			{

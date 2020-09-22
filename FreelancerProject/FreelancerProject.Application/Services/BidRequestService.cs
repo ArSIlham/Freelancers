@@ -57,14 +57,32 @@ namespace FreelancersProject.Application.Services
 			}
 		}
 
-		public Task<BidRequest> GetById(string id)
+		public async Task<BidRequest> GetById(string id)
 		{
-			throw new NotImplementedException();
+			try
+			{
+				var result = await bidRequestRepository.GetById(id);
+				return result;
+			}
+			catch (Exception ex)
+			{
+
+				throw new RestException(HttpStatusCode.NotFound, ex.Message);
+			}
 		}
 
-		public Task<BidRequest> Update(BidRequest entity)
+		public async Task<BidRequest> Update(BidRequest entity)
 		{
-			throw new NotImplementedException();
+			try
+			{
+				await bidRequestRepository.Update(entity);
+				return entity;
+			}
+			catch (Exception ex)
+			{
+
+				throw new RestException(HttpStatusCode.NotFound, ex.Message);
+			}
 		}
 	}
 }

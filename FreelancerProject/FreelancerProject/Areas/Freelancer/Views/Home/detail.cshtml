@@ -1,26 +1,56 @@
 ﻿@model FreelancersProject.Domain.Concretes.Project
 
 @{
-    ViewData["Title"] = "detail";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+	ViewData["Title"] = "detail";
+	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h1>detail</h1>
 
 <div class="card Hoverr">
-    <div class="card-header">
-        <p>@Model.Title</p>
-    </div>
-    <div class="card-body">
-        <h5 class="card-title">@Model.Description</h5>
-        <p class="card-text">@Model.OwnerId</p>
-        <p class="card-text" style=" margin: 0px 0px 0px 10px;">
-        <p class="card-text">
-            <a class="Atag border border-primary" href="#">C# Asp.Net Core </a>
-            <a class="Atag border border-primary" href="#">Web Desing </a>
-            <a class="Atag border border-primary" href="#">JavaScript </a>
-        </p>
-        <a href="detail" class="btn btn-primary">Go somewhere</a>
-    </div>
+	<div class="card-header">
+		<p>@Model.Title</p>
+	</div>
+	<div class="card-body">
+		<h5 class="card-title">@Model.Description</h5>
+		<p class="card-text">@Model.OwnerId</p>
+		<p class="card-text" style=" margin: 0px 0px 0px 10px;">
+		<p class="card-text">
+			<a class="Atag border border-primary" href="#">C# Asp.Net Core </a>
+			<a class="Atag border border-primary" href="#">Web Desing </a>
+			<a class="Atag border border-primary" href="#">JavaScript </a>
+		</p>
+		<a href="detail" class="btn btn-primary">Go somewhere</a>
+	</div>
 </div>
-       
+
+<form  method="post" asp-area="FreeLancer">
+	<div asp-validation-summary="All"></div>
+	<div class="pt-5 pl-5 pr-5" tabindex="-1" role="dialog">
+		<div class="modal-dialog modal-lg " role="document">
+			<div class="modal-content">
+
+				<div class="modal-body">
+					<div class="form-group">
+						<h4><label class="control-label" for="minPrice">Amount</label></h4>
+					
+						<input type="number" class="form-control " min="0" step="any"
+							   id="minPrice" aria-describedby="inputGroup-sizing-sm" placeholder="e.g. Min Price">
+					</div>
+
+					<div class="form-group">
+						<h4><label class="control-label" for="exampleFormControlTextarea1">Comment</label></h4>
+						<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+					</div>
+</div>
+				
+				<div class="modal-footer">
+					<input hidden />
+					<input hidden />
+					<button type="submit" class="btn btn-success">Confirm Bid</button>
+					
+				</div>
+			</div>
+			</div>
+		</div>
+	</form>

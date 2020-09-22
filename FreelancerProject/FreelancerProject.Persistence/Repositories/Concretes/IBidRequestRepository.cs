@@ -13,6 +13,7 @@ namespace FreelancersProject.Persistence.Repositories.Concretes
 	public interface IBidRequestRepository : IRepository<BidRequest>
 	{
 		Task<IEnumerable<BidRequest>> GetBidRequestsByProjectId(string projectId);
+	    
 	}
 
 	public class BidRequestRepository : IBidRequestRepository
@@ -32,7 +33,8 @@ namespace FreelancersProject.Persistence.Repositories.Concretes
 		private string AddSql = "insert into BidRequests (FreelancerId, ProjectId,BidPrice, CreateDate,IsConfirmed)" +
 			"values(@FreelancerId, @ProjectId,@BidPrice, @CreateDate,@IsConfirmed)";
 		private string DeleteSql = "delete BidRequests where Id=@id;";
-		private string UpdateSql = "";
+		private string UpdateSql = "update BidRequests set IsConfirmed = @IsConfirmed where Id = @Id";
+		private string GetByIdSql = "select * from BidRequests where Id=@Id";
 
 		public Task<Guid> Add(BidRequest entity)
 		{
@@ -54,14 +56,32 @@ namespace FreelancersProject.Persistence.Repositories.Concretes
 			throw new NotImplementedException();
 		}
 
-		public Task<BidRequest> GetById(string id)
+		public async  Task<BidRequest> GetById(string id)
 		{
-			throw new NotImplementedException();
+			try
+			{
+				var result = await unitOfWork.GetConnection().QueryFirstAsync<BidRequest>(GetByIdSql, new { Id = id }, unitOfWork.GetTransaction());
+				return result;
+			}
+			catch (Exception ex)
+			{
+
+				throw ex;
+			}
 		}
 
-		public Task Update(BidRequest entity)
+		public async Task Update(BidRequest entity)
 		{
-			throw new NotImplementedException();
+			try
+			{
+				var res=await unitOfWork.GetConnection().ExecuteAsync(UpdateSql, new { IsConfirmed = entity.IsConfirmed, Id=entity.Id.ToString() }, unitOfWork.GetTransaction());
+				
+			}
+			catch (Exception ex)
+			{
+
+				throw ex;
+			}
 		}
 
 		public async Task<IEnumerable<BidRequest>> GetBidRequestsByProjectId(string projectId)

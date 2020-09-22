@@ -18,6 +18,7 @@ namespace FreelancersProject.Application.Services
 	{
 		Task AddSkillsToProject(List<ProjectSkill> projectSkills);
 		Task<IEnumerable<Project>> GetProjectByOwnerId(int id);
+		Task<Project> ProjectStatusUpdate(Project entity);
 	}
 	public class ProjectService : IProjectService
 	{
@@ -113,6 +114,20 @@ namespace FreelancersProject.Application.Services
 			{
 				var result = await projectRepository.GetProjectByOwnerId(id);
 				return result;
+			}
+			catch (Exception ex)
+			{
+
+				throw new RestException(HttpStatusCode.NotFound, ex.Message);
+			}
+		}
+
+		public async Task<Project> ProjectStatusUpdate(Project entity)
+		{
+			try
+			{
+				await projectRepository.ProjectStatusUpdate(entity);
+				return entity;
 			}
 			catch (Exception ex)
 			{
