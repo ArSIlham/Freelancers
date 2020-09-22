@@ -3809,7 +3809,6 @@
       "path": "runtime.win-arm64.runtime.native.system.data.sqlclient.sni/4.4.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
@@ -3825,7 +3824,6 @@
       "path": "runtime.win-x64.runtime.native.system.data.sqlclient.sni/4.4.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
@@ -3841,7 +3839,6 @@
       "path": "runtime.win-x86.runtime.native.system.data.sqlclient.sni/4.4.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
@@ -7339,11 +7336,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\99450\\Desktop\\FreelancersM\\FreelancerProject\\FreelancerProject\\FreelancersProject.csproj",
+      "projectUniqueName": "C:\\Users\\99450\\Desktop\\FreelancersNew\\FreelancerProject\\FreelancerProject\\FreelancersProject.csproj",
       "projectName": "FreelancersProject",
-      "projectPath": "C:\\Users\\99450\\Desktop\\FreelancersM\\FreelancerProject\\FreelancerProject\\FreelancersProject.csproj",
+      "projectPath": "C:\\Users\\99450\\Desktop\\FreelancersNew\\FreelancerProject\\FreelancerProject\\FreelancersProject.csproj",
       "packagesPath": "C:\\Users\\99450\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\99450\\Desktop\\FreelancersM\\FreelancerProject\\FreelancerProject\\obj\\",
+      "outputPath": "C:\\Users\\99450\\Desktop\\FreelancersNew\\FreelancerProject\\FreelancerProject\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -7364,11 +7361,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\99450\\Desktop\\FreelancersM\\FreelancerProject\\FreelancerProject.Application\\FreelancersProject.Application.csproj": {
-              "projectPath": "C:\\Users\\99450\\Desktop\\FreelancersM\\FreelancerProject\\FreelancerProject.Application\\FreelancersProject.Application.csproj"
+            "C:\\Users\\99450\\Desktop\\FreelancersNew\\FreelancerProject\\FreelancerProject.Application\\FreelancersProject.Application.csproj": {
+              "projectPath": "C:\\Users\\99450\\Desktop\\FreelancersNew\\FreelancerProject\\FreelancerProject.Application\\FreelancersProject.Application.csproj"
             },
-            "C:\\Users\\99450\\Desktop\\FreelancersM\\FreelancerProject\\FreelancerProject.IoC\\FreelancersProject.IoC.csproj": {
-              "projectPath": "C:\\Users\\99450\\Desktop\\FreelancersM\\FreelancerProject\\FreelancerProject.IoC\\FreelancersProject.IoC.csproj"
+            "C:\\Users\\99450\\Desktop\\FreelancersNew\\FreelancerProject\\FreelancerProject.IoC\\FreelancersProject.IoC.csproj": {
+              "projectPath": "C:\\Users\\99450\\Desktop\\FreelancersNew\\FreelancerProject\\FreelancerProject.IoC\\FreelancersProject.IoC.csproj"
             }
           }
         }
