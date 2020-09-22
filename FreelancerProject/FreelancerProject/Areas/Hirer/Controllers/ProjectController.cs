@@ -7,6 +7,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using FreelancersProject.Application.Common;
 using FreelancersProject.Application.DTOs;
+using FreelancersProject.Application.Handler.CQRS.Commands.ConfirmedBidCommands;
 using FreelancersProject.Application.Handler.CQRS.Commands.ProjectCommands;
 using FreelancersProject.Application.Handler.CQRS.Queries.Freelancer;
 using FreelancersProject.Application.Handler.CQRS.Queries.OfferedProjectQueries;
@@ -16,6 +17,7 @@ using FreelancersProject.Persistence.Repositories.Concretes;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace FreelancersProject.Areas.Hirer.Controllers
@@ -148,9 +150,22 @@ namespace FreelancersProject.Areas.Hirer.Controllers
 		}
 
 		[HttpPost]
-		public IActionResult ConfirmBid(ProjectDetailsDTO model)
+		public async Task<IActionResult> ConfirmBid(ProjectDetailsDTO model)
 		{
-			return RedirectToAction("ProjectDetails");
+			var data = new CreateConfirmedBid.ConfirmedBidRequest { ProjectId = model.ProjectId, ConfirmedBid = model.ConfirmedBid };
+			var result = await mediator.Send(data);
+			if (result.StatusCode == HttpStatusCode.OK)
+			{
+				
+			    return RedirectToAction("ProjectDetails");
+
+			}
+
+			else
+			{
+				var error = new ErrorPageDTO() { StatusCode = result.StatusCode, Errors = result.Errors, Success = result.Success };
+				return RedirectToAction("ResponsePage", "Home", error);
+			}
 		}
 	}
 }

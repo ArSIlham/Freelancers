@@ -13,6 +13,7 @@ namespace FreelancersProject.Domain.Concretes
 		public decimal BidPrice { get; set; }
 		public DateTime CreateDate { get; set; }
 		public bool IsConfirmed { get; set; }
+		public string Comment { get; set; }
 
 
 	}
