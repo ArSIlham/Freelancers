@@ -21,6 +21,7 @@ namespace FreelancersProject.IoC
             services.AddTransient<IProjectService, ProjectService>();
             services.AddTransient<IOfferProjectService, OfferProjectService>();
             services.AddTransient<IBidRequestService, BidRequestService>();
+            services.AddTransient<IConfirmedBidService, ConfirmedBidService>();
 
         }
     }
