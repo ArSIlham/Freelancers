@@ -1,56 +1,111 @@
-﻿@model FreelancersProject.Domain.Concretes.Project
+﻿@model FreelancersProject.Application.DTOs.ProjectBidRequestDTO
 
 @{
-	ViewData["Title"] = "detail";
-	Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
 <h1>detail</h1>
 
-<div class="card Hoverr">
-	<div class="card-header">
-		<p>@Model.Title</p>
-	</div>
-	<div class="card-body">
-		<h5 class="card-title">@Model.Description</h5>
-		<p class="card-text">@Model.OwnerId</p>
-		<p class="card-text" style=" margin: 0px 0px 0px 10px;">
-		<p class="card-text">
-			<a class="Atag border border-primary" href="#">C# Asp.Net Core </a>
-			<a class="Atag border border-primary" href="#">Web Desing </a>
-			<a class="Atag border border-primary" href="#">JavaScript </a>
-		</p>
-		<a href="detail" class="btn btn-primary">Go somewhere</a>
-	</div>
+
+<div class="my-3 p-3 bg-white rounded box-shadow">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">@Model.Project.Title</h5>
+            <p class="card-text">@Model.Project.Description</p>
+            <p class="card-text">Price:@Model.Project.MinPrice -@Model.Project.MaxPrice $USD</p>
+            <p class="card-text "><small class="text-muted">Status :@Model.Project.Status</small></p>
+            <p class="card-text"><small class="text-muted">Created Date :@Model.Project.CreateDate</small></p>
+        </div>
+
+    </div>
+
+    <div class="card-body">
+        <div class="table-responsive" id="proTeamScroll" tabindex="2" style="height: 400px; overflow: hidden; outline: none;">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>User</th>
+                        <th>Freelancer Info</th>
+                        <th>Price</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Action</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.BidRequests)
+                    {
+                        <tr>
+                            <td>@item.FreeLancer.Name @item.FreeLancer.SurName</td>
+                            <td>@item.BidRequest.Comment</td>
+                            <td>@item.BidRequest.BidPrice</td>
+                            <td>@item.BidRequest.CreateDate</td>
+                            @if (item.BidRequest.IsConfirmed)
+                            {
+                                <td><span class="text-success">Confirmed</span></td>
+                                <td></td>
+                            }
+                            else
+                            {
+                                <td><span class="text-danger">Waiting for action</span></td>
+                                <td>
+                                    <a href="#" class="badge badge-success" data-toggle="modal" data-target="#confrimModal" onclick="ConfirmBid('@item.BidRequest.Id')">Confirm</a>
+                                </td>
+                            }
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
 </div>
 
-<form  method="post" asp-area="FreeLancer">
-	<div asp-validation-summary="All"></div>
-	<div class="pt-5 pl-5 pr-5" tabindex="-1" role="dialog">
-		<div class="modal-dialog modal-lg " role="document">
-			<div class="modal-content">
 
-				<div class="modal-body">
-					<div class="form-group">
-						<h4><label class="control-label" for="minPrice">Amount</label></h4>
-					
-						<input type="number" class="form-control " min="0" step="any"
-							   id="minPrice" aria-describedby="inputGroup-sizing-sm" placeholder="e.g. Min Price">
-					</div>
 
-					<div class="form-group">
-						<h4><label class="control-label" for="exampleFormControlTextarea1">Comment</label></h4>
-						<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-					</div>
+
+
+<div class="container">
+
+    <form method="post" asp-action="Comment" asp-controller="Home" role="form" style="width:400px; margin: 0 auto;">
+
+        <div class="form-group required-field-block">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-user">Amount</span></span>
+            <div class="col-md-12 input-group">
+                <input hidden="hidden" name="project.Project.Id" id="project.Project.Id" value="@Model.Project.Id" />
+                <input type="text" size="30"  name="project.bidrequests.BidPrice" id="BidPrice" class="form-control" placeholder="e.g Min Price">
+                <div class="required-icon">
+                    <div class="text">*</div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <br>
+
+        <div class="form-group required-field-block">
+            <div class="col-md-12 input-group">
+                <div class="col-sm-1 column">
+                    <label>Comment</label>
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-pencil"></span></span>
+                </div>
+                <div class="col-sm-11 column">
+
+                    <textarea rows="3" size="30"  name="project.bidrequests.Comment" id="Comment" class="form-control" placeholder="Comment"></textarea>
+                    <div class="required-icon">
+                        <div class="text">*</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <input type="submit" class="btn btn-primary"/>
+    </form>
+
+
+
 </div>
-				
-				<div class="modal-footer">
-					<input hidden />
-					<input hidden />
-					<button type="submit" class="btn btn-success">Confirm Bid</button>
-					
-				</div>
-			</div>
-			</div>
-		</div>
-	</form>
+

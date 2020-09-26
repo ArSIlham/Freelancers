@@ -121,3 +121,16 @@ C:\Users\99450\Desktop\FreelancersNew\FreelancerProject\FreelancerProject.Applic
 C:\Users\99450\Desktop\FreelancersNew\FreelancerProject\FreelancerProject.Application\obj\Debug\netstandard2.0\FreelancersProject.Application.csproj.CopyComplete
 C:\Users\99450\Desktop\FreelancersNew\FreelancerProject\FreelancerProject.Application\obj\Debug\netstandard2.0\FreelancersProject.Application.dll
 C:\Users\99450\Desktop\FreelancersNew\FreelancerProject\FreelancerProject.Application\obj\Debug\netstandard2.0\FreelancersProject.Application.pdb
+C:\freelancer\FreelancerProject\FreelancerProject.Application\bin\Debug\netstandard2.0\FreelancersProject.Application.deps.json
+C:\freelancer\FreelancerProject\FreelancerProject.Application\bin\Debug\netstandard2.0\FreelancersProject.Application.dll
+C:\freelancer\FreelancerProject\FreelancerProject.Application\bin\Debug\netstandard2.0\FreelancersProject.Application.pdb
+C:\freelancer\FreelancerProject\FreelancerProject.Application\bin\Debug\netstandard2.0\FreelancersProject.Domain.dll
+C:\freelancer\FreelancerProject\FreelancerProject.Application\bin\Debug\netstandard2.0\FreelancersProject.Persistence.dll
+C:\freelancer\FreelancerProject\FreelancerProject.Application\bin\Debug\netstandard2.0\FreelancersProject.Persistence.pdb
+C:\freelancer\FreelancerProject\FreelancerProject.Application\bin\Debug\netstandard2.0\FreelancersProject.Domain.pdb
+C:\freelancer\FreelancerProject\FreelancerProject.Application\obj\Debug\netstandard2.0\FreelancersProject.Application.csprojAssemblyReference.cache
+C:\freelancer\FreelancerProject\FreelancerProject.Application\obj\Debug\netstandard2.0\FreelancersProject.Application.AssemblyInfoInputs.cache
+C:\freelancer\FreelancerProject\FreelancerProject.Application\obj\Debug\netstandard2.0\FreelancersProject.Application.AssemblyInfo.cs
+C:\freelancer\FreelancerProject\FreelancerProject.Application\obj\Debug\netstandard2.0\FreelancersProject.Application.csproj.CopyComplete
+C:\freelancer\FreelancerProject\FreelancerProject.Application\obj\Debug\netstandard2.0\FreelancersProject.Application.dll
+C:\freelancer\FreelancerProject\FreelancerProject.Application\obj\Debug\netstandard2.0\FreelancersProject.Application.pdb

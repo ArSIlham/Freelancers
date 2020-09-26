@@ -9,6 +9,6 @@ namespace FreelancersProject.Domain.Concretes
 		
 		public string BidId { get; set; }
 		public DateTime DeadlineDate { get; set; }
-		public DateTime ConfirmedDate { get; set; } = DateTime.Now;
+		public DateTime ConfirmedDate { get; set; }
 	}
 }

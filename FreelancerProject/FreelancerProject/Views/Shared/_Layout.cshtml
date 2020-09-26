@@ -50,9 +50,6 @@
 					@if (User.IsInRole("Owner"))
 					{
 						<li class="nav-item active">
-							<a class="nav-link" asp-area="Hirer" asp-controller="Home" asp-action="Main" >Home</a>
-						</li>
-						<li class="nav-item ">
 							<a class="nav-link" asp-area="Hirer" asp-controller="Project" asp-action="MyProjectss">My Projects</a>
 						</li>
 						<li class="nav-item">
@@ -82,7 +79,7 @@
 					</a>
 
 
-					<a class="btn btn-outline-info my-2 my-sm-0 mr-4" asp-action="SignOut" asp-controller="Auth"  asp-area="">Sign Out</a>
+					<a class="btn btn-outline-info my-2 my-sm-0 mr-4" asp-action="SignOut" asp-controller="Auth">Sign Out</a>
 				}
 
 				else
