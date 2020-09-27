@@ -1,0 +1,65 @@
+﻿@model IEnumerable<FreelancersProject.Application.DTOs.ProjectManagementDTOcs>
+
+@{
+    ViewData["Title"] = "ProjectManager";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProjectName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProjectOwnerName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MinPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaxPrice)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+				<a asp-action="ProjectDetails" asp-controller="Project" asp-area="Admin" asp-route-projectId="@item.ProjectId">@item.ProjectName</a>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProjectOwnerName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MinPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaxPrice)
+            </td>
+			<td>
+
+                @if (item.Status != Statuses.Confirmed.ToString())
+				{
+
+				<a class="btn btn-danger text-white" asp-area="Admin" asp-controller="Project" asp-action="Delete" asp-route-projectId="@item.ProjectId">Delete</a>
+				}
+			</td>
+        </tr>
+}
+    </tbody>
+</table>

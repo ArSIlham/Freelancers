@@ -1,0 +1,51 @@
+﻿@model  CreateAdmin.CreateAdminRequest
+@{
+	ViewData["Title"] = "CreateUser";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container register fadeIn">
+
+	<div class="row">
+		<div class="col-sm-12  register-left  register-form">
+
+
+			<div class="tab-content mt-5" id="myTabContent">
+				<div class="" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+					<form asp-action="CreateUser" asp-controller="User" method="post">
+						<div asp-validation-summary="All" class="text-warning"></div>
+						<div class="row register-form">
+							<div class="col-md-6">
+								<div class="form-group">
+									<input type="text" class="form-control" placeholder="Name *" asp-for="@Model.Name" value="" />
+								</div>
+								<div class="form-group">
+									
+									<input type="email" class="form-control" placeholder="Your Email *" asp-for="@Model.Email" value="" />
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<input type="text" class="form-control" placeholder="Surname *" asp-for="@Model.SurName" value="" />
+								</div>
+								<div class="form-group">
+									<input type="password" class="form-control" placeholder="Password *" asp-for="@Model.PasswordHash" value="" />
+								</div>
+
+								<div class="form-group">
+									<input type="password" class="form-control" placeholder="Confirm Password *" asp-for="@Model.ConfirmPassword" value="" />
+								</div>
+								<input type="submit" class="btn btn-primary" value="Create User" />
+							</div>
+
+							
+						</div>
+					</form>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+</div>

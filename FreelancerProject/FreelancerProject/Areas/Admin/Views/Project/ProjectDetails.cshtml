@@ -1,0 +1,61 @@
+﻿@model ProjectDetailsDTO
+@{
+	ViewData["Title"] = "ProjectDetails";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="my-3 p-3 bg-white rounded box-shadow">
+	<div class="card">
+		<div class="card-body">
+			<h5 class="card-title">@Model.Project.Title</h5>
+			<p class="card-text">@Model.Project.Description</p>
+			<p class="card-text">Price:@Model.Project.MinPrice -@Model.Project.MaxPrice $USD</p>
+			<p class="card-text "><small class="text-muted">Status :@Model.Project.Status</small></p>
+			<p class="card-text"><small class="text-muted">Created Date :@Model.Project.CreateDate</small></p>
+		</div>
+
+	</div>
+
+	<div class="card-body">
+		<div class="table-responsive" id="proTeamScroll" tabindex="2" style="height: 400px; overflow: hidden; outline: none;">
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>User</th>
+						<th>Freelancer Info</th>
+						<th>Price</th>
+						<th>Date</th>
+						<th>Status</th>
+						<th>Action</th>
+
+					</tr>
+				</thead>
+				<tbody>
+					@foreach (var item in Model.BidRequests)
+					{
+						<tr>
+							<td></td>
+							<td>@item.FreeLancer.Name @item.FreeLancer.SurName</td>
+							<td>@item.BidRequest.BidPrice</td>
+							<td>@item.BidRequest.CreateDate</td>
+							@if (item.BidRequest.IsConfirmed)
+							{
+								<td><span class="text-success">Confirmed</span></td>
+								<td></td>
+							}
+							else
+							{
+								<td><span class="text-danger">Waiting for action</span></td>
+								<td>
+									<a  class="badge badge-success" asp-action="DeleteBidRequest" asp-controller="Project" asp-area="Admin" asp-route-requestId="@item.BidRequest.Id">Delete</a>
+								</td>
+							}
+						</tr>
+					}
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+</div>
+
