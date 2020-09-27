@@ -94,6 +94,7 @@ namespace FreelancersProject.Controllers
 			var user = await userManager.FindByEmailAsync(model.EMail);
 			if (user != null)
 			{
+
 				var result = await signInManager.PasswordSignInAsync(user,model.Password,false,false);
 				if (result.Succeeded)
 				{
@@ -114,11 +115,10 @@ namespace FreelancersProject.Controllers
 		{
 			return View();
 		}
-		[HttpGet]
 		public async Task<IActionResult> SignOut()
 		{
 			await signInManager.SignOutAsync();
-			return RedirectToAction("Index","Home");
+			return RedirectToAction("Index", "Home");
 		}
 	}
 }

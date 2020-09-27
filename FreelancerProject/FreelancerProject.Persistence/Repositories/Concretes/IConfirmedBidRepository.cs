@@ -1,17 +1,15 @@
-﻿using Dapper;
-using FreelancersProject.Domain.Concretes;
+﻿using FreelancersProject.Domain.Concretes;
 using FreelancersProject.Persistence.Infratructure;
 using FreelancersProject.Persistence.Repositories.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
-using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace FreelancersProject.Persistence.Repositories.Concretes
 {
-	public interface IConfirmedBidRepository : IRepository<ConfirmedBid>
+	public interface IConfirmedBidRepository : IRepository<OfferedProject>
 	{
 	}
 
@@ -19,27 +17,13 @@ namespace FreelancersProject.Persistence.Repositories.Concretes
 	{
 		private readonly IUnitOfWork unitOfWork;
 
-		private string AddSql = $@"insert into ConfirmedBids ([BidId],[DeadlineDate],[ConfirmedDate]) OUTPUT Inserted.Id
-												values	(@{nameof(ConfirmedBid.BidId)},
-                                                        @{nameof(ConfirmedBid.DeadlineDate)},
-								   					 @{nameof(ConfirmedBid.DeadlineDate)})";
-		private string GetProjectById = "select * from ConfirmedBids where Id=@Id";
 		public ConfirmedBidRepository(IUnitOfWork unitOfWork)
 		{
 			this.unitOfWork = unitOfWork;
 		}
-		public async  Task<Guid> Add(ConfirmedBid entity)
+		public Task<Guid> Add(OfferedProject entity)
 		{
-			try
-			{
-				var result = await unitOfWork.GetConnection().QueryFirstAsync<Guid>(AddSql, entity, unitOfWork.GetTransaction());
-				return result;
-			}
-			catch (Exception ex)
-			{
-
-				throw ex;
-			}
+			throw new NotImplementedException();
 		}
 
 		public Task Delete(string id)
@@ -47,31 +31,22 @@ namespace FreelancersProject.Persistence.Repositories.Concretes
 			throw new NotImplementedException();
 		}
 
-		public Task<IEnumerable<ConfirmedBid>> Find(Expression<Func<ConfirmedBid, bool>> predicate)
+		public Task<IEnumerable<OfferedProject>> Find(Expression<Func<OfferedProject, bool>> predicate)
 		{
 			throw new NotImplementedException();
 		}
 
-		public Task<IEnumerable<ConfirmedBid>> GetAll()
+		public Task<IEnumerable<OfferedProject>> GetAll()
 		{
 			throw new NotImplementedException();
 		}
 
-		public async Task<ConfirmedBid> GetById(string id)
+		public Task<OfferedProject> GetById(string id)
 		{
-			try
-			{
-				var result = await unitOfWork.GetConnection().QueryFirstAsync<ConfirmedBid>(GetProjectById, new { Id = id }, unitOfWork.GetTransaction());
-				return result;
-			}
-			catch (Exception ex)
-			{
-
-				throw ex;
-			}
+			throw new NotImplementedException();
 		}
 
-		public Task Update(ConfirmedBid entity)
+		public Task Update(OfferedProject entity)
 		{
 			throw new NotImplementedException();
 		}

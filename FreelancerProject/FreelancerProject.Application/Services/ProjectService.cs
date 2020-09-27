@@ -18,7 +18,8 @@ namespace FreelancersProject.Application.Services
 	{
 		Task AddSkillsToProject(List<ProjectSkill> projectSkills);
 		Task<IEnumerable<Project>> GetProjectByOwnerId(int id);
-		Task<Project> ProjectStatusUpdate(Project entity);
+		Task<IEnumerable<Project>> GetFreelancermyProject(string id);
+
 	}
 	public class ProjectService : IProjectService
 	{
@@ -117,11 +118,11 @@ namespace FreelancersProject.Application.Services
 			}
 		}
 
-		public async  Task<IEnumerable<Project>> GetProjectByOwnerId(int id)
+		public async Task<IEnumerable<Project>> GetFreelancermyProject(string id)
 		{
 			try
 			{
-				var result = await projectRepository.GetProjectByOwnerId(id);
+				var result = await projectRepository.GetFreelancermyProject(id);
 				return result;
 			}
 			catch (Exception ex)
@@ -131,12 +132,12 @@ namespace FreelancersProject.Application.Services
 			}
 		}
 
-		public async Task<Project> ProjectStatusUpdate(Project entity)
+		public async  Task<IEnumerable<Project>> GetProjectByOwnerId(int id)
 		{
 			try
 			{
-				await projectRepository.ProjectStatusUpdate(entity);
-				return entity;
+				var result = await projectRepository.GetProjectByOwnerId(id);
+				return result;
 			}
 			catch (Exception ex)
 			{

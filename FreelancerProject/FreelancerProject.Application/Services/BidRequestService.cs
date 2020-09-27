@@ -23,9 +23,20 @@ namespace FreelancersProject.Application.Services
 		{
 			this.bidRequestRepository = bidRequestRepository;
 		}
-		public Task<BidRequest> Add(BidRequest entity)
+		public async Task<BidRequest> Add(BidRequest entity)
 		{
-			throw new NotImplementedException();
+
+			try
+			{
+				var addedId = await bidRequestRepository.Add(entity);
+
+				var result = await bidRequestRepository.GetById(addedId.ToString());
+				return result;
+			}
+			catch (Exception ex)
+			{
+				throw new RestException(System.Net.HttpStatusCode.NotFound, ex.Message);
+			}
 		}
 
 		public async Task<string> Delete(string id)
@@ -66,32 +77,14 @@ namespace FreelancersProject.Application.Services
 			}
 		}
 
-		public async Task<BidRequest> GetById(string id)
+		public Task<BidRequest> GetById(string id)
 		{
-			try
-			{
-				var result = await bidRequestRepository.GetById(id);
-				return result;
-			}
-			catch (Exception ex)
-			{
-
-				throw new RestException(HttpStatusCode.NotFound, ex.Message);
-			}
+			throw new NotImplementedException();
 		}
 
-		public async Task<BidRequest> Update(BidRequest entity)
+		public Task<BidRequest> Update(BidRequest entity)
 		{
-			try
-			{
-				await bidRequestRepository.Update(entity);
-				return entity;
-			}
-			catch (Exception ex)
-			{
-
-				throw new RestException(HttpStatusCode.NotFound, ex.Message);
-			}
+			throw new NotImplementedException();
 		}
 	}
 }

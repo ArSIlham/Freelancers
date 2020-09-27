@@ -18,9 +18,9 @@ namespace FreelancersProject.Persistence.Repositories.Concretes
 		//GetProjectByStatus(string status)
 		//GetProjectByOwnerId(Guid ownerId)
 		Task AddSkillsToProject(List<ProjectSkill> projectSkills);
-		Task<IEnumerable<Project>> GetProjectByOwnerId(int ownerId);
 
-		Task ProjectStatusUpdate(Project entity);
+		Task<IEnumerable<Project>> GetProjectByOwnerId(int ownerId);
+		Task<IEnumerable<Project>> GetFreelancermyProject(string id);
 
 	}
 
@@ -56,11 +56,11 @@ on p.OwnerId = AU.Id
 		private string GetProjectByCountrySql = "select * from Projects where CountryId=@countryId";
 		private string GetProjectByPriceSql = "select * from Projects where MinPrice>@price and maxPrice<@price";
 
-		private string GetProjectBySkillSql = "select Projects.* from Projects as p inner join ProjectSkills as s where s.SkillId=@skillId ";
+		private string GetFreelancerMyProject = @"select Projects.* from ApplicationUser inner join BidRequests ON ApplicationUser.Id = BidRequests.FreelancerId
+inner join Projects on Projects.Id = BidRequests.ProjectId where ApplicationUser.Id = @id";
 		private string GetProjectById = "select * from Projects where Id=@Id";
 		private string AddSkillProjectSkill = "insert into ProjectSkills (ProjectId, SkillId)  values(@projectId, @skillId)";
 		private readonly IUnitOfWork unitOfWork;
-		private string ProjectStatusUpdateSql = $@"update Projects set Status=@Status where Id=@Id";
 
 		public async Task<Guid> Add(Project entity)
 		{
@@ -158,19 +158,19 @@ on p.OwnerId = AU.Id
 				throw ex;
 			}
 		}
-
-		public async Task ProjectStatusUpdate(Project entity)
+		public async Task<IEnumerable<Project>> GetFreelancermyProject(string id)
 		{
 			try
 			{
-				var res = await unitOfWork.GetConnection().ExecuteAsync(ProjectStatusUpdateSql, new { Status = entity.Status, Id = entity.Id.ToString() }, unitOfWork.GetTransaction());
-
+				var result = await unitOfWork.GetConnection().QueryAsync<Project>(GetFreelancerMyProject, new { Id = id }, unitOfWork.GetTransaction());
+				return result as IEnumerable<Project>;
 			}
 			catch (Exception ex)
 			{
 
 				throw ex;
 			}
+
 		}
 	}
 }
