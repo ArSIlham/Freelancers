@@ -1,8 +1,56 @@
 ﻿
 @{
-    ViewData["Title"] = "Main";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+	ViewData["Title"] = "Main";
+	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Owner</h1>
+<style>
+	div.project-main {
+		background: #0F69C9;
+	}
+</style>
+
+<div class="container-fluid  project-main pt-5 pb-5">
+	<div class="row mt-3 ">
+		<div class="col-sm-6  justify-content-center">
+			<div class="card fadeIn">
+				<div class="card-body">
+					<h5 class="card-title">My Projects</h5>
+					<p class="card-text">Track your projects</p>
+					<a asp-area="Hirer" asp-controller="Project" asp-action="MyProjectss" class="btn btn-outline-primary">Go >>> </a>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-6">
+			<div class="card">
+				<div class="card-body">
+					<h5 class="card-title">Create Projects</h5>
+					<p class="card-text">Hire employees</p>
+					<a asp-area="Hirer" asp-controller="Project" asp-action="CreateProject" class="btn btn-outline-success">Create</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row  mt-3">
+		<div class="col-sm-6">
+			<div class="card">
+				<div class="card-body">
+					<h5 class="card-title">Make offer</h5>
+					<p class="card-text">if you want send project direct click</p>
+					<a asp-area="Hirer" asp-controller="Project" asp-action="MakeOffer" class="btn btn-outline-success">Make offer</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-6">
+			<div class="card">
+				<div class="card-body">
+					<h5 class="card-title">Offered Projects</h5>
+					<p class="card-text">Track project statuses</p>
+					<a asp-area="Hirer" asp-controller="Project" asp-action="OfferedProjects" class="btn btn-outline-primary">Go >>> </a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
 

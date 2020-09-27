@@ -12,7 +12,7 @@ namespace FreelancersProject.Domain.Concretes
 		public string ProjectId { get; set; }
 		public decimal BidPrice { get; set; }
 		public DateTime CreateDate { get; set; } = DateTime.Now;
-		public bool IsConfirmed { get; set; } = true;
+		public bool IsConfirmed { get; set; } = false;
 		public string Comment { get; set; }
 
 

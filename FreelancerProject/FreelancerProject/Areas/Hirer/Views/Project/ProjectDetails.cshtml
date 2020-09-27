@@ -33,24 +33,32 @@
 				<tbody>
 					@foreach (var item in Model.BidRequests)
 					{
-						<tr>
+					<tr>
+						<td></td>
+						<td>@item.FreeLancer.Name @item.FreeLancer.SurName</td>
+						<td>@item.BidRequest.BidPrice</td>
+						<td>@item.BidRequest.CreateDate</td>
+						@if (item.BidRequest.IsConfirmed)
+						{
+							<td><span class="text-success">Confirmed</span></td>
 							<td></td>
-							<td>@item.FreeLancer.Name @item.FreeLancer.SurName</td>
-							<td>@item.BidRequest.BidPrice</td>
-							<td>@item.BidRequest.CreateDate</td>
-							@if (item.BidRequest.IsConfirmed)
+						}
+						else
+						{
+							@if (Model.Project.Status != Statuses.Confirmed.ToString())
 							{
-								<td><span class="text-success">Confirmed</span></td>
-								<td></td>
+
+								<td><span class="text-danger">Waiting for action</span></td>
 							}
 							else
 							{
-								<td><span class="text-danger">Waiting for action</span></td>
-								<td>
-									<a href="#" class="badge badge-success" data-toggle="modal" data-target="#confrimModal" onclick="ConfirmBid('@item.BidRequest.Id')">Confirm</a>
-								</td>
+								<td><span class="text-warning">Finished</span></td>
 							}
-						</tr>
+							<td>
+								<a href="#" class="badge badge-success" data-toggle="modal" data-target="#confrimModal" onclick="ConfirmBid('@item.BidRequest.Id')">Confirm</a>
+							</td>
+						}
+					</tr>
 					}
 				</tbody>
 			</table>

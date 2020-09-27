@@ -73,11 +73,11 @@
 											<div class="maxl">
 												<label class="radio inline">
 													<input type="radio" value="Freelancer" asp-for="@Model.Role" checked>
-													<span> Employee </span>
+													<span> Freelancer </span>
 												</label>
 												<label class="radio inline">
 													<input type="radio" value="Owner" asp-for="@Model.Role">
-													<span>Hirer </span>
+													<span>Owner </span>
 												</label>
 											</div>
 										</div>
@@ -93,6 +93,7 @@
 
 
 										<input type="submit" class="btn btn-primary" value="Register" />
+										<a class=" btn btn-primary" asp-action="Index" asp-controller="Home">Back to main page</a>
 
 									</div>
 								</div>
