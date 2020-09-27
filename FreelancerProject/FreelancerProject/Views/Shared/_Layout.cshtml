@@ -47,10 +47,25 @@
 						</li>
 					}
 
+					@if (User.IsInRole("Admin"))
+					{
+
+						<li class="nav-item active">
+							<a class="nav-link" asp-action="Index" asp-controller="Home" asp-area="Admin">Home</a>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link" asp-area="Admin" asp-controller="User" asp-action="CreateUser">Create User</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" asp-area="Admin" asp-controller="Project" asp-action="ProjectManager">Projects</a>
+
+						</li>
+					}
 					@if (User.IsInRole("Owner"))
 					{
 						<li class="nav-item active">
-							<a class="nav-link" asp-area="Hirer" asp-controller="Home" asp-action="Main" >Home</a>
+							<a class="nav-link" asp-area="Hirer" asp-controller="Home" asp-action="Main">Home</a>
 						</li>
 						<li class="nav-item ">
 							<a class="nav-link" asp-area="Hirer" asp-controller="Project" asp-action="MyProjectss">My Projects</a>

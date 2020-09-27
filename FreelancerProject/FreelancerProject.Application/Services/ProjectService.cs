@@ -61,9 +61,18 @@ namespace FreelancersProject.Application.Services
 			}
 		}
 
-		public Task<string> Delete(string id)
+		public async  Task<string> Delete(string id)
 		{
-			throw new NotImplementedException();
+			try
+			{
+				await projectRepository.Delete(id);
+				return id;
+			}
+			catch (Exception ex)
+			{
+
+				throw new RestException(HttpStatusCode.NotFound, ex.Message);
+			}
 		}
 
 		public Task<IEnumerable<Project>> Find(Expression<Func<Project, bool>> predicate)

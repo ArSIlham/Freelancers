@@ -47,6 +47,7 @@ namespace FreelancersProject.Persistence.Repositories
             using (var connection = new SqlConnection(_connectionString))
             {
                 await connection.OpenAsync(cancellationToken);
+                await connection.ExecuteAsync($"DELETE FROM [ApplicationUserRole] WHERE [UserId] = @{nameof(ApplicationUser.Id)}", user);
                 await connection.ExecuteAsync($"DELETE FROM [ApplicationUser] WHERE [Id] = @{nameof(ApplicationUser.Id)}", user);
             }
 

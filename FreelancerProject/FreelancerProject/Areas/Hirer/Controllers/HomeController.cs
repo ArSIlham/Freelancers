@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace FreelancersProject.Areas.Hirer.Controllers
 {
 	[Area("Hirer")]
-	//[Authorize(Roles ="Owner")]
+	[Authorize(Roles ="Owner")]
 	public class HomeController : Controller
 	{
 		public IActionResult Main()

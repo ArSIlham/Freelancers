@@ -41,9 +41,18 @@ namespace FreelancersProject.Persistence.Repositories.Concretes
 			throw new NotImplementedException();
 		}
 
-		public Task Delete(string id)
+		public async Task Delete(string id)
 		{
-			throw new NotImplementedException();
+			try
+			{
+				var result = await unitOfWork.GetConnection().ExecuteAsync(DeleteSql, new { Id = id }, unitOfWork.GetTransaction());
+
+			}
+			catch (Exception ex)
+			{
+
+				throw ex;
+			}
 		}
 
 		public Task<IEnumerable<BidRequest>> Find(Expression<Func<BidRequest, bool>> predicate)

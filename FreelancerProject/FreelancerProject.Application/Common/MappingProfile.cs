@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using FreelancersProject.Application.DTOs;
 using FreelancersProject.Application.Handler.CQRS.Commands.ConfirmedBidCommands;
 using FreelancersProject.Application.Handler.CQRS.Commands.LoginCommands;
 using FreelancersProject.Application.Handler.CQRS.Commands.ProjectCommands;
@@ -19,10 +20,11 @@ namespace FreelancersProject.Application.Common
             CreateMap<CreateOwner.AddOwnerRequest, OwnerModel>();
 
             CreateMap<SignIn.SignInRequest, ApplicationUser>();
+            CreateMap<CreateAdmin.CreateAdminRequest, ApplicationUser>();
             CreateMap<CreateProject.CreateProjectRequest, Project>();
             CreateMap<OfferProject.OfferProjectRequest, OfferedProject>();
             CreateMap<CreateConfirmedBid.ConfirmedBidRequest, ConfirmedBid>();
-
+            CreateMap<ApplicationUser, ApplicationUsersDTO>();
 
 
 

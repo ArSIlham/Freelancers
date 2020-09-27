@@ -76,9 +76,18 @@ on p.OwnerId = AU.Id
 			}
 		}
 
-		public Task Delete(string id)
+		public async Task Delete(string id)
 		{
-			throw new NotImplementedException();
+			try
+			{
+				var result = await unitOfWork.GetConnection().ExecuteAsync(DeleteSql, new {Id=id }, unitOfWork.GetTransaction());
+				
+			}
+			catch (Exception ex)
+			{
+
+				throw ex;
+			}
 		}
 
 		public Task<IEnumerable<Project>> Find(Expression<Func<Project, bool>> predicate)
