@@ -1873,11 +1873,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\99450\\Desktop\\Freelancers - Copy\\FreelancerProject\\FreelancerProject.Application\\FreelancersProject.Application.csproj",
+      "projectUniqueName": "C:\\Users\\99450\\Desktop\\Freelancers45\\FreelancerProject\\FreelancerProject.Application\\FreelancersProject.Application.csproj",
       "projectName": "FreelancersProject.Application",
-      "projectPath": "C:\\Users\\99450\\Desktop\\Freelancers - Copy\\FreelancerProject\\FreelancerProject.Application\\FreelancersProject.Application.csproj",
+      "projectPath": "C:\\Users\\99450\\Desktop\\Freelancers45\\FreelancerProject\\FreelancerProject.Application\\FreelancersProject.Application.csproj",
       "packagesPath": "C:\\Users\\99450\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\99450\\Desktop\\Freelancers - Copy\\FreelancerProject\\FreelancerProject.Application\\obj\\",
+      "outputPath": "C:\\Users\\99450\\Desktop\\Freelancers45\\FreelancerProject\\FreelancerProject.Application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -1898,8 +1898,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "C:\\Users\\99450\\Desktop\\Freelancers - Copy\\FreelancerProject\\FreelancerProject.Persistence\\FreelancersProject.Persistence.csproj": {
-              "projectPath": "C:\\Users\\99450\\Desktop\\Freelancers - Copy\\FreelancerProject\\FreelancerProject.Persistence\\FreelancersProject.Persistence.csproj"
+            "C:\\Users\\99450\\Desktop\\Freelancers45\\FreelancerProject\\FreelancerProject.Persistence\\FreelancersProject.Persistence.csproj": {
+              "projectPath": "C:\\Users\\99450\\Desktop\\Freelancers45\\FreelancerProject\\FreelancerProject.Persistence\\FreelancersProject.Persistence.csproj"
             }
           }
         }

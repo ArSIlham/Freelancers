@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\99450\\Desktop\\Freelancers - Copy\\FreelancerProject\\FreelancerProject.Domain\\FreelancersProject.Domain.csproj": {}
+    "C:\\Users\\99450\\Desktop\\Freelancers45\\FreelancerProject\\FreelancerProject.Domain\\FreelancersProject.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\99450\\Desktop\\Freelancers - Copy\\FreelancerProject\\FreelancerProject.Domain\\FreelancersProject.Domain.csproj": {
+    "C:\\Users\\99450\\Desktop\\Freelancers45\\FreelancerProject\\FreelancerProject.Domain\\FreelancersProject.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\99450\\Desktop\\Freelancers - Copy\\FreelancerProject\\FreelancerProject.Domain\\FreelancersProject.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\99450\\Desktop\\Freelancers45\\FreelancerProject\\FreelancerProject.Domain\\FreelancersProject.Domain.csproj",
         "projectName": "FreelancersProject.Domain",
-        "projectPath": "C:\\Users\\99450\\Desktop\\Freelancers - Copy\\FreelancerProject\\FreelancerProject.Domain\\FreelancersProject.Domain.csproj",
+        "projectPath": "C:\\Users\\99450\\Desktop\\Freelancers45\\FreelancerProject\\FreelancerProject.Domain\\FreelancersProject.Domain.csproj",
         "packagesPath": "C:\\Users\\99450\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\99450\\Desktop\\Freelancers - Copy\\FreelancerProject\\FreelancerProject.Domain\\obj\\",
+        "outputPath": "C:\\Users\\99450\\Desktop\\Freelancers45\\FreelancerProject\\FreelancerProject.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
