@@ -103,6 +103,7 @@ namespace FreelancersProject.Controllers
 					var admin = await roleManager.FindByNameAsync("admin");
 					if (User.IsInRole(freelancer.Name)) return RedirectToAction("Projects", "Home", new { area="Freelancer"});
 					if (User.IsInRole(hirer.Name)) return RedirectToAction("Main", "Home", new { area = "Hirer" });
+					if (User.IsInRole(admin.Name)) return RedirectToAction("Index", "Home", new { area = "Admin" });
 				}
 
 			}
