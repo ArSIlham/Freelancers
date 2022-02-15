@@ -1,24 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\99450\\Desktop\\Freelancers45\\FreelancerProject\\FreelancerProject\\FreelancersProject.csproj": {}
+    "C:\\Freelancers\\FreelancerProject\\FreelancerProject\\FreelancersProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\99450\\Desktop\\Freelancers45\\FreelancerProject\\FreelancerProject.Application\\FreelancersProject.Application.csproj": {
+    "C:\\Freelancers\\FreelancerProject\\FreelancerProject.Application\\FreelancersProject.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\99450\\Desktop\\Freelancers45\\FreelancerProject\\FreelancerProject.Application\\FreelancersProject.Application.csproj",
+        "projectUniqueName": "C:\\Freelancers\\FreelancerProject\\FreelancerProject.Application\\FreelancersProject.Application.csproj",
         "projectName": "FreelancersProject.Application",
-        "projectPath": "C:\\Users\\99450\\Desktop\\Freelancers45\\FreelancerProject\\FreelancerProject.Application\\FreelancersProject.Application.csproj",
-        "packagesPath": "C:\\Users\\99450\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\99450\\Desktop\\Freelancers45\\FreelancerProject\\FreelancerProject.Application\\obj\\",
+        "projectPath": "C:\\Freelancers\\FreelancerProject\\FreelancerProject.Application\\FreelancersProject.Application.csproj",
+        "packagesPath": "C:\\Users\\ArS\\.nuget\\packages\\",
+        "outputPath": "C:\\Freelancers\\FreelancerProject\\FreelancerProject.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\99450\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ArS\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -31,9 +30,10 @@
         },
         "frameworks": {
           "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
             "projectReferences": {
-              "C:\\Users\\99450\\Desktop\\Freelancers45\\FreelancerProject\\FreelancerProject.Persistence\\FreelancersProject.Persistence.csproj": {
-                "projectPath": "C:\\Users\\99450\\Desktop\\Freelancers45\\FreelancerProject\\FreelancerProject.Persistence\\FreelancersProject.Persistence.csproj"
+              "C:\\Freelancers\\FreelancerProject\\FreelancerProject.Persistence\\FreelancersProject.Persistence.csproj": {
+                "projectPath": "C:\\Freelancers\\FreelancerProject\\FreelancerProject.Persistence\\FreelancersProject.Persistence.csproj"
               }
             }
           }
@@ -46,6 +46,7 @@
       },
       "frameworks": {
         "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
           "dependencies": {
             "AutoMapper": {
               "target": "Package",
@@ -84,25 +85,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\99450\\Desktop\\Freelancers45\\FreelancerProject\\FreelancerProject.Domain\\FreelancersProject.Domain.csproj": {
+    "C:\\Freelancers\\FreelancerProject\\FreelancerProject.Domain\\FreelancersProject.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\99450\\Desktop\\Freelancers45\\FreelancerProject\\FreelancerProject.Domain\\FreelancersProject.Domain.csproj",
+        "projectUniqueName": "C:\\Freelancers\\FreelancerProject\\FreelancerProject.Domain\\FreelancersProject.Domain.csproj",
         "projectName": "FreelancersProject.Domain",
-        "projectPath": "C:\\Users\\99450\\Desktop\\Freelancers45\\FreelancerProject\\FreelancerProject.Domain\\FreelancersProject.Domain.csproj",
-        "packagesPath": "C:\\Users\\99450\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\99450\\Desktop\\Freelancers45\\FreelancerProject\\FreelancerProject.Domain\\obj\\",
+        "projectPath": "C:\\Freelancers\\FreelancerProject\\FreelancerProject.Domain\\FreelancersProject.Domain.csproj",
+        "packagesPath": "C:\\Users\\ArS\\.nuget\\packages\\",
+        "outputPath": "C:\\Freelancers\\FreelancerProject\\FreelancerProject.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\99450\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ArS\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -115,6 +115,7 @@
         },
         "frameworks": {
           "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
             "projectReferences": {}
           }
         },
@@ -126,6 +127,7 @@
       },
       "frameworks": {
         "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
           "dependencies": {
             "NETStandard.Library": {
               "suppressParent": "All",
@@ -144,25 +146,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\99450\\Desktop\\Freelancers45\\FreelancerProject\\FreelancerProject.IoC\\FreelancersProject.IoC.csproj": {
+    "C:\\Freelancers\\FreelancerProject\\FreelancerProject.IoC\\FreelancersProject.IoC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\99450\\Desktop\\Freelancers45\\FreelancerProject\\FreelancerProject.IoC\\FreelancersProject.IoC.csproj",
+        "projectUniqueName": "C:\\Freelancers\\FreelancerProject\\FreelancerProject.IoC\\FreelancersProject.IoC.csproj",
         "projectName": "FreelancersProject.IoC",
-        "projectPath": "C:\\Users\\99450\\Desktop\\Freelancers45\\FreelancerProject\\FreelancerProject.IoC\\FreelancersProject.IoC.csproj",
-        "packagesPath": "C:\\Users\\99450\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\99450\\Desktop\\Freelancers45\\FreelancerProject\\FreelancerProject.IoC\\obj\\",
+        "projectPath": "C:\\Freelancers\\FreelancerProject\\FreelancerProject.IoC\\FreelancersProject.IoC.csproj",
+        "packagesPath": "C:\\Users\\ArS\\.nuget\\packages\\",
+        "outputPath": "C:\\Freelancers\\FreelancerProject\\FreelancerProject.IoC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\99450\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ArS\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -175,12 +176,13 @@
         },
         "frameworks": {
           "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
             "projectReferences": {
-              "C:\\Users\\99450\\Desktop\\Freelancers45\\FreelancerProject\\FreelancerProject.Application\\FreelancersProject.Application.csproj": {
-                "projectPath": "C:\\Users\\99450\\Desktop\\Freelancers45\\FreelancerProject\\FreelancerProject.Application\\FreelancersProject.Application.csproj"
+              "C:\\Freelancers\\FreelancerProject\\FreelancerProject.Application\\FreelancersProject.Application.csproj": {
+                "projectPath": "C:\\Freelancers\\FreelancerProject\\FreelancerProject.Application\\FreelancersProject.Application.csproj"
               },
-              "C:\\Users\\99450\\Desktop\\Freelancers45\\FreelancerProject\\FreelancerProject.Persistence\\FreelancersProject.Persistence.csproj": {
-                "projectPath": "C:\\Users\\99450\\Desktop\\Freelancers45\\FreelancerProject\\FreelancerProject.Persistence\\FreelancersProject.Persistence.csproj"
+              "C:\\Freelancers\\FreelancerProject\\FreelancerProject.Persistence\\FreelancersProject.Persistence.csproj": {
+                "projectPath": "C:\\Freelancers\\FreelancerProject\\FreelancerProject.Persistence\\FreelancersProject.Persistence.csproj"
               }
             }
           }
@@ -193,6 +195,7 @@
       },
       "frameworks": {
         "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
           "dependencies": {
             "Microsoft.Extensions.DependencyInjection.Abstractions": {
               "target": "Package",
@@ -227,25 +230,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\99450\\Desktop\\Freelancers45\\FreelancerProject\\FreelancerProject.Persistence\\FreelancersProject.Persistence.csproj": {
+    "C:\\Freelancers\\FreelancerProject\\FreelancerProject.Persistence\\FreelancersProject.Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\99450\\Desktop\\Freelancers45\\FreelancerProject\\FreelancerProject.Persistence\\FreelancersProject.Persistence.csproj",
+        "projectUniqueName": "C:\\Freelancers\\FreelancerProject\\FreelancerProject.Persistence\\FreelancersProject.Persistence.csproj",
         "projectName": "FreelancersProject.Persistence",
-        "projectPath": "C:\\Users\\99450\\Desktop\\Freelancers45\\FreelancerProject\\FreelancerProject.Persistence\\FreelancersProject.Persistence.csproj",
-        "packagesPath": "C:\\Users\\99450\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\99450\\Desktop\\Freelancers45\\FreelancerProject\\FreelancerProject.Persistence\\obj\\",
+        "projectPath": "C:\\Freelancers\\FreelancerProject\\FreelancerProject.Persistence\\FreelancersProject.Persistence.csproj",
+        "packagesPath": "C:\\Users\\ArS\\.nuget\\packages\\",
+        "outputPath": "C:\\Freelancers\\FreelancerProject\\FreelancerProject.Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\99450\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ArS\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -258,9 +260,10 @@
         },
         "frameworks": {
           "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
             "projectReferences": {
-              "C:\\Users\\99450\\Desktop\\Freelancers45\\FreelancerProject\\FreelancerProject.Domain\\FreelancersProject.Domain.csproj": {
-                "projectPath": "C:\\Users\\99450\\Desktop\\Freelancers45\\FreelancerProject\\FreelancerProject.Domain\\FreelancersProject.Domain.csproj"
+              "C:\\Freelancers\\FreelancerProject\\FreelancerProject.Domain\\FreelancersProject.Domain.csproj": {
+                "projectPath": "C:\\Freelancers\\FreelancerProject\\FreelancerProject.Domain\\FreelancersProject.Domain.csproj"
               }
             }
           }
@@ -273,6 +276,7 @@
       },
       "frameworks": {
         "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
           "dependencies": {
             "Dapper": {
               "target": "Package",
@@ -307,25 +311,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\99450\\Desktop\\Freelancers45\\FreelancerProject\\FreelancerProject\\FreelancersProject.csproj": {
+    "C:\\Freelancers\\FreelancerProject\\FreelancerProject\\FreelancersProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\99450\\Desktop\\Freelancers45\\FreelancerProject\\FreelancerProject\\FreelancersProject.csproj",
+        "projectUniqueName": "C:\\Freelancers\\FreelancerProject\\FreelancerProject\\FreelancersProject.csproj",
         "projectName": "FreelancersProject",
-        "projectPath": "C:\\Users\\99450\\Desktop\\Freelancers45\\FreelancerProject\\FreelancerProject\\FreelancersProject.csproj",
-        "packagesPath": "C:\\Users\\99450\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\99450\\Desktop\\Freelancers45\\FreelancerProject\\FreelancerProject\\obj\\",
+        "projectPath": "C:\\Freelancers\\FreelancerProject\\FreelancerProject\\FreelancersProject.csproj",
+        "packagesPath": "C:\\Users\\ArS\\.nuget\\packages\\",
+        "outputPath": "C:\\Freelancers\\FreelancerProject\\FreelancerProject\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\99450\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ArS\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -338,12 +341,13 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\99450\\Desktop\\Freelancers45\\FreelancerProject\\FreelancerProject.Application\\FreelancersProject.Application.csproj": {
-                "projectPath": "C:\\Users\\99450\\Desktop\\Freelancers45\\FreelancerProject\\FreelancerProject.Application\\FreelancersProject.Application.csproj"
+              "C:\\Freelancers\\FreelancerProject\\FreelancerProject.Application\\FreelancersProject.Application.csproj": {
+                "projectPath": "C:\\Freelancers\\FreelancerProject\\FreelancerProject.Application\\FreelancersProject.Application.csproj"
               },
-              "C:\\Users\\99450\\Desktop\\Freelancers45\\FreelancerProject\\FreelancerProject.IoC\\FreelancersProject.IoC.csproj": {
-                "projectPath": "C:\\Users\\99450\\Desktop\\Freelancers45\\FreelancerProject\\FreelancerProject.IoC\\FreelancersProject.IoC.csproj"
+              "C:\\Freelancers\\FreelancerProject\\FreelancerProject.IoC\\FreelancersProject.IoC.csproj": {
+                "projectPath": "C:\\Freelancers\\FreelancerProject\\FreelancerProject.IoC\\FreelancersProject.IoC.csproj"
               }
             }
           }
@@ -356,6 +360,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "MediatR": {
               "target": "Package",
@@ -388,7 +393,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
         }
       }
     }
